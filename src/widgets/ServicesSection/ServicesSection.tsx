@@ -2,36 +2,46 @@
 
 import { useTranslations } from 'next-intl';
 import { ServiceCard } from '@/shared/ui/ServiceCard';
+import { Carousel } from '@/shared/ui/Carousel';
+import {
+  faMobileAlt,
+  faPalette,
+  faGlobe,
+  faServer,
+  faRobot,
+  faChartLine,
+  faGraduationCap
+} from '@fortawesome/free-solid-svg-icons';
 import styles from './ServicesSection.module.css';
 
 const services = [
   {
     id: 'app',
-    icon: '📱',
+    icon: faMobileAlt,
   },
   {
     id: 'web',
-    icon: '🎨',
+    icon: faPalette,
   },
   {
     id: 'website',
-    icon: '🌐',
+    icon: faGlobe,
   },
   {
     id: 'hosting',
-    icon: '🖥️',
+    icon: faServer,
   },
   {
     id: 'ai',
-    icon: '🤖',
+    icon: faRobot,
   },
   {
     id: 'seo',
-    icon: '📈',
+    icon: faChartLine,
   },
   {
     id: 'teaching',
-    icon: '🎓',
+    icon: faGraduationCap,
   },
 ];
 
@@ -42,15 +52,24 @@ export const ServicesSection = () => {
     <section id="services" className="section">
       <div className="container">
         <h2 className={styles.title}>{t('title')}</h2>
-        <div className={styles.grid}>
-          {services.map((service) => (
-            <ServiceCard
-              key={service.id}
-              icon={service.icon}
-              title={t(`${service.id}.title`)}
-              description={t(`${service.id}.description`)}
-            />
-          ))}
+        <div className={styles.carouselWrapper}>
+          <Carousel
+            itemsPerView={3}
+            autoPlay={true}
+            autoPlayInterval={5000}
+            showDots={true}
+            showArrows={true}
+            gap={30}
+          >
+            {services.map((service) => (
+              <ServiceCard
+                key={service.id}
+                icon={service.icon}
+                title={t(`${service.id}.title`)}
+                description={t(`${service.id}.description`)}
+              />
+            ))}
+          </Carousel>
         </div>
       </div>
     </section>

@@ -1,0 +1,147 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  padding: 0 50px;
+}
+
+.carouselContainer {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: grab;
+}
+
+.carouselTrack:active {
+  cursor: grabbing;
+}
+
+.carouselItem {
+  min-width: 0;
+  flex-shrink: 0;
+}
+
+/* 導航箭頭 */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: var(--secondary);
+  border: 1px solid var(--gray-medium);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--foreground);
+}
+
+.arrow:hover:not(:disabled) {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.arrowLeft {
+  left: 0;
+}
+
+.arrowRight {
+  right: 0;
+}
+
+/* 指示器點 */
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gray-medium);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dot:hover {
+  background: var(--gray-dark);
+  transform: scale(1.2);
+}
+
+.dotActive {
+  background: var(--primary);
+  width: 30px;
+  border-radius: 5px;
+}
+
+.dotActive:hover {
+  background: var(--primary);
+}
+
+/* 平板響應式設計 */
+@media (max-width: 1024px) {
+  .carousel {
+    padding: 0 40px;
+  }
+
+  .arrow {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* 手機響應式設計 */
+@media (max-width: 640px) {
+  .carousel {
+    padding: 0;
+  }
+
+  .arrow {
+    width: 32px;
+    height: 32px;
+    background: rgba(var(--secondary-rgb), 0.95);
+  }
+
+  .arrowLeft {
+    left: 10px;
+  }
+
+  .arrowRight {
+    right: 10px;
+  }
+
+  .dots {
+    margin-top: 20px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .dotActive {
+    width: 24px;
+  }
+}
