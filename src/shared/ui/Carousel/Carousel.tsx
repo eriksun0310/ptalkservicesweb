@@ -28,7 +28,7 @@ export const Carousel: React.FC<CarouselProps> = ({
   const [startX, setStartX] = useState(0);
   const [translateX, setTranslateX] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
-  const intervalRef = useRef<NodeJS.Timeout>();
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const totalItems = React.Children.count(children);
   const maxIndex = Math.max(0, totalItems - itemsToShow);
