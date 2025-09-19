@@ -3,11 +3,11 @@
 }
 
 .item {
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .item:first-child {
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .header {
@@ -21,14 +21,15 @@
   text-align: left;
   cursor: pointer;
   transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .header:hover {
-  color: #667eea;
+  color: var(--accent);
 }
 
 .header.active {
-  color: #667eea;
+  color: var(--accent);
 }
 
 .question {
@@ -36,11 +37,13 @@
   font-weight: 600;
   line-height: 1.5;
   padding-right: 1rem;
+  color: inherit;
 }
 
 .icon {
   flex-shrink: 0;
   transition: transform 0.3s ease;
+  color: var(--accent);
 }
 
 .content {
@@ -55,9 +58,14 @@
 }
 
 .answer {
-  color: #666;
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.8;
   font-size: 1rem;
+  background: rgba(139, 111, 71, 0.08);
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  border: 1px solid rgba(139, 111, 71, 0.15);
+  margin-top: 0.5rem;
 }
 
 @media (max-width: 768px) {
