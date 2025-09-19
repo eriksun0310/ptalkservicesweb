@@ -11,6 +11,7 @@ import {
   faCube,
   faGem
 } from '@fortawesome/free-solid-svg-icons';
+import { Carousel } from '@/shared/ui/Carousel';
 import styles from './ProcessFeatures.module.css';
 
 export const ProcessFeatures = () => {
@@ -25,8 +26,7 @@ export const ProcessFeatures = () => {
         t('items.tracking.highlights.0'),
         t('items.tracking.highlights.1'),
         t('items.tracking.highlights.2')
-      ],
-      gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+      ]
     },
     {
       icon: faComments,
@@ -36,8 +36,7 @@ export const ProcessFeatures = () => {
         t('items.communication.highlights.0'),
         t('items.communication.highlights.1'),
         t('items.communication.highlights.2')
-      ],
-      gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
+      ]
     },
     {
       icon: faLock,
@@ -47,8 +46,7 @@ export const ProcessFeatures = () => {
         t('items.security.highlights.0'),
         t('items.security.highlights.1'),
         t('items.security.highlights.2')
-      ],
-      gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
+      ]
     },
     {
       icon: faBolt,
@@ -58,8 +56,7 @@ export const ProcessFeatures = () => {
         t('items.agile.highlights.0'),
         t('items.agile.highlights.1'),
         t('items.agile.highlights.2')
-      ],
-      gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)'
+      ]
     }
   ];
 
@@ -91,34 +88,42 @@ export const ProcessFeatures = () => {
           <p className={styles.subtitle}>{t('subtitle')}</p>
         </div>
 
-        <div className={styles.grid}>
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className={styles.card}
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className={styles.cardGlow} />
-              <div className={styles.cardInner}>
-                <div className={styles.iconWrapper}>
-                  <div className={styles.iconGlow} style={{ background: feature.gradient }} />
-                  <div className={styles.cardIcon}>
-                    <FontAwesomeIcon icon={feature.icon} />
+        <div className={styles.carouselWrapper}>
+          <Carousel
+            itemsPerView={3}
+            autoPlay={true}
+            autoPlayInterval={6000}
+            showDots={true}
+            showArrows={true}
+            gap={35}
+          >
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className={styles.card}
+              >
+                <div className={styles.cardGlow} />
+                <div className={styles.cardInner}>
+                  <div className={styles.iconWrapper}>
+                    <div className={styles.iconGlow} />
+                    <div className={styles.cardIcon}>
+                      <FontAwesomeIcon icon={feature.icon} />
+                    </div>
                   </div>
+                  <h3 className={styles.cardTitle}>{feature.title}</h3>
+                  <p className={styles.cardDescription}>{feature.description}</p>
+                  <ul className={styles.highlights}>
+                    {feature.highlights.map((highlight, idx) => (
+                      <li key={idx}>
+                        <FontAwesomeIcon icon={faCheck} className={styles.checkIcon} />
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className={styles.cardTitle}>{feature.title}</h3>
-                <p className={styles.cardDescription}>{feature.description}</p>
-                <ul className={styles.highlights}>
-                  {feature.highlights.map((highlight, idx) => (
-                    <li key={idx}>
-                      <FontAwesomeIcon icon={faCheck} className={styles.checkIcon} />
-                      <span>{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
-            </div>
-          ))}
+            ))}
+          </Carousel>
         </div>
       </div>
     </section>

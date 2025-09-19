@@ -239,14 +239,11 @@
   font-weight: 300;
 }
 
-/* 卡片網格 */
-.grid {
+/* Carousel 容器 */
+.carouselWrapper {
   position: relative;
   z-index: 2;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 35px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -254,6 +251,7 @@
 .card {
   position: relative;
   animation: fadeInUp 1s ease-out both;
+  min-width: 340px;
 }
 
 @keyframes fadeInUp {
@@ -287,7 +285,7 @@
 
 .cardInner {
   position: relative;
-  padding: 40px 35px;
+  padding: 50px 45px;
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur-strong);
   -webkit-backdrop-filter: var(--glass-blur-strong);
@@ -295,6 +293,7 @@
   border-radius: 24px;
   transition: all 0.3s ease;
   height: 100%;
+  min-height: 500px;
   display: flex;
   flex-direction: column;
   box-shadow:
@@ -315,7 +314,7 @@
 /* 圖標區域 */
 .iconWrapper {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .iconGlow {
@@ -323,9 +322,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
-  filter: blur(30px);
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(139, 111, 71, 0.4), transparent);
+  filter: blur(35px);
   opacity: 0.3;
   transition: opacity 0.3s ease;
   border-radius: 50%;
@@ -336,16 +336,16 @@
 }
 
 .cardIcon {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   margin: 0 auto;
   background: rgba(139, 111, 71, 0.1);
-  border: 2px solid var(--accent);
+  border: 3px solid var(--accent);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 36px;
+  font-size: 45px;
   color: var(--accent);
   transition: all 0.3s ease;
   position: relative;
@@ -376,9 +376,9 @@
 
 /* 文字內容 */
 .cardTitle {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color: var(--foreground);
   text-align: center;
   background: linear-gradient(135deg, var(--foreground) 0%, var(--accent) 100%);
@@ -389,10 +389,10 @@
 
 .cardDescription {
   color: rgba(255, 255, 255, 0.8);
-  line-height: 1.7;
-  margin-bottom: 30px;
+  line-height: 1.8;
+  margin-bottom: 35px;
   text-align: center;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
 }
 
 /* 重點列表 */
@@ -406,9 +406,9 @@
 .highlights li {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 15px;
-  padding: 12px;
+  gap: 14px;
+  margin-bottom: 18px;
+  padding: 14px 16px;
   background: rgba(255, 255, 255, 0.03);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -423,14 +423,14 @@
 
 .checkIcon {
   flex-shrink: 0;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   background: rgba(139, 111, 71, 0.15);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--accent);
   margin-top: 2px;
 }
@@ -441,8 +441,8 @@
 }
 
 .highlights span {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.7;
   color: rgba(255, 255, 255, 0.85);
   flex: 1;
 }
@@ -453,9 +453,8 @@
     display: none;
   }
 
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+  .carouselWrapper {
+    max-width: 100%;
   }
 }
 
