@@ -3,7 +3,9 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { Button } from '@/shared/ui/Button';
-import { SocialLinks } from '@/shared/ui/SocialLinks';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faInstagram, faThreads, faLine } from '@fortawesome/free-brands-svg-icons';
 import styles from './Footer.module.css';
 
 export const Footer = () => {
@@ -44,7 +46,45 @@ export const Footer = () => {
             </div>
 
             <div className={styles.bottomRight}>
-              <SocialLinks />
+              <div className={styles.contactSection}>
+                <a
+                  href="mailto:connect.ptalk@gmail.com"
+                  className={styles.contactIcon}
+                  title="connect.ptalk@gmail.com"
+                >
+                  <FontAwesomeIcon icon={faEnvelope} />
+                </a>
+
+                <a
+                  href="https://line.me/ti/p/ptalk.tw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.contactIcon}
+                  title="Line 官方帳號"
+                >
+                  <FontAwesomeIcon icon={faLine} />
+                </a>
+
+                <a
+                  href="https://instagram.com/ptalk.tw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.contactIcon}
+                  title="@ptalk.tw"
+                >
+                  <FontAwesomeIcon icon={faInstagram} />
+                </a>
+
+                <a
+                  href="https://threads.net/ptalk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.contactIcon}
+                  title="@ptalk.tw"
+                >
+                  <FontAwesomeIcon icon={faThreads} />
+                </a>
+              </div>
             </div>
           </div>
         </div>

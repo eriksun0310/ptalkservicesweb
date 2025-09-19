@@ -10,34 +10,40 @@ const socials = [
     name: 'Instagram',
     icon: faInstagram,
     url: 'https://instagram.com/ptalk.tw',
-  },
-  {
-    name: 'Line',
-    icon: faLine,
-    url: 'https://line.me/ti/p/ptalk.tw',
+    label: '@ptalk.tw'
   },
   {
     name: 'Threads',
     icon: faThreads,
     url: 'https://threads.net/ptalk',
+    label: '@ptalk.tw'
   }
 ];
 
 export const SocialLinks = () => {
   return (
-    <div className={styles.socialLinks}>
-      {socials.map((social) => (
-        <a
-          key={social.name}
-          href={social.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.link}
-          title={social.name}
-        >
-          <FontAwesomeIcon icon={social.icon} className={styles.icon} />
-        </a>
-      ))}
+    <div className={styles.container}>
+      <h3 className={styles.title}>追蹤我們</h3>
+      <div className={styles.socialLinks}>
+        {socials.map((social) => (
+          <a
+            key={social.name}
+            href={social.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+            title={social.name}
+          >
+            <div className={styles.iconWrapper}>
+              <FontAwesomeIcon icon={social.icon} className={styles.icon} />
+            </div>
+            <div className={styles.info}>
+              <span className={styles.name}>{social.name}</span>
+              <span className={styles.label}>{social.label}</span>
+            </div>
+          </a>
+        ))}
+      </div>
     </div>
   );
 };

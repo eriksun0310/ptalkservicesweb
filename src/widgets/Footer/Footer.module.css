@@ -252,25 +252,35 @@
   align-items: center;
 }
 
-/* 社交連結玻璃效果 */
-.bottomRight :global(.socialLinks) {
-  background: linear-gradient(135deg,
-    rgba(139, 111, 71, 0.15) 0%,
-    rgba(255, 255, 255, 0.05) 100%);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 12px 20px;
-  border-radius: 30px;
-  border: 1px solid rgba(139, 111, 71, 0.25);
+.contactSection {
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }
 
-.bottomRight :global(.socialLinks a) {
+.contactIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(139, 111, 71, 0.1);
+  border: 1px solid rgba(139, 111, 71, 0.2);
+  border-radius: 50%;
+  color: var(--accent);
+  text-decoration: none;
   transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  font-size: 16px;
 }
 
-.bottomRight :global(.socialLinks a:hover) {
-  transform: translateY(-3px) scale(1.1);
-  filter: drop-shadow(0 4px 8px rgba(139, 111, 71, 0.3));
+.contactIcon:hover {
+  background: rgba(139, 111, 71, 0.25);
+  border-color: rgba(139, 111, 71, 0.4);
+  transform: translateY(-2px);
+  color: #ffd1b9;
+  box-shadow: 0 4px 12px rgba(139, 111, 71, 0.3);
 }
 
 /* 響應式設計 */
@@ -323,7 +333,14 @@
     display: inline-block;
   }
 
-  .bottomRight :global(.socialLinks) {
-    margin-top: 10px;
+  .contactSection {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .contactIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
   }
 }

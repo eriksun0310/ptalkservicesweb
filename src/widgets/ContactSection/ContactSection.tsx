@@ -2,7 +2,9 @@
 
 import { useTranslations } from 'next-intl';
 import { ContactForm } from '@/features/contact-form';
-import { SocialLinks } from '@/shared/ui/SocialLinks';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faInstagram, faThreads, faLine } from '@fortawesome/free-brands-svg-icons';
 import styles from './ContactSection.module.css';
 
 export const ContactSection = () => {
@@ -26,25 +28,46 @@ export const ContactSection = () => {
               <div className={styles.contactInfo}>
                 <h3>{t('info.quickContact')}</h3>
 
-                <div className={styles.infoItem}>
-                  <div className={styles.infoIcon}>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <rect x="2" y="4" width="20" height="16" rx="2" />
-                      <path d="M22 4L12 13 2 4" />
-                    </svg>
-                  </div>
-                  <div className={styles.infoContent}>
-                    <p className={styles.infoLabel}>{t('info.email')}</p>
-                    <a href="mailto:connect.ptalk@gmail.com">connect.ptalk@gmail.com</a>
-                  </div>
+                <div className={styles.contactEmail}>
+                  <FontAwesomeIcon icon={faEnvelope} className={styles.emailIcon} />
+                  <a href="mailto:connect.ptalk@gmail.com">connect.ptalk@gmail.com</a>
                 </div>
 
-          
                 <div className={styles.divider}></div>
 
                 <div className={styles.socialSection}>
                   <p className={styles.socialTitle}>{t('social.follow')}</p>
-                  <SocialLinks />
+                  <div className={styles.socialIcons}>
+                    <a
+                      href="https://line.me/ti/p/ptalk.tw"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.socialIcon}
+                      title="Line 官方帳號"
+                    >
+                      <FontAwesomeIcon icon={faLine} />
+                    </a>
+
+                    <a
+                      href="https://instagram.com/ptalk.tw"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.socialIcon}
+                      title="@ptalk.tw"
+                    >
+                      <FontAwesomeIcon icon={faInstagram} />
+                    </a>
+
+                    <a
+                      href="https://threads.net/ptalk"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.socialIcon}
+                      title="@ptalk.tw"
+                    >
+                      <FontAwesomeIcon icon={faThreads} />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
