@@ -1,0 +1,302 @@
+{
+  "metadata": {
+    "title": "PTalk - Professional Technical Services",
+    "description": "Providing APP design, web design, website development, AI integration, SEO optimization and more professional services"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "process": "Process",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Transform Your Ideas Into Digital Reality",
+    "subtitle": "Professional team creating innovative solutions",
+    "cta": "Get Started"
+  },
+  "services": {
+    "title": "Our Services",
+    "app": {
+      "title": "APP Design & Development",
+      "description": "Complete APP development from concept to launch"
+    },
+    "web": {
+      "title": "Web Design",
+      "description": "Responsive web design for optimal user experience"
+    },
+    "website": {
+      "title": "Website Development",
+      "description": "Custom website development for your business needs"
+    },
+    "hosting": {
+      "title": "Web Hosting",
+      "description": "Reliable hosting services ensuring website stability"
+    },
+    "ai": {
+      "title": "AI Integration",
+      "description": "Integrate AI technology to enhance product intelligence"
+    },
+    "seo": {
+      "title": "SEO Optimization",
+      "description": "Improve search rankings and increase visibility"
+    },
+    "teaching": {
+      "title": "AI Tech Speaking & Training",
+      "description": "Sharing latest AI technology and programming experience"
+    }
+  },
+  "whyUs": {
+    "title": "Why Choose PTalk",
+    "reason1": {
+      "title": "Professional Team",
+      "description": "Experienced engineers with deep expertise"
+    },
+    "reason2": {
+      "title": "Custom Solutions",
+      "description": "Tailored solutions to meet your specific needs"
+    },
+    "reason3": {
+      "title": "Complete Support",
+      "description": "Ongoing technical support and maintenance"
+    }
+  },
+  "about": {
+    "title": "About PTalk",
+    "mission": {
+      "title": "Our Mission",
+      "content": "PTalk is dedicated to providing innovative technical solutions, helping businesses and individuals achieve digital transformation. We believe in the power of technology to change the world, turning every idea into reality through professional technical services."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "content": "To become the most trusted technology partner, creating maximum value for clients through innovative thinking and professional expertise."
+    },
+    "team": {
+      "title": "Our Team",
+      "content": "Our team consists of experienced engineers, designers, and project managers, each with deep expertise in their respective fields."
+    }
+  },
+  "products": {
+    "title": "Our Products",
+    "viewDetails": "View Details",
+    "features": "Core Features",
+    "techStack": "Tech Stack"
+  },
+  "process": {
+    "hero": {
+      "title": "Transparent Collaboration Process",
+      "subtitle": "From idea to launch, every step clearly tracked",
+      "stats": {
+        "projects": "Projects Completed",
+        "satisfaction": "Client Satisfaction",
+        "clients": "Partners",
+        "support": "Tech Support"
+      },
+      "startConsultation": "Start Consultation",
+      "viewProcess": "View Process"
+    },
+    "timeline": {
+      "title": "Six Steps to Complete Your Project",
+      "subtitle": "We use agile development to ensure smooth progress and timely delivery",
+      "note": "Every project is unique. We adjust our process to your specific needs to ensure the best results",
+      "steps": {
+        "consultation": {
+          "title": "Requirements Consultation",
+          "duration": "1-2 Days",
+          "description": "Deep understanding of your needs and goals",
+          "details": [
+            "Online meeting to discuss project scope",
+            "Requirements documentation and confirmation",
+            "Technical feasibility assessment",
+            "Initial timeline planning"
+          ],
+          "deliverables": "Requirements Specification"
+        },
+        "proposal": {
+          "title": "Proposal & Quote",
+          "duration": "2-3 Days",
+          "description": "Customized solution proposal",
+          "details": [
+            "Technical architecture planning",
+            "Detailed quotation preparation",
+            "Timeline and milestones setting",
+            "Contract terms discussion"
+          ],
+          "deliverables": "Project Proposal"
+        },
+        "contract": {
+          "title": "Contract Signing",
+          "duration": "1-2 Days",
+          "description": "Confirm cooperation details and guarantees",
+          "details": [
+            "Final contract confirmation",
+            "Payment terms and schedule",
+            "IP rights confirmation",
+            "Project kickoff meeting"
+          ],
+          "deliverables": "Formal Contract"
+        },
+        "development": {
+          "title": "Development",
+          "duration": "Varies by project",
+          "description": "Agile development, continuous delivery",
+          "details": [
+            "Sprint planning and execution",
+            "Weekly progress reports",
+            "Version control and code review",
+            "Staged deliverables demo"
+          ],
+          "deliverables": "Development Builds"
+        },
+        "testing": {
+          "title": "Testing & QA",
+          "duration": "3-5 Days",
+          "description": "Ensure quality and stability",
+          "details": [
+            "Functional testing and fixes",
+            "Performance optimization",
+            "User acceptance testing",
+            "Issue tracking and resolution"
+          ],
+          "deliverables": "Test Reports"
+        },
+        "launch": {
+          "title": "Launch & Support",
+          "duration": "Ongoing",
+          "description": "Smooth launch and continuous support",
+          "details": [
+            "Production deployment",
+            "System monitoring setup",
+            "User training",
+            "Warranty support"
+          ],
+          "deliverables": "Live System"
+        }
+      }
+    },
+    "features": {
+      "title": "Our Collaboration Features",
+      "subtitle": "Transparent, efficient, professional service process",
+      "items": {
+        "tracking": {
+          "title": "Real-time Project Tracking",
+          "description": "Track project progress and status anytime",
+          "highlights": [
+            "Online project dashboard",
+            "Real-time progress updates",
+            "Milestone tracking"
+          ]
+        },
+        "communication": {
+          "title": "Transparent Communication",
+          "description": "Stay closely connected to ensure accurate requirements",
+          "highlights": [
+            "Dedicated Slack/Teams channel",
+            "Weekly progress meetings",
+            "24-hour response time"
+          ]
+        },
+        "security": {
+          "title": "Security Guarantee",
+          "description": "Complete contract and IP protection",
+          "highlights": [
+            "NDA signing",
+            "Code ownership transfer",
+            "Data security protection"
+          ]
+        },
+        "agile": {
+          "title": "Agile Development",
+          "description": "Flexible adjustments, rapid response to changes",
+          "highlights": [
+            "Sprint iterations",
+            "Continuous integration",
+            "Fast feedback loops"
+          ]
+        }
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Answers about our collaboration process",
+      "items": [
+        {
+          "question": "How do we start working together?",
+          "answer": "You can contact us through our website form or directly. We'll respond within 24 hours and schedule an initial consultation to understand your needs and provide professional recommendations."
+        },
+        {
+          "question": "What are the payment terms?",
+          "answer": "We offer multiple payment options, typically using staged payments: 30% upon signing, 30% mid-development, 40% upon acceptance. Actual arrangements can be adjusted based on project needs."
+        },
+        {
+          "question": "Can requirements be changed during development?",
+          "answer": "Using agile development, we can adjust requirement priorities in each Sprint cycle. Major changes will be evaluated for timeline and cost impact and discussed with you."
+        },
+        {
+          "question": "How long is the warranty period?",
+          "answer": "Standard warranty is 3-6 months with free bug fixes during this period. After warranty, you can opt for a maintenance contract to ensure long-term system stability."
+        },
+        {
+          "question": "Who owns the intellectual property?",
+          "answer": "After project completion and full payment, custom development code IP belongs to the client. We retain the right to use technical experience for other projects without disclosing business secrets."
+        },
+        {
+          "question": "How do you ensure project quality?",
+          "answer": "We use best practices including code review, automated testing, and continuous integration. Each phase has clear acceptance criteria to ensure deliverables meet expected quality."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "subtitle": "Let's turn your ideas into reality together",
+      "primaryAction": "Schedule Consultation",
+      "secondaryAction": "Download Service Guide",
+      "phone": "+886 912 345 678",
+      "email": "contact@ptalk.com.tw"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We'd love to help. Fill out the form or contact us directly.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "service": "Service Inquiry",
+      "message": "Message",
+      "submit": "Send Inquiry",
+      "selectService": "Select a service"
+    },
+    "info": {
+      "title": "Contact Information",
+      "quickContact": "Quick Contact",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address",
+      "addressText": "Xinyi District, Taipei",
+      "hours": "Business Hours",
+      "hoursText": "Monday - Friday 9:00 - 18:00"
+    },
+    "social": {
+      "title": "Social Media",
+      "follow": "Follow Us",
+      "instagram": "Instagram",
+      "line": "Line",
+      "threads": "Threads",
+      "gmail": "Gmail"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 PTalk. All rights reserved.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact Info",
+    "cta": {
+      "title": "Ready to Get Started?",
+      "subtitle": "Let's turn your ideas into reality together",
+      "primaryAction": "Schedule Consultation",
+      "secondaryAction": "Download Service Guide",
+      "phone": "+886 912 345 678",
+      "email": "connect.ptalk@gmail.com"
+    }
+  }
+}

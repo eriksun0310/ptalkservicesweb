@@ -1,0 +1,1 @@
+export { ProcessFAQ } from './ProcessFAQ';

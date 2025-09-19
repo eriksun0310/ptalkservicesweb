@@ -1,0 +1,29 @@
+.switcher {
+  display: flex;
+  gap: 4px;
+  background: var(--gray-light);
+  border-radius: var(--border-radius);
+  padding: 4px;
+}
+
+.button {
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--gray-dark);
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  color: var(--foreground);
+}
+
+.button.active {
+  background: var(--secondary);
+  color: var(--foreground);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

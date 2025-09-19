@@ -1,0 +1,108 @@
+.card {
+  background: var(--secondary);
+  border-radius: var(--border-radius-lg);
+  padding: 30px;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow-lg);
+}
+
+.header {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--foreground);
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--gray-dark);
+}
+
+.section {
+  flex: 1;
+}
+
+.sectionTitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.features li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 0.95rem;
+  color: var(--gray-dark);
+  line-height: 1.5;
+}
+
+.features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech {
+  padding: 6px 12px;
+  background: var(--gray-light);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: var(--foreground);
+  border: 1px solid var(--gray-medium);
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 24px;
+  }
+
+  .name {
+    font-size: 1.3rem;
+  }
+}

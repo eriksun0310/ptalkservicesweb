@@ -1,0 +1,41 @@
+.products {
+  padding-top: 120px;
+  padding-bottom: 80px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--gray-light) 100%);
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  text-align: center;
+  margin-bottom: 60px;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--foreground) 0%, var(--primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .products {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  .title {
+    margin-bottom: 40px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

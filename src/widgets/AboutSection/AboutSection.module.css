@@ -1,0 +1,122 @@
+.about {
+  padding-top: 120px;
+  padding-bottom: 80px;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  text-align: center;
+  margin-bottom: 60px;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--foreground) 0%, var(--primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.block {
+  margin-bottom: 60px;
+  padding: 40px;
+  background: var(--secondary);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow);
+}
+
+.block h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--foreground);
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.block h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.block p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--gray-dark);
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.teamMember {
+  text-align: center;
+  padding: 30px 20px;
+  background: var(--gray-light);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.teamMember:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow);
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--secondary);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.teamMember h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: var(--foreground);
+}
+
+.teamMember p {
+  font-size: 0.95rem;
+  color: var(--gray-dark);
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  .title {
+    margin-bottom: 40px;
+  }
+
+  .block {
+    padding: 30px 20px;
+    margin-bottom: 40px;
+  }
+
+  .block h2 {
+    font-size: 1.5rem;
+  }
+
+  .teamGrid {
+    gap: 20px;
+  }
+}
