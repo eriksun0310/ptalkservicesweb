@@ -28,6 +28,12 @@ export const LanguageSwitcher = () => {
       >
         EN
       </button>
+      <button
+        className={`${styles.button} ${locale === 'ja' ? styles.active : ''}`}
+        onClick={() => handleLanguageChange('ja')}
+      >
+        日本語
+      </button>
     </div>
   );
 };

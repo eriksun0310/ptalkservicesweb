@@ -1,9 +1,9 @@
 import { getRequestConfig } from 'next-intl/server';
 import { cookies, headers } from 'next/headers';
 
-export type Locale = 'zh-TW' | 'en';
+export type Locale = 'zh-TW' | 'en' | 'ja';
 
-export const locales: Locale[] = ['zh-TW', 'en'];
+export const locales: Locale[] = ['zh-TW', 'en', 'ja'];
 export const defaultLocale: Locale = 'zh-TW';
 
 async function getLocale(): Promise<Locale> {
@@ -24,6 +24,7 @@ async function getLocale(): Promise<Locale> {
 
     if (preferredLocale === 'zh') return 'zh-TW';
     if (preferredLocale === 'en') return 'en';
+    if (preferredLocale === 'ja') return 'ja';
   }
 
   return defaultLocale;
