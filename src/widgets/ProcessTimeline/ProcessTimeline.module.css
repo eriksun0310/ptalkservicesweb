@@ -275,7 +275,7 @@
 .timelineContent {
   position: relative;
   perspective: 1000px;
-  height: 280px;
+  height: 380px;
 }
 
 /* 時間軸節點 */
@@ -498,7 +498,7 @@
 
   .timelineContent {
     height: auto;
-    min-height: 280px;
+    min-height: 380px;
   }
 
   .note {

@@ -33,8 +33,7 @@ export const ProcessTimeline = () => {
         t('steps.consultation.details.2'),
         t('steps.consultation.details.3')
       ],
-      deliverables: t('steps.consultation.deliverables'),
-      color: '#3B82F6'
+      deliverables: t('steps.consultation.deliverables')
     },
     {
       id: 'proposal',
@@ -49,8 +48,7 @@ export const ProcessTimeline = () => {
         t('steps.proposal.details.2'),
         t('steps.proposal.details.3')
       ],
-      deliverables: t('steps.proposal.deliverables'),
-      color: '#8B5CF6'
+      deliverables: t('steps.proposal.deliverables')
     },
     {
       id: 'contract',
@@ -65,8 +63,7 @@ export const ProcessTimeline = () => {
         t('steps.contract.details.2'),
         t('steps.contract.details.3')
       ],
-      deliverables: t('steps.contract.deliverables'),
-      color: '#EC4899'
+      deliverables: t('steps.contract.deliverables')
     },
     {
       id: 'development',
@@ -81,8 +78,7 @@ export const ProcessTimeline = () => {
         t('steps.development.details.2'),
         t('steps.development.details.3')
       ],
-      deliverables: t('steps.development.deliverables'),
-      color: '#F59E0B'
+      deliverables: t('steps.development.deliverables')
     },
     {
       id: 'testing',
@@ -97,8 +93,7 @@ export const ProcessTimeline = () => {
         t('steps.testing.details.2'),
         t('steps.testing.details.3')
       ],
-      deliverables: t('steps.testing.deliverables'),
-      color: '#10B981'
+      deliverables: t('steps.testing.deliverables')
     },
     {
       id: 'launch',
@@ -113,8 +108,7 @@ export const ProcessTimeline = () => {
         t('steps.launch.details.2'),
         t('steps.launch.details.3')
       ],
-      deliverables: t('steps.launch.deliverables'),
-      color: '#EF4444'
+      deliverables: t('steps.launch.deliverables')
     }
   ];
 

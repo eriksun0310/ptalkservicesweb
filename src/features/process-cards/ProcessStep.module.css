@@ -16,7 +16,7 @@
 
 .card {
   height: 100%;
-  min-height: 280px;
+  min-height: 380px;
   cursor: pointer;
   position: relative;
 }
@@ -28,7 +28,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 25px;
+  padding: 35px 30px;
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur-strong);
   -webkit-backdrop-filter: var(--glass-blur-strong);
@@ -88,6 +88,7 @@
   transform: translate(-50%, -50%);
   width: 120px;
   height: 120px;
+  background: radial-gradient(circle, rgba(139, 111, 71, 0.4), transparent);
   filter: blur(30px);
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -98,15 +99,15 @@
 }
 
 .icon {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   background: rgba(139, 111, 71, 0.1);
   border: 3px solid var(--accent);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 32px;
+  font-size: 36px;
   color: var(--accent);
   transition: all 0.3s ease;
   position: relative;
@@ -135,10 +136,10 @@
 }
 
 .title {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 800;
   color: var(--foreground);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   text-align: center;
   background: linear-gradient(135deg, var(--foreground) 0%, var(--accent) 100%);
   -webkit-background-clip: text;
@@ -147,24 +148,24 @@
 }
 
 .duration {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--accent);
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding: 4px 12px;
+  padding: 5px 14px;
   background: rgba(139, 111, 71, 0.1);
   border-radius: 15px;
 }
 
 .description {
   flex: 1;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.8);
   text-align: center;
-  line-height: 1.6;
-  margin-bottom: 20px;
+  line-height: 1.65;
+  margin-bottom: 25px;
 }
 
 .flipHint {
@@ -192,7 +193,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 25px;
+  padding: 30px;
   background: var(--glass-bg-light);
   backdrop-filter: var(--glass-blur-strong);
   -webkit-backdrop-filter: var(--glass-blur-strong);
@@ -211,6 +212,7 @@
   left: -50%;
   right: -50%;
   bottom: -50%;
+  background: radial-gradient(circle, rgba(139, 111, 71, 0.3), transparent);
   filter: blur(50px);
   opacity: 0.5;
   pointer-events: none;
@@ -249,7 +251,7 @@
   flex: 1;
   margin-bottom: 20px;
   overflow-y: auto;
-  max-height: 150px;
+  max-height: 200px;
 }
 
 .details h4 {
@@ -294,6 +296,7 @@
   justify-content: center;
   font-size: 12px;
   margin-top: 2px;
+  color: var(--accent);
 }
 
 .details li span {

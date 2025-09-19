@@ -15,7 +15,6 @@ export interface ProcessStepData {
   description: string;
   details: string[];
   deliverables: string;
-  color: string;
 }
 
 interface ProcessStepProps {
@@ -31,8 +30,8 @@ export const ProcessStep: React.FC<ProcessStepProps> = ({ step, index }) => {
         {step.number}
       </div>
       <div className={styles.iconWrapper}>
-        <div className={styles.iconGlow} style={{ background: `radial-gradient(circle, ${step.color}40, transparent)` }} />
-        <div className={styles.icon} style={{ borderColor: step.color }}>
+        <div className={styles.iconGlow} />
+        <div className={styles.icon}>
           <FontAwesomeIcon icon={step.icon} />
         </div>
       </div>
@@ -48,10 +47,10 @@ export const ProcessStep: React.FC<ProcessStepProps> = ({ step, index }) => {
 
   const backContent = (
     <div className={styles.back}>
-      <div className={styles.backGlow} style={{ background: `radial-gradient(circle, ${step.color}30, transparent)` }} />
+      <div className={styles.backGlow} />
       <div className={styles.backHeader}>
         <h3 className={styles.backTitle}>{step.title}</h3>
-        <div className={styles.backNumber} style={{ background: step.color }}>{step.number}</div>
+        <div className={styles.backNumber}>{step.number}</div>
       </div>
 
       <div className={styles.details}>
@@ -59,7 +58,7 @@ export const ProcessStep: React.FC<ProcessStepProps> = ({ step, index }) => {
         <ul>
           {step.details.map((detail, idx) => (
             <li key={idx}>
-              <FontAwesomeIcon icon={faCheck} className={styles.checkIcon} style={{ color: step.color }} />
+              <FontAwesomeIcon icon={faCheck} className={styles.checkIcon} />
               <span>{detail}</span>
             </li>
           ))}
