@@ -11,15 +11,11 @@ interface ServiceCardProps {
 export const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description }) => {
   return (
     <div className={styles.card}>
-      <div className={styles.glow} />
-      <div className={styles.content}>
-        <div className={styles.icon}>
-          <div className={styles.iconGlow} />
-          <FontAwesomeIcon icon={icon} size="2x" />
-        </div>
-        <h3 className={styles.title}>{title}</h3>
-        <p className={styles.description}>{description}</p>
+      <div className={styles.icon}>
+        <FontAwesomeIcon icon={icon} size="2x" />
       </div>
+      <h3 className={styles.title}>{title}</h3>
+      <p className={styles.description}>{description}</p>
     </div>
   );
 };

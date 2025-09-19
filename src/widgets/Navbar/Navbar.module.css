@@ -3,11 +3,12 @@
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(var(--secondary-rgb), 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--gray-medium);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur) saturate(180%);
+  -webkit-backdrop-filter: var(--glass-blur) saturate(180%);
+  border-bottom: 1px solid var(--glass-border);
   z-index: 1000;
-  box-shadow: var(--box-shadow);
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
 }
 
 .content {
@@ -20,11 +21,15 @@
 .logo {
   font-size: 1.75rem;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
   letter-spacing: -0.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  color: var(--accent);
+  text-shadow: 0 2px 12px rgba(139, 111, 71, 0.5);
 }
 
 .navItems {
@@ -36,30 +41,50 @@
 .navLink {
   font-size: 1rem;
   font-weight: 500;
-  color: var(--foreground);
+  color: rgba(255, 255, 255, 0.9);
   position: relative;
-  padding: 4px 0;
-  transition: color 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.navLink::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--glass-bg-light);
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .navLink::after {
   content: '';
   position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
+  bottom: 6px;
+  left: 16px;
+  right: 16px;
   height: 2px;
   background: var(--accent);
-  transition: width 0.3s ease;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
 .navLink:hover {
-  color: var(--accent);
+  color: #ffffff;
+  opacity: 1;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.navLink:hover::before {
   opacity: 1;
 }
 
 .navLink:hover::after {
-  width: 100%;
+  transform: scaleX(1);
 }
 
 .menuToggle {
@@ -93,7 +118,9 @@
     top: 65px;
     left: 0;
     right: 0;
-    background: var(--secondary);
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
     flex-direction: column;
     padding: 30px;
     gap: 24px;
@@ -101,8 +128,8 @@
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    border-bottom: 1px solid var(--gray-medium);
-    box-shadow: var(--box-shadow-lg);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.2);
   }
 
   .navItems.active {

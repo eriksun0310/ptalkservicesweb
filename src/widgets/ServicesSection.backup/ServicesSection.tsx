@@ -49,23 +49,9 @@ export const ServicesSection = () => {
   const t = useTranslations('services');
 
   return (
-    <section id="services" className={styles.section}>
-      {/* 動態背景裝飾 */}
-      <div className={styles.backgroundDecorations}>
-        <div className={styles.orb1} />
-        <div className={styles.orb2} />
-        <div className={styles.orb3} />
-        <div className={styles.orb4} />
-        <div className={styles.orb5} />
-      </div>
-
+    <section id="services" className="section">
       <div className="container">
-        <div className={styles.header}>
-          <h2 className={styles.title}>
-            {t('title')}
-          </h2>
-        </div>
-
+        <h2 className={styles.title}>{t('title')}</h2>
         <div className={styles.carouselWrapper}>
           <Carousel
             itemsPerView={3}

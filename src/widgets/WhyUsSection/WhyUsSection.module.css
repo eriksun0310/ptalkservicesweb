@@ -1,72 +1,281 @@
-.title {
-  font-size: clamp(2rem, 4vw, 3rem);
-  text-align: center;
-  margin-bottom: 60px;
-  font-weight: 700;
-  color: var(--foreground);
+/* 區塊樣式 */
+.section {
+  padding: 120px 0;
+  position: relative;
+  background: var(--gradient-alt);
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
+  overflow: hidden;
 }
 
+/* 動態背景裝飾 */
+.backgroundDecorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* 浮動光球 */
+.orb1,
+.orb2,
+.orb3 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.4;
+  animation: float 20s infinite ease-in-out;
+}
+
+.orb1 {
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 182, 193, 0.3));
+  top: -200px;
+  left: -200px;
+  animation-duration: 25s;
+}
+
+.orb2 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(255, 218, 185, 0.5), rgba(255, 255, 255, 0.3));
+  bottom: -150px;
+  right: -150px;
+  animation-duration: 30s;
+  animation-delay: -10s;
+}
+
+.orb3 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, rgba(139, 111, 71, 0.3), rgba(255, 255, 255, 0.15));
+  top: 50%;
+  right: 10%;
+  animation-duration: 35s;
+  animation-delay: -5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  33% {
+    transform: translateY(-30px) scale(1.05);
+  }
+  66% {
+    transform: translateY(20px) scale(0.95);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 標題樣式 */
+.title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  text-align: center;
+  margin-bottom: 80px;
+  font-weight: 800;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  letter-spacing: -1px;
+  position: relative;
+  z-index: 1;
+}
+
+/* 網格佈局 */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 40px;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
+/* 玻璃卡片 */
 .card {
   text-align: center;
   position: relative;
-  padding: 40px 30px;
-  background: var(--secondary);
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--box-shadow);
-  transition: var(--transition);
+  padding: 50px 40px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: 24px;
+  border: 1px solid var(--glass-border);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  box-shadow:
+    0 8px 32px rgba(255, 255, 255, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.15) inset;
 }
 
+/* 光暈效果 */
+.glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(160, 130, 109, 0.2) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.card:hover .glow {
+  opacity: 1;
+}
+
+/* 懸停效果 */
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--box-shadow-lg);
+  transform: translateY(-12px) scale(1.02);
+  background: var(--glass-bg-light);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 15px 40px rgba(255, 255, 255, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.25) inset,
+    0 30px 60px -30px rgba(0, 0, 0, 0.15);
 }
 
+/* 數字標記 */
 .number {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 3rem;
+  top: 25px;
+  right: 25px;
+  font-size: 3.5rem;
   font-weight: 900;
-  color: rgba(var(--accent-rgb), 0.2);
+  color: rgba(255, 255, 255, 0.3);
   line-height: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
 }
 
+.card:hover .number {
+  color: rgba(160, 130, 109, 0.6);
+  transform: scale(1.1);
+}
+
+/* 圖標容器 */
 .icon {
-  font-size: 48px;
-  width: 90px;
-  height: 90px;
-  margin: 0 auto 24px;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(139, 111, 71, 0.2) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
   border-radius: 50%;
+  border: 2px solid rgba(139, 111, 71, 0.3);
+  position: relative;
+  transition: all 0.5s ease;
+  color: #ffffff;
 }
 
+/* 圖標光暈 */
+.iconGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(
+    circle,
+    rgba(160, 130, 109, 0.4) 0%,
+    transparent 70%
+  );
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover .iconGlow {
+  opacity: 1;
+  animation: pulse 2s infinite;
+}
+
+/* 圖標懸停效果 */
+.card:hover .icon {
+  transform: scale(1.15) rotate(5deg);
+  background: linear-gradient(
+    135deg,
+    rgba(160, 130, 109, 0.3) 0%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+  border-color: rgba(160, 130, 109, 0.5);
+  color: #ffffff;
+}
+
+/* 卡片標題 */
 .cardTitle {
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-bottom: 16px;
-  color: var(--foreground);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  transition: all 0.4s ease;
 }
 
+.card:hover .cardTitle {
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* 描述文字 */
 .description {
-  font-size: 1rem;
-  color: var(--gray-dark);
-  line-height: 1.7;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.8;
+  transition: all 0.4s ease;
 }
 
+.card:hover .description {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* 動畫 */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+/* 響應式設計 */
 @media (max-width: 768px) {
+  .section {
+    padding: 80px 0;
+  }
+
   .title {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
 
   .grid {
@@ -75,20 +284,26 @@
   }
 
   .card {
-    padding: 30px 20px;
+    padding: 40px 25px;
   }
 
   .number {
     font-size: 2.5rem;
+    top: 20px;
+    right: 20px;
   }
 
   .icon {
-    width: 80px;
-    height: 80px;
-    font-size: 40px;
+    width: 85px;
+    height: 85px;
+    font-size: 42px;
   }
 
   .cardTitle {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
   }
 }

@@ -3,18 +3,36 @@
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-lg);
   transition: var(--transition);
   cursor: pointer;
-  border: none;
+  border: 1px solid var(--glass-border);
   outline: none;
   text-align: center;
   white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .button:hover {
   transform: translateY(-2px);
-  box-shadow: var(--box-shadow-lg);
+  box-shadow: 0 8px 25px rgba(139, 111, 71, 0.25);
+}
+
+.button:hover::before {
+  opacity: 1;
 }
 
 .button:active {
@@ -28,33 +46,39 @@
 }
 
 .primary {
-  background-color: var(--primary);
-  color: var(--secondary);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  color: var(--foreground);
 }
 
 .primary:hover:not(:disabled) {
-  background-color: #a0a0a0;
+  background: var(--glass-bg-light);
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 .secondary {
-  background-color: var(--secondary);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   color: var(--foreground);
-  border: 2px solid var(--gray-medium);
 }
 
 .secondary:hover:not(:disabled) {
-  background-color: var(--gray-light);
-  border-color: var(--primary);
+  background: var(--glass-bg);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 .accent {
-  background-color: var(--accent);
-  color: var(--foreground);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  color: white;
   font-weight: 700;
+  border-color: rgba(139, 111, 71, 0.4);
 }
 
 .accent:hover:not(:disabled) {
-  background-color: var(--accent-hover);
+  background: linear-gradient(135deg, var(--accent-hover) 0%, var(--accent) 100%);
+  box-shadow: 0 8px 30px rgba(139, 111, 71, 0.4);
 }
 
 .small {

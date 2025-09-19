@@ -1,34 +1,93 @@
+/* 聯絡區塊 */
 .contact {
-  padding: 100px 0 80px;
-  background: #ffffff;
+  padding: 120px 0 80px;
+  background: var(--gradient-main);
+  background-size: 200% 200%;
+  animation: gradientShift 18s ease infinite;
   min-height: calc(100vh - 80px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 動態背景裝飾 */
+.contact::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -30%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+  animation: float 25s ease-in-out infinite;
+}
+
+.contact::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: -20%;
+  width: 40%;
+  height: 40%;
+  background: radial-gradient(circle, rgba(139, 111, 71, 0.2) 0%, transparent 70%);
+  animation: float 30s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  33% {
+    transform: translateY(-20px) scale(1.05);
+  }
+  66% {
+    transform: translateY(15px) scale(0.95);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .content {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
+/* 標題區塊 */
 .header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #1a1a1a;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  letter-spacing: -1px;
 }
 
 .subtitle {
-  font-size: 1.125rem;
-  color: #6b7280;
-  max-width: 500px;
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 600px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.7;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
 }
 
+/* 網格佈局 */
 .grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -36,96 +95,173 @@
   align-items: start;
 }
 
+/* 表單區塊 - 玻璃風格 */
 .formSection {
-  background: #f9fafb;
-  border-radius: 12px;
-  padding: 2.5rem;
-  border: 1px solid #e5e7eb;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: 24px;
+  padding: 3rem;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.25);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.formSection:hover {
+  box-shadow: 0 12px 40px rgba(255, 255, 255, 0.35);
+}
+
+/* 資訊區塊 */
 .infoSection {
   position: sticky;
   top: 100px;
 }
 
+/* 聯絡資訊卡片 - 玻璃風格 */
 .contactInfo {
-  background: white;
-  border-radius: 12px;
-  padding: 2rem;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: var(--glass-bg-light);
+  backdrop-filter: var(--glass-blur-strong);
+  -webkit-backdrop-filter: var(--glass-blur-strong);
+  border-radius: 24px;
+  padding: 2.5rem;
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    0 8px 32px rgba(255, 255, 255, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contactInfo:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 15px 40px rgba(255, 255, 255, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.25) inset;
 }
 
 .contactInfo h3 {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  color: #1a1a1a;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  letter-spacing: -0.5px;
 }
 
+/* 資訊項目 */
 .infoItem {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
   align-items: flex-start;
 }
 
+/* 圖標容器 - 玻璃風格 */
 .infoIcon {
-  width: 40px;
-  height: 40px;
-  background: #f3f4f6;
-  border-radius: 8px;
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.infoItem:hover .infoIcon {
+  transform: scale(1.1) rotate(5deg);
+  background: linear-gradient(
+    135deg,
+    rgba(139, 111, 71, 0.3) 0%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
 }
 
 .infoIcon svg {
-  color: #667eea;
+  color: #A0826D;
+  width: 20px;
+  height: 20px;
 }
 
+/* 資訊內容 */
 .infoContent {
   flex: 1;
 }
 
 .infoLabel {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  color: #9ca3af;
-  margin: 0 0 0.25rem 0;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 0.5rem 0;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 .infoContent a {
-  color: #1a1a1a;
+  color: #ffffff;
   text-decoration: none;
-  font-size: 0.95rem;
-  transition: color 0.2s ease;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .infoContent a:hover {
-  color: #667eea;
+  color: #A0826D;
+  transform: translateX(3px);
+  display: inline-block;
 }
 
+/* 分隔線 - 玻璃風格 */
 .divider {
   height: 1px;
-  background: #e5e7eb;
-  margin: 1.5rem 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  margin: 2rem 0;
 }
 
+/* 社交區塊 */
 .socialSection {
   text-align: center;
 }
 
 .socialTitle {
-  font-size: 0.875rem;
-  color: #6b7280;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1.25rem;
+  font-weight: 500;
 }
 
+/* 社交連結玻璃效果覆蓋 */
+.socialSection :global(.socialLinks) {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: inline-flex;
+}
 
+.socialSection :global(.socialLinks a) {
+  transition: all 0.3s ease;
+  color: #A0826D;
+}
+
+.socialSection :global(.socialLinks a:hover) {
+  transform: translateY(-3px) scale(1.15);
+  filter: drop-shadow(0 4px 8px rgba(139, 111, 71, 0.4));
+}
+
+/* 響應式設計 */
 @media (max-width: 768px) {
   .contact {
     padding: 100px 0 60px;
@@ -140,7 +276,7 @@
   }
 
   .subtitle {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   .grid {
@@ -148,9 +284,15 @@
     gap: 2rem;
   }
 
-  .formSection,
-  .infoCard,
-  .socialCard {
-    padding: 1.5rem;
+  .formSection {
+    padding: 2rem;
+  }
+
+  .contactInfo {
+    padding: 2rem;
+  }
+
+  .infoSection {
+    position: static;
   }
 }

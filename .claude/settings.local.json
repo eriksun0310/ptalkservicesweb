@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Read(//c/Users/USER/Downloads/**)"
+      "Read(//c/Users/USER/Downloads/**)",
+      "Read(//Users/jiayu/Downloads/**)",
+      "Bash(pnpm add:*)"
     ],
     "deny": [],
     "ask": []

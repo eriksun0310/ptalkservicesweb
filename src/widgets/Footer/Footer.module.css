@@ -1,36 +1,95 @@
 .footer {
   margin-top: 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .content {
   width: 100%;
 }
 
+/* CTA 區塊 - 玻璃風格 */
 .ctaSection {
-  background: #f8f9fa;
-  padding: 80px 0;
+  background: var(--gradient-alt);
+  background-size: 200% 200%;
+  animation: gradientShift 20s ease infinite;
+  padding: 100px 20px;
   text-align: center;
-  border-top: 1px solid #e5e7eb;
+  position: relative;
+  overflow: hidden;
+}
+
+/* CTA 背景裝飾 */
+.ctaSection::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+  animation: rotate 25s linear infinite;
+}
+
+.ctaSection::after {
+  content: '';
+  position: absolute;
+  bottom: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+  animation: rotate 30s linear infinite reverse;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* CTA 內容容器 */
+.ctaSection > * {
+  position: relative;
+  z-index: 1;
 }
 
 .ctaTitle {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #1a1a1a;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  letter-spacing: -0.5px;
 }
 
 .ctaSubtitle {
-  font-size: 1.125rem;
-  color: #6b7280;
-  max-width: 600px;
-  margin: 0 auto 2.5rem;
-  line-height: 1.6;
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
 }
 
 .ctaActions {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -39,35 +98,107 @@
   text-decoration: none;
 }
 
+/* 玻璃按鈕樣式覆蓋 */
+.ctaActions button {
+  background: var(--glass-bg-light) !important;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  color: #2d2d2d;
+  font-weight: 600;
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ctaActions button:hover {
+  background: rgba(255, 255, 255, 0.5) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* 底部區塊 - 深色玻璃風格 */
 .bottomSection {
-  background: #1f2937;
-  padding: 40px 0;
+  background: linear-gradient(135deg,
+    #1a1a1a 0%,
+    #252525 50%,
+    #2d2d2d 100%);
+  padding: 50px 0;
   color: white;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* 底部玻璃覆層與粉色光暈 */
+.bottomSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg,
+    rgba(139, 111, 71, 0.08) 0%,
+    rgba(250, 208, 196, 0.03) 100%);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  pointer-events: none;
+}
+
+/* 底部裝飾光暈 */
+.bottomSection::after {
+  content: '';
+  position: absolute;
+  bottom: -50%;
+  right: -20%;
+  width: 60%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(139, 111, 71, 0.1) 0%, transparent 70%);
+  animation: float 30s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+  }
 }
 
 .bottomContent {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .bottomLeft {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.75rem;
 }
 
 .brand {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.75rem;
+  font-weight: 800;
   margin: 0;
-  color: white;
+  background: linear-gradient(135deg, #8B6F47 0%, #A0826D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.5px;
 }
 
 .copyright {
-  font-size: 0.875rem;
-  color: #9ca3af;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
   margin: 0;
+  opacity: 0.9;
 }
 
 .bottomCenter {
@@ -78,20 +209,42 @@
 
 .quickLinks {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .quickLinks a {
-  font-size: 0.9rem;
-  color: #9ca3af;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  transition: color 0.3s ease;
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.quickLinks a::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    rgba(139, 111, 71, 0.2) 0%,
+    rgba(255, 255, 255, 0.1) 100%);
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .quickLinks a:hover {
-  color: white;
+  color: #ffd1b9;
+  transform: translateY(-2px);
+}
+
+.quickLinks a:hover::before {
+  opacity: 1;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .bottomRight {
@@ -99,17 +252,41 @@
   align-items: center;
 }
 
+/* 社交連結玻璃效果 */
+.bottomRight :global(.socialLinks) {
+  background: linear-gradient(135deg,
+    rgba(139, 111, 71, 0.15) 0%,
+    rgba(255, 255, 255, 0.05) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 1px solid rgba(139, 111, 71, 0.25);
+}
+
+.bottomRight :global(.socialLinks a) {
+  transition: all 0.3s ease;
+}
+
+.bottomRight :global(.socialLinks a:hover) {
+  transform: translateY(-3px) scale(1.1);
+  filter: drop-shadow(0 4px 8px rgba(139, 111, 71, 0.3));
+}
+
+/* 響應式設計 */
 @media (max-width: 768px) {
   .ctaSection {
-    padding: 60px 0;
+    padding: 70px 20px;
   }
 
   .ctaTitle {
-    font-size: 2rem;
+    font-size: 1.85rem;
+    margin-bottom: 1rem;
   }
 
   .ctaSubtitle {
-    font-size: 1rem;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
   }
 
   .ctaActions {
@@ -119,16 +296,16 @@
 
   .ctaActions > * {
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
   }
 
   .bottomSection {
-    padding: 30px 0;
+    padding: 40px 0;
   }
 
   .bottomContent {
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem;
     text-align: center;
   }
 
@@ -139,5 +316,14 @@
   .quickLinks {
     gap: 1rem;
     flex-direction: column;
+  }
+
+  .quickLinks a {
+    padding: 10px 20px;
+    display: inline-block;
+  }
+
+  .bottomRight :global(.socialLinks) {
+    margin-top: 10px;
   }
 }

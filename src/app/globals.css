@@ -5,22 +5,38 @@
   --primary-rgb: 180, 180, 180;
   --secondary: #ffffff;
   --secondary-rgb: 255, 255, 255;
-  --accent: #ff9a9e;
-  --accent-rgb: 255, 154, 158;
-  --accent-hover: #ff7a7e;
+  --accent: #8B6F47;
+  --accent-rgb: 139, 111, 71;
+  --accent-hover: #A0826D;
 
-  --background: #ffffff;
-  --foreground: #1a1a1a;
+  --background: #1a1a1a;
+  --foreground: #ffffff;
   --gray-light: #f5f5f5;
   --gray-medium: #e0e0e0;
   --gray-dark: #666666;
 
   --border-radius: 8px;
   --border-radius-lg: 12px;
+  --border-radius-xl: 24px;
   --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   --box-shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.12);
 
   --transition: all 0.3s ease;
+
+  /* Glassmorphism 變數 */
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-bg-dark: rgba(255, 255, 255, 0.05);
+  --glass-bg-light: rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --glass-blur: blur(15px);
+  --glass-blur-strong: blur(20px);
+  --glass-shadow: 0 8px 32px rgba(255, 255, 255, 0.25);
+  --glass-shadow-hover: 0 15px 35px rgba(255, 255, 255, 0.4);
+
+  /* 背景漸層 */
+  --gradient-main: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #3a3a3a 100%);
+  --gradient-alt: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 50%, #4a4a4a 100%);
+  --gradient-dark: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 @theme inline {
