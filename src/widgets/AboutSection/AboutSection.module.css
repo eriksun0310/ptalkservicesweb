@@ -1,100 +1,701 @@
 .about {
+  position: relative;
   padding-top: 120px;
-  padding-bottom: 80px;
+  padding-bottom: 100px;
   min-height: 100vh;
+  overflow: hidden;
 }
 
-.title {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+/* 背景效果層 */
+.backgroundEffects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gradientBg {
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-main);
+  animation: gradientShift 20s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background: var(--gradient-main);
+  }
+  50% {
+    background: var(--gradient-alt);
+  }
+}
+
+.gridPattern {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 30s linear infinite;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+/* 光球裝飾 */
+.orb1, .orb2, .orb3, .orb4 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.5;
+}
+
+.orb1 {
+  width: 400px;
+  height: 400px;
+  background: rgba(139, 111, 71, 0.3);
+  top: -200px;
+  right: -100px;
+  animation: orbFloat1 25s ease-in-out infinite;
+}
+
+.orb2 {
+  width: 350px;
+  height: 350px;
+  background: rgba(139, 111, 71, 0.25);
+  bottom: -150px;
+  left: -100px;
+  animation: orbFloat2 30s ease-in-out infinite;
+}
+
+.orb3 {
+  width: 300px;
+  height: 300px;
+  background: rgba(160, 130, 109, 0.2);
+  top: 50%;
+  left: 30%;
+  animation: orbFloat3 35s ease-in-out infinite;
+}
+
+.orb4 {
+  width: 250px;
+  height: 250px;
+  background: rgba(139, 111, 71, 0.2);
+  bottom: 20%;
+  right: 20%;
+  animation: orbFloat1 28s ease-in-out infinite reverse;
+}
+
+@keyframes orbFloat1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -20px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 30px) scale(0.95);
+  }
+}
+
+@keyframes orbFloat2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-30px, 20px) scale(1.05);
+  }
+  66% {
+    transform: translate(20px, -30px) scale(0.98);
+  }
+}
+
+@keyframes orbFloat3 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(40px, 40px) scale(1.15);
+  }
+}
+
+/* 漂浮裝飾元素 */
+.floatingElements {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floatingCard1, .floatingCard2, .floatingCard3 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--accent);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.floatingCard1 {
+  top: 15%;
+  right: 10%;
+  animation: floatAnimation 20s ease-in-out infinite;
+}
+
+.floatingCard2 {
+  top: 45%;
+  left: 8%;
+  animation: floatAnimation 25s ease-in-out infinite reverse;
+}
+
+.floatingCard3 {
+  bottom: 25%;
+  right: 15%;
+  animation: floatAnimation 30s ease-in-out infinite 5s;
+}
+
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-5deg);
+  }
+  75% {
+    transform: translateY(-10px) rotate(3deg);
+  }
+}
+
+/* 頂部介紹區 */
+.introSection {
+  position: relative;
+  z-index: 2;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur-strong);
+  -webkit-backdrop-filter: var(--glass-blur-strong);
+  border: 1px solid var(--glass-border);
+  border-radius: 30px;
+  padding: 60px;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  animation: fadeInUp 1s ease-out;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: var(--accent);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(139, 111, 71, 0.3);
+}
+
+.mainTitle {
+  font-size: clamp(3rem, 6vw, 4rem);
   font-weight: 800;
-  background: linear-gradient(135deg, var(--foreground) 0%, var(--primary) 100%);
+  color: var(--foreground);
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, var(--foreground) 0%, var(--accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.content {
-  max-width: 1000px;
+.subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.introContent {
+  max-width: 800px;
   margin: 0 auto;
 }
 
-.block {
-  margin-bottom: 60px;
-  padding: 40px;
-  background: var(--secondary);
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--box-shadow);
-}
-
-.block h2 {
-  font-size: 1.8rem;
+.introContent p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 20px;
-  color: var(--foreground);
-  position: relative;
-  padding-bottom: 12px;
 }
 
-.block h2::after {
+/* 區塊標題 */
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--foreground);
+  margin-bottom: 60px;
+  position: relative;
+  animation: fadeIn 1s ease-out;
+}
+
+.sectionTitle::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 60px;
-  height: 3px;
-  background: var(--accent);
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
   border-radius: 2px;
 }
 
-.block p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--gray-dark);
+/* 核心價值卡片 */
+.coreValues {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 100px;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.valueCard {
+  position: relative;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  animation: fadeInUp 1s ease-out;
+  animation-fill-mode: both;
+}
+
+.valueCard:nth-child(1) { animation-delay: 0.1s; }
+.valueCard:nth-child(2) { animation-delay: 0.2s; }
+.valueCard:nth-child(3) { animation-delay: 0.3s; }
+.valueCard:nth-child(4) { animation-delay: 0.4s; }
+
+.valueCard:hover {
+  transform: translateY(-10px);
+  background: var(--glass-bg-light);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.2),
+    0 0 30px rgba(139, 111, 71, 0.3);
+}
+
+.valueIcon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 25px;
+  background: rgba(139, 111, 71, 0.1);
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  color: var(--accent);
+  transition: all 0.3s ease;
+}
+
+.valueCard:hover .valueIcon {
+  background: var(--accent);
+  color: white;
+  transform: rotate(360deg) scale(1.1);
+}
+
+.valueCard h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 15px;
+}
+
+.valueCard p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.valueGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(139, 111, 71, 0.2), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.valueCard:hover .valueGlow {
+  opacity: 1;
+}
+
+/* 時間軸 */
+.timeline {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 100px;
+}
+
+.timelineWrapper {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.timelineLine {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg,
+    var(--accent) 0%,
+    rgba(139, 111, 71, 0.5) 50%,
+    var(--accent) 100%
+  );
+  border-radius: 2px;
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 60px;
+  animation: fadeIn 1s ease-out;
+  animation-fill-mode: both;
+}
+
+.timelineItem:nth-child(2) { animation-delay: 0.2s; }
+.timelineItem:nth-child(3) { animation-delay: 0.4s; }
+.timelineItem:nth-child(4) { animation-delay: 0.6s; }
+.timelineItem:nth-child(5) { animation-delay: 0.8s; }
+
+.timelineItem.left .timelineContent {
+  margin-right: calc(50% + 40px);
+  text-align: right;
+}
+
+.timelineItem.right .timelineContent {
+  margin-left: calc(50% + 40px);
+  text-align: left;
+}
+
+.timelineContent {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.timelineContent:hover {
+  transform: scale(1.05);
+  background: var(--glass-bg-light);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.timelineYear {
+  display: inline-block;
+  padding: 5px 15px;
+  background: var(--accent);
+  color: white;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.timelineContent h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 10px;
+}
+
+.timelineContent p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.timelineNode {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background: var(--accent);
+  border: 4px solid var(--background);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--accent);
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+.timelineItem:hover .timelineNode {
+  transform: translate(-50%, -50%) scale(1.3);
+  box-shadow: 0 0 20px var(--accent);
+}
+
+/* 團隊卡片 */
+.teamSection {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 100px;
 }
 
 .teamGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
 }
 
-.teamMember {
+.teamCard {
+  perspective: 1000px;
+  height: 350px;
+  animation: fadeInUp 1s ease-out;
+  animation-fill-mode: both;
+}
+
+.teamCard:nth-child(1) { animation-delay: 0.1s; }
+.teamCard:nth-child(2) { animation-delay: 0.2s; }
+.teamCard:nth-child(3) { animation-delay: 0.3s; }
+.teamCard:nth-child(4) { animation-delay: 0.4s; }
+
+.teamCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  padding: 30px 20px;
-  background: var(--gray-light);
-  border-radius: var(--border-radius);
-  transition: var(--transition);
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
 }
 
-.teamMember:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--box-shadow);
+.teamCard:hover .teamCardInner {
+  transform: rotateY(180deg);
 }
 
-.avatar {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 20px;
-  font-size: 48px;
+.teamCardFront, .teamCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.teamCardBack {
+  transform: rotateY(180deg);
+  background: var(--glass-bg-light);
+}
+
+.teamIcon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 30px;
+  background: rgba(139, 111, 71, 0.1);
+  border: 3px solid var(--accent);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--secondary);
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 48px;
+  color: var(--accent);
+  transition: all 0.3s ease;
 }
 
-.teamMember h3 {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
+.teamCard:hover .teamIcon {
+  background: var(--accent);
+  color: white;
+}
+
+.teamCardFront h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
   color: var(--foreground);
+  margin-bottom: 15px;
 }
 
-.teamMember p {
-  font-size: 0.95rem;
-  color: var(--gray-dark);
+.teamCardFront p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.teamCardBack p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* 成就數據 */
+.achievements {
+  position: relative;
+  z-index: 2;
+}
+
+.achievementsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.achievementCard {
+  position: relative;
+  background: var(--glass-bg-light);
+  backdrop-filter: var(--glass-blur-strong);
+  -webkit-backdrop-filter: var(--glass-blur-strong);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  animation: fadeInUp 1s ease-out;
+  animation-fill-mode: both;
+}
+
+.achievementCard:nth-child(1) { animation-delay: 0.1s; }
+.achievementCard:nth-child(2) { animation-delay: 0.2s; }
+.achievementCard:nth-child(3) { animation-delay: 0.3s; }
+.achievementCard:nth-child(4) { animation-delay: 0.4s; }
+
+.achievementCard:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.2),
+    0 0 40px rgba(139, 111, 71, 0.4);
+}
+
+.achievementNumber {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 10px;
+  text-shadow: 0 2px 10px rgba(139, 111, 71, 0.3);
+}
+
+.achievementLabel {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.achievementGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(139, 111, 71, 0.3), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.achievementCard:hover .achievementGlow {
+  opacity: 1;
+}
+
+/* 動畫定義 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 響應式設計 */
+@media (max-width: 1024px) {
+  .floatingCard1, .floatingCard2, .floatingCard3 {
+    display: none;
+  }
+
+  .introSection {
+    padding: 40px;
+  }
+
+  .timelineLine {
+    left: 30px;
+  }
+
+  .timelineItem.left .timelineContent,
+  .timelineItem.right .timelineContent {
+    margin-left: 80px;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .timelineNode {
+    left: 30px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -103,20 +704,90 @@
     padding-bottom: 60px;
   }
 
-  .title {
-    margin-bottom: 40px;
+  .orb1, .orb2, .orb3, .orb4 {
+    filter: blur(80px);
   }
 
-  .block {
+  .orb1 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .orb2 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .orb3, .orb4 {
+    display: none;
+  }
+
+  .introSection {
     padding: 30px 20px;
+    margin-bottom: 60px;
+  }
+
+  .mainTitle {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
     margin-bottom: 40px;
   }
 
-  .block h2 {
-    font-size: 1.5rem;
+  .valuesGrid,
+  .teamGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
-  .teamGrid {
+  .valueCard,
+  .teamCard {
+    margin-bottom: 20px;
+  }
+
+  .timelineWrapper {
+    padding: 20px 0;
+  }
+
+  .timelineLine {
+    left: 20px;
+  }
+
+  .timelineItem {
+    margin-bottom: 40px;
+  }
+
+  .timelineItem.left .timelineContent,
+  .timelineItem.right .timelineContent {
+    margin-left: 60px;
+  }
+
+  .timelineNode {
+    left: 20px;
+  }
+
+  .achievementsGrid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+  }
+
+  .achievementNumber {
+    font-size: 2.5rem;
+  }
+
+  .teamCardInner {
+    height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .achievementsGrid {
+    grid-template-columns: 1fr;
   }
 }

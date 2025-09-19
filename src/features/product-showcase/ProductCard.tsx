@@ -1,7 +1,14 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Button } from '@/shared/ui/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faCheck,
+  faArrowRight,
+  faCode,
+  faMicrochip
+} from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import styles from './ProductCard.module.css';
 
 interface Product {
@@ -11,49 +18,71 @@ interface Product {
   features: string[];
   techStack: string[];
   link: string;
-  icon: string;
+  icon: IconDefinition;
+  gradient?: string;
 }
 
 interface ProductCardProps {
   product: Product;
+  index: number;
 }
 
-export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+export const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
   const t = useTranslations('products');
 
   return (
-    <div className={styles.card}>
-      <div className={styles.header}>
-        <div className={styles.icon}>{product.icon}</div>
-        <div>
-          <h3 className={styles.name}>{product.name}</h3>
-          <p className={styles.description}>{product.description}</p>
+    <div className={styles.card} style={{ animationDelay: `${index * 0.1}s` }}>
+      <div className={styles.cardGlow} />
+      <div className={styles.cardInner}>
+        <div className={styles.header}>
+          <div className={styles.iconWrapper}>
+            <div className={styles.iconGlow} />
+            <div className={styles.icon}>
+              <FontAwesomeIcon icon={product.icon} />
+            </div>
+          </div>
+          <div className={styles.headerContent}>
+            <h3 className={styles.name}>{product.name}</h3>
+            <p className={styles.description}>{product.description}</p>
+          </div>
+        </div>
+
+        <div className={styles.section}>
+          <div className={styles.sectionHeader}>
+            <FontAwesomeIcon icon={faCode} className={styles.sectionIcon} />
+            <h4 className={styles.sectionTitle}>{t('features')}</h4>
+          </div>
+          <ul className={styles.features}>
+            {product.features.map((feature, index) => (
+              <li key={index}>
+                <FontAwesomeIcon icon={faCheck} className={styles.featureIcon} />
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className={styles.section}>
+          <div className={styles.sectionHeader}>
+            <FontAwesomeIcon icon={faMicrochip} className={styles.sectionIcon} />
+            <h4 className={styles.sectionTitle}>{t('techStack')}</h4>
+          </div>
+          <div className={styles.techStack}>
+            {product.techStack.map((tech, index) => (
+              <span key={index} className={styles.tech}>
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className={styles.cardFooter}>
+          <button className={styles.ctaButton}>
+            <span>{t('viewDetails')}</span>
+            <FontAwesomeIcon icon={faArrowRight} className={styles.ctaIcon} />
+          </button>
         </div>
       </div>
-
-      <div className={styles.section}>
-        <h4 className={styles.sectionTitle}>{t('features')}</h4>
-        <ul className={styles.features}>
-          {product.features.map((feature, index) => (
-            <li key={index}>{feature}</li>
-          ))}
-        </ul>
-      </div>
-
-      <div className={styles.section}>
-        <h4 className={styles.sectionTitle}>{t('techStack')}</h4>
-        <div className={styles.techStack}>
-          {product.techStack.map((tech, index) => (
-            <span key={index} className={styles.tech}>
-              {tech}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      <Button variant="accent" fullWidth>
-        {t('viewDetails')}
-      </Button>
     </div>
   );
 };

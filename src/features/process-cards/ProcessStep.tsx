@@ -1,5 +1,8 @@
 'use client';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { faCheck, faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FlipCard } from '@/shared/ui/FlipCard';
 import styles from './ProcessStep.module.css';
 
@@ -8,7 +11,7 @@ export interface ProcessStepData {
   number: string;
   title: string;
   duration: string;
-  icon: string;
+  icon: IconDefinition;
   description: string;
   details: string[];
   deliverables: string;
@@ -22,28 +25,33 @@ interface ProcessStepProps {
 
 export const ProcessStep: React.FC<ProcessStepProps> = ({ step, index }) => {
   const frontContent = (
-    <div className={styles.front} style={{ background: `linear-gradient(135deg, ${step.color}20, ${step.color}10)` }}>
-      <div className={styles.number} style={{ color: step.color }}>
+    <div className={styles.front}>
+      <div className={styles.frontGlow} />
+      <div className={styles.number}>
         {step.number}
       </div>
-      <div className={styles.icon}>{step.icon}</div>
+      <div className={styles.iconWrapper}>
+        <div className={styles.iconGlow} style={{ background: `radial-gradient(circle, ${step.color}40, transparent)` }} />
+        <div className={styles.icon} style={{ borderColor: step.color }}>
+          <FontAwesomeIcon icon={step.icon} />
+        </div>
+      </div>
       <h3 className={styles.title}>{step.title}</h3>
       <p className={styles.duration}>{step.duration}</p>
       <p className={styles.description}>{step.description}</p>
       <div className={styles.flipHint}>
-        <span>點擊查看詳情</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M9 5l7 7-7 7" />
-        </svg>
+        <span>滑鼠移入查看詳情</span>
+        <FontAwesomeIcon icon={faArrowRight} />
       </div>
     </div>
   );
 
   const backContent = (
-    <div className={styles.back} style={{ background: `linear-gradient(135deg, ${step.color}, ${step.color}dd)` }}>
+    <div className={styles.back}>
+      <div className={styles.backGlow} style={{ background: `radial-gradient(circle, ${step.color}30, transparent)` }} />
       <div className={styles.backHeader}>
         <h3 className={styles.backTitle}>{step.title}</h3>
-        <div className={styles.backNumber}>{step.number}</div>
+        <div className={styles.backNumber} style={{ background: step.color }}>{step.number}</div>
       </div>
 
       <div className={styles.details}>
@@ -51,11 +59,8 @@ export const ProcessStep: React.FC<ProcessStepProps> = ({ step, index }) => {
         <ul>
           {step.details.map((detail, idx) => (
             <li key={idx}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M9 11l3 3L22 4" stroke="currentColor" strokeWidth="2" fill="none" />
-                <circle cx="5" cy="12" r="2" />
-              </svg>
-              {detail}
+              <FontAwesomeIcon icon={faCheck} className={styles.checkIcon} style={{ color: step.color }} />
+              <span>{detail}</span>
             </li>
           ))}
         </ul>
@@ -67,9 +72,7 @@ export const ProcessStep: React.FC<ProcessStepProps> = ({ step, index }) => {
       </div>
 
       <div className={styles.flipBack}>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M15 19l-7-7 7-7" />
-        </svg>
+        <FontAwesomeIcon icon={faArrowLeft} />
         <span>返回</span>
       </div>
     </div>
@@ -81,6 +84,7 @@ export const ProcessStep: React.FC<ProcessStepProps> = ({ step, index }) => {
         front={frontContent}
         back={backContent}
         className={styles.card}
+        triggerMode="hover"
       />
     </div>
   );

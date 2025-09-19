@@ -1,105 +1,495 @@
 .features {
-  padding: 80px 0;
-  background: #ffffff;
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
 }
 
+/* 背景效果層 */
+.backgroundEffects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gradientBg {
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-main);
+  animation: gradientShift 20s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background: var(--gradient-main);
+  }
+  50% {
+    background: var(--gradient-alt);
+  }
+}
+
+.gridPattern {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 30s linear infinite;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+/* 光球裝飾 */
+.orb1, .orb2, .orb3 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.4;
+}
+
+.orb1 {
+  width: 500px;
+  height: 500px;
+  background: rgba(139, 111, 71, 0.25);
+  top: -200px;
+  left: -150px;
+  animation: orbFloat1 30s ease-in-out infinite;
+}
+
+.orb2 {
+  width: 400px;
+  height: 400px;
+  background: rgba(160, 130, 109, 0.2);
+  bottom: -150px;
+  right: -100px;
+  animation: orbFloat2 35s ease-in-out infinite;
+}
+
+.orb3 {
+  width: 350px;
+  height: 350px;
+  background: rgba(139, 111, 71, 0.15);
+  top: 50%;
+  left: 50%;
+  animation: orbFloat3 40s ease-in-out infinite;
+}
+
+@keyframes orbFloat1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(50px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-30px, 40px) scale(0.95);
+  }
+}
+
+@keyframes orbFloat2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-40px, 30px) scale(1.15);
+  }
+}
+
+@keyframes orbFloat3 {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  25% {
+    transform: translate(-45%, -55%) scale(1.05);
+  }
+  50% {
+    transform: translate(-55%, -45%) scale(0.95);
+  }
+  75% {
+    transform: translate(-48%, -52%) scale(1.08);
+  }
+}
+
+/* 漂浮裝飾元素 */
+.floatingElements {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floatingCard1, .floatingCard2 {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: var(--accent);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.15),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.floatingCard1 {
+  top: 15%;
+  right: 8%;
+  animation: floatAnimation 25s ease-in-out infinite;
+}
+
+.floatingCard2 {
+  bottom: 20%;
+  left: 5%;
+  animation: floatAnimation 30s ease-in-out infinite reverse;
+}
+
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-25px) rotate(8deg);
+  }
+  50% {
+    transform: translateY(15px) rotate(-8deg);
+  }
+  75% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+}
+
+/* 標題區域 */
 .header {
+  position: relative;
+  z-index: 2;
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 80px;
+  animation: fadeInDown 1s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 24px;
+  background: var(--accent);
+  color: white;
+  border-radius: 24px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  box-shadow: 0 6px 20px rgba(139, 111, 71, 0.35);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 6px 20px rgba(139, 111, 71, 0.35);
+  }
+  50% {
+    box-shadow: 0 8px 25px rgba(139, 111, 71, 0.5);
+  }
 }
 
 .title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #1a1a1a;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--foreground);
+  background: linear-gradient(135deg, var(--foreground) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .subtitle {
-  font-size: 1.125rem;
-  color: #666;
-  max-width: 600px;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 700px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.7;
+  font-weight: 300;
 }
 
+/* 卡片網格 */
 .grid {
+  position: relative;
+  z-index: 2;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* 卡片樣式 */
 .card {
-  padding: 2rem;
-  background: #f9fafb;
-  border-radius: 16px;
-  transition: all 0.3s ease;
-  border: 1px solid transparent;
+  position: relative;
+  animation: fadeInUp 1s ease-out both;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  border-color: #e5e7eb;
-  background: #ffffff;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cardGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(139, 111, 71, 0.15) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  border-radius: 24px;
+}
+
+.card:hover .cardGlow {
+  opacity: 1;
+}
+
+.cardInner {
+  position: relative;
+  padding: 40px 35px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur-strong);
+  -webkit-backdrop-filter: var(--glass-blur-strong);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.card:hover .cardInner {
+  transform: translateY(-8px) scale(1.02);
+  background: var(--glass-bg-light);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(139, 111, 71, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+/* 圖標區域 */
+.iconWrapper {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.iconGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  filter: blur(30px);
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+  border-radius: 50%;
+}
+
+.card:hover .iconGlow {
+  opacity: 0.6;
 }
 
 .cardIcon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  background: rgba(139, 111, 71, 0.1);
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  color: var(--accent);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
+.cardIcon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.card:hover .cardIcon::before {
+  left: 100%;
+}
+
+.card:hover .cardIcon {
+  background: var(--accent);
+  color: white;
+  transform: rotate(-10deg) scale(1.1);
+  box-shadow: 0 8px 20px rgba(139, 111, 71, 0.4);
+}
+
+/* 文字內容 */
 .cardTitle {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: #1a1a1a;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--foreground);
+  text-align: center;
+  background: linear-gradient(135deg, var(--foreground) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .cardDescription {
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 1.05rem;
 }
 
+/* 重點列表 */
 .highlights {
   list-style: none;
   padding: 0;
   margin: 0;
+  flex: 1;
 }
 
 .highlights li {
   display: flex;
   align-items: flex-start;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
-  color: #444;
+  gap: 12px;
+  margin-bottom: 15px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease;
 }
 
-.highlights svg {
+.highlights li:hover {
+  background: rgba(139, 111, 71, 0.1);
+  transform: translateX(5px);
+  border-color: rgba(139, 111, 71, 0.3);
+}
+
+.checkIcon {
   flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background: rgba(139, 111, 71, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--accent);
   margin-top: 2px;
-  color: #10b981;
+}
+
+.highlights li:hover .checkIcon {
+  background: var(--accent);
+  color: white;
 }
 
 .highlights span {
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  flex: 1;
 }
 
+/* 響應式設計 */
 @media (max-width: 1024px) {
+  .floatingCard1, .floatingCard2 {
+    display: none;
+  }
+
   .grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
 }
 
 @media (max-width: 768px) {
   .features {
-    padding: 60px 0;
+    padding: 80px 0;
+  }
+
+  .orb1, .orb2, .orb3 {
+    filter: blur(100px);
+    opacity: 0.3;
+  }
+
+  .orb1 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .orb2 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .orb3 {
+    display: none;
   }
 
   .header {
-    margin-bottom: 3rem;
+    margin-bottom: 60px;
+  }
+
+  .badge {
+    padding: 6px 18px;
+    font-size: 0.8rem;
   }
 
   .title {
@@ -107,23 +497,56 @@
   }
 
   .subtitle {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   .grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 25px;
+    padding: 0 10px;
   }
 
-  .card {
-    padding: 1.5rem;
+  .cardInner {
+    padding: 30px 25px;
   }
 
   .cardIcon {
-    font-size: 2.5rem;
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
   }
 
   .cardTitle {
-    font-size: 1.125rem;
+    font-size: 1.3rem;
+  }
+
+  .cardDescription {
+    font-size: 0.95rem;
+  }
+
+  .highlights span {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .features {
+    padding: 60px 0;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .cardInner {
+    padding: 24px 20px;
+  }
+
+  .highlights li {
+    padding: 10px;
   }
 }

@@ -1,84 +1,534 @@
 .timeline {
-  padding: 80px 0;
-  background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+  min-height: 100vh;
 }
 
+/* 背景效果層 */
+.backgroundEffects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gradientBg {
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-alt);
+  animation: gradientShift 20s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background: var(--gradient-alt);
+  }
+  50% {
+    background: var(--gradient-main);
+  }
+}
+
+.gridPattern {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridMove 25s linear infinite;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(40px, 40px);
+  }
+}
+
+/* 光球裝飾 */
+.orb1, .orb2 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+}
+
+.orb1 {
+  width: 400px;
+  height: 400px;
+  background: rgba(139, 111, 71, 0.25);
+  top: 10%;
+  left: -100px;
+  animation: orbFloat1 30s ease-in-out infinite;
+}
+
+.orb2 {
+  width: 350px;
+  height: 350px;
+  background: rgba(160, 130, 109, 0.2);
+  bottom: 10%;
+  right: -100px;
+  animation: orbFloat2 35s ease-in-out infinite;
+}
+
+@keyframes orbFloat1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(50px, -30px) scale(1.1);
+  }
+}
+
+@keyframes orbFloat2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-40px, 40px) scale(1.15);
+  }
+}
+
+/* 漂浮裝飾元素 */
+.floatingElements {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floatingCard1, .floatingCard2 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--accent);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.floatingCard1 {
+  top: 15%;
+  right: 5%;
+  animation: floatAnimation 25s ease-in-out infinite;
+}
+
+.floatingCard2 {
+  bottom: 25%;
+  left: 5%;
+  animation: floatAnimation 30s ease-in-out infinite reverse;
+}
+
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-5deg);
+  }
+  75% {
+    transform: translateY(-10px) rotate(3deg);
+  }
+}
+
+/* 標題區域 */
 .header {
+  position: relative;
+  z-index: 2;
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 80px;
+  animation: fadeInDown 1s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 24px;
+  background: var(--accent);
+  color: white;
+  border-radius: 24px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  box-shadow: 0 6px 20px rgba(139, 111, 71, 0.35);
 }
 
 .title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #1a1a1a;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--foreground);
+  background: linear-gradient(135deg, var(--foreground) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .subtitle {
-  font-size: 1.125rem;
-  color: #666;
-  max-width: 600px;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 700px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.7;
+  font-weight: 300;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
+/* 時間軸容器 */
+.timelineWrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 60px auto 0;
+  padding: 0 20px;
 }
 
+/* 中央垂直線 */
+.timelineLine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    var(--accent) 10%,
+    var(--accent) 90%,
+    transparent 100%
+  );
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timelineLine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -2px;
+  right: -2px;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(139, 111, 71, 0.3) 10%,
+    rgba(139, 111, 71, 0.3) 90%,
+    transparent 100%
+  );
+  filter: blur(4px);
+  z-index: -1;
+}
+
+/* 時間軸項目 */
+.timelineItem {
+  position: relative;
+  margin-bottom: 80px;
+  animation: fadeIn 1s ease-out;
+  animation-fill-mode: both;
+}
+
+.timelineItem:nth-child(1) { animation-delay: 0.1s; }
+.timelineItem:nth-child(2) { animation-delay: 0.2s; }
+.timelineItem:nth-child(3) { animation-delay: 0.3s; }
+.timelineItem:nth-child(4) { animation-delay: 0.4s; }
+.timelineItem:nth-child(5) { animation-delay: 0.5s; }
+.timelineItem:nth-child(6) { animation-delay: 0.6s; }
+
+/* 左右排列 */
+.timelineItem.left .timelineContent {
+  margin-right: calc(50% + 50px);
+}
+
+.timelineItem.right .timelineContent {
+  margin-left: calc(50% + 50px);
+}
+
+/* 時間軸內容 - 翻轉卡片容器 */
+.timelineContent {
+  position: relative;
+  perspective: 1000px;
+  height: 280px;
+}
+
+/* 時間軸節點 */
+.timelineNode {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  background: var(--accent);
+  border: 5px solid var(--background);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 3px rgba(139, 111, 71, 0.3),
+    0 0 20px rgba(139, 111, 71, 0.5);
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+.timelineNode::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+.timelineItem:hover .timelineNode {
+  transform: translate(-50%, -50%) scale(1.3);
+  box-shadow:
+    0 0 0 5px rgba(139, 111, 71, 0.3),
+    0 0 30px rgba(139, 111, 71, 0.8);
+}
+
+/* 連接線 */
+.timelineItem.left::after,
+.timelineItem.right::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(139, 111, 71, 0.2),
+    var(--accent)
+  );
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.timelineItem.left::after {
+  right: 50%;
+  background: linear-gradient(
+    90deg,
+    var(--accent),
+    rgba(139, 111, 71, 0.2)
+  );
+}
+
+.timelineItem.right::after {
+  left: 50%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 備註區域 */
 .note {
+  position: relative;
+  z-index: 2;
   text-align: center;
-  padding: 2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 16px;
-  color: white;
-  max-width: 800px;
-  margin: 0 auto;
+  padding: 50px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur-strong);
+  -webkit-backdrop-filter: var(--glass-blur-strong);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  max-width: 900px;
+  margin: 80px auto 0;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .note p {
   margin: 0;
-  font-size: 1.125rem;
-  line-height: 1.6;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
 }
 
-@media (max-width: 1200px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
+.note p::before {
+  content: '💡 ';
+  font-size: 1.3rem;
+  margin-right: 8px;
+}
+
+/* 響應式設計 */
+@media (max-width: 1024px) {
+  .timelineItem.left .timelineContent,
+  .timelineItem.right .timelineContent {
+    margin: 0;
+    width: calc(50% - 50px);
+  }
+
+  .timelineItem.left .timelineContent {
+    margin-right: auto;
+  }
+
+  .timelineItem.right .timelineContent {
+    margin-left: auto;
+  }
+
+  .floatingElements {
+    display: none;
   }
 }
 
 @media (max-width: 768px) {
   .timeline {
-    padding: 60px 0;
+    padding: 80px 0;
+  }
+
+  .orb1, .orb2 {
+    filter: blur(80px);
+    opacity: 0.2;
+  }
+
+  .orb1 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .orb2 {
+    width: 200px;
+    height: 200px;
   }
 
   .header {
-    margin-bottom: 3rem;
+    margin-bottom: 60px;
+  }
+
+  .badge {
+    padding: 6px 18px;
+    font-size: 0.8rem;
   }
 
   .title {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 
   .subtitle {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  /* 手機版：時間線左對齊 */
+  .timelineLine {
+    left: 30px;
+  }
+
+  .timelineItem {
+    margin-bottom: 60px;
+  }
+
+  .timelineItem.left .timelineContent,
+  .timelineItem.right .timelineContent {
+    margin-left: 70px;
+    margin-right: 20px;
+    width: auto;
+  }
+
+  .timelineNode {
+    left: 30px;
+  }
+
+  .timelineItem.left::after,
+  .timelineItem.right::after {
+    left: 30px;
+    width: 40px;
+  }
+
+  .timelineContent {
+    height: auto;
+    min-height: 280px;
   }
 
   .note {
-    padding: 1.5rem;
+    padding: 30px 24px;
+    border-radius: 20px;
   }
 
   .note p {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline {
+    padding: 60px 0;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .note {
+    padding: 24px 20px;
+  }
+
+  .note p {
+    font-size: 0.95rem;
   }
 }

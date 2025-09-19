@@ -9,6 +9,7 @@ interface FlipCardProps {
   className?: string;
   flipped?: boolean;
   onFlip?: () => void;
+  triggerMode?: 'click' | 'hover';
 }
 
 export const FlipCard: React.FC<FlipCardProps> = ({
@@ -16,17 +17,37 @@ export const FlipCard: React.FC<FlipCardProps> = ({
   back,
   className = '',
   flipped = false,
-  onFlip
+  onFlip,
+  triggerMode = 'click'
 }) => {
   const [isFlipped, setIsFlipped] = useState(flipped);
 
   const handleClick = () => {
-    setIsFlipped(!isFlipped);
-    onFlip?.();
+    if (triggerMode === 'click') {
+      setIsFlipped(!isFlipped);
+      onFlip?.();
+    }
+  };
+
+  const handleMouseEnter = () => {
+    if (triggerMode === 'hover') {
+      setIsFlipped(true);
+      onFlip?.();
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (triggerMode === 'hover') {
+      setIsFlipped(false);
+    }
   };
 
   return (
-    <div className={`${styles.container} ${className}`}>
+    <div
+      className={`${styles.container} ${className}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <div
         className={`${styles.card} ${isFlipped ? styles.flipped : ''}`}
         onClick={handleClick}
