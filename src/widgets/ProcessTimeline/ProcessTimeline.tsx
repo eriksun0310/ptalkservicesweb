@@ -113,7 +113,7 @@ export const ProcessTimeline = () => {
   ];
 
   return (
-    <section className={styles.timeline}>
+    <section id="process-timeline" className={styles.timeline}>
       {/* 背景效果層 */}
       <div className={styles.backgroundEffects}>
         <div className={styles.gradientBg} />

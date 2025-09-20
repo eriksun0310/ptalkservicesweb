@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
 import { Button } from '@/shared/ui/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -13,10 +14,10 @@ import styles from './HeroSection.module.css';
 
 export const HeroSection = () => {
   const t = useTranslations('hero');
+  const router = useRouter();
 
   const scrollToContact = () => {
-    const contactSection = document.getElementById('contact');
-    contactSection?.scrollIntoView({ behavior: 'smooth' });
+    router.push('/contact');
   };
 
   const scrollToServices = () => {

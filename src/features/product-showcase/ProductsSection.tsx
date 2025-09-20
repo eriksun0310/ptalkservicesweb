@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faChartLine,
@@ -55,6 +56,11 @@ const products = [
 
 export const ProductsSection = () => {
   const t = useTranslations('products');
+  const router = useRouter();
+
+  const handleContactClick = () => {
+    router.push('/contact');
+  };
 
   return (
     <section className={styles.products}>
@@ -103,7 +109,7 @@ export const ProductsSection = () => {
           <p className={styles.ctaText}>
             我們提供客製化開發服務，為您打造專屬解決方案
           </p>
-          <button className={styles.ctaButton}>
+          <button className={styles.ctaButton} onClick={handleContactClick}>
             <span>聯絡我們</span>
             <FontAwesomeIcon icon={faRocket} />
           </button>

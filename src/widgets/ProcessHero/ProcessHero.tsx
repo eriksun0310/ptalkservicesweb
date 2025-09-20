@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faProjectDiagram,
@@ -15,6 +16,18 @@ import styles from './ProcessHero.module.css';
 
 export const ProcessHero = () => {
   const t = useTranslations('process.hero');
+  const router = useRouter();
+
+  const handleConsultationClick = () => {
+    router.push('/contact');
+  };
+
+  const handleViewProcessClick = () => {
+    const processSection = document.getElementById('process-timeline');
+    if (processSection) {
+      processSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const stats = [
     {
@@ -84,11 +97,11 @@ export const ProcessHero = () => {
           </div>
 
           <div className={styles.cta}>
-            <button className={styles.primaryBtn}>
+            <button className={styles.primaryBtn} onClick={handleConsultationClick}>
               <span>{t('startConsultation')}</span>
               <FontAwesomeIcon icon={faArrowRight} />
             </button>
-            <button className={styles.secondaryBtn}>
+            <button className={styles.secondaryBtn} onClick={handleViewProcessClick}>
               <span>{t('viewProcess')}</span>
               <FontAwesomeIcon icon={faArrowRight} />
             </button>
