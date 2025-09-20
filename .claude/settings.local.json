@@ -4,7 +4,9 @@
       "Read(//c/Users/USER/Downloads/**)",
       "Read(//Users/jiayu/Downloads/**)",
       "Bash(pnpm add:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(pkill:*)",
+      "Bash(npm run dev:*)"
     ],
     "deny": [],
     "ask": []

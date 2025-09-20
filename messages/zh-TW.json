@@ -152,36 +152,32 @@
   },
   "products": {
     "title": "我們的產品",
-    "subtitle": "創新科技解決方案，助力企業數位轉型",
+    "subtitle": "展示我們最新和最引以為傲的作品",
+    "badge": "產品展示",
     "viewDetails": "查看詳情",
     "features": "核心功能",
     "techStack": "技術架構",
+    "learnMore": "了解更多",
+    "contactUs": "聯絡我們",
+    "demo": "查看演示",
+    "items": {
+      "petfriendlyApp": {
+        "title": "PTalk 寵物友善地圖 App",
+        "description": "全台最大寵物友善地點資訊平台",
+        "features": ["地圖探索", "老實評分", "飼主分享", "收藏口袋名單", "新增評論", "新增店家"],
+        "techStack": ["React Native", ".NET 8", "MySQL", "Redis", "AWS S3", "Next.js", "TypeScript"]
+      },
+      "petfriendlyAdmin": {
+        "title": "PTalk 後台管理系統",
+        "description": "寵物友善地圖運營後台",
+        "features": ["會員與用戶管理", "評論與檢舉審核", "店家與場館資料維護", "推播通知管理", "數據統計與分析"],
+        "techStack": [".NET 8", "MySQL", "Redis", "AWS S3", "Next.js", "TypeScript", "React"]
+      }
+    },
     "cta": {
       "title": "找不到適合的產品？",
       "description": "我們提供客製化開發服務，為您打造專屬解決方案",
       "button": "聯絡我們"
-    },
-    "items": {
-      "crm": {
-        "name": "PTalk CRM",
-        "description": "客戶關係管理系統",
-        "features": ["客戶資料管理", "銷售追蹤", "自動化報表", "團隊協作"]
-      },
-      "pos": {
-        "name": "SmartPOS",
-        "description": "智慧零售管理系統",
-        "features": ["庫存管理", "銷售分析", "會員系統", "多店管理"]
-      },
-      "eduhub": {
-        "name": "EduHub",
-        "description": "線上教育平台",
-        "features": ["課程管理", "直播教學", "作業系統", "學習分析"]
-      },
-      "aiassistant": {
-        "name": "AI Assistant",
-        "description": "智能客服助手",
-        "features": ["自然語言處理", "多語言支援", "24/7服務", "智能路由"]
-      }
     }
   },
   "process": {

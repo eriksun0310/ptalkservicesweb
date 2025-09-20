@@ -2,27 +2,12 @@
 
 import { useTranslations } from 'next-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faThreads, faLine } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { getSocialLinks } from '@/shared/config';
 import styles from './SocialLinks.module.css';
-
-const socials = [
-  {
-    name: 'Instagram',
-    icon: faInstagram,
-    url: 'https://instagram.com/ptalk.tw',
-    label: '@ptalk.tw'
-  },
-  {
-    name: 'Threads',
-    icon: faThreads,
-    url: 'https://www.threads.com/@ptalk.tw',
-    label: '@ptalk.tw'
-  }
-];
 
 export const SocialLinks = () => {
   const t = useTranslations('common');
+  const socials = getSocialLinks();
   return (
     <div className={styles.container}>
       <h3 className={styles.title}>{t('followUs')}</h3>

@@ -4,10 +4,9 @@ import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faChartLine,
-  faCashRegister,
-  faGraduationCap,
-  faRobot,
+  faPaw,
+  faMapMarkedAlt,
+  faUsersCog,
   faRocket,
   faStar,
   faCube
@@ -17,40 +16,24 @@ import styles from './ProductsSection.module.css';
 
 const products = [
   {
-    id: 'product1',
-    nameKey: 'items.crm.name',
-    descriptionKey: 'items.crm.description',
-    featuresKey: 'items.crm.features',
-    techStack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Redis'],
-    link: '#',
-    icon: faChartLine
+    id: 'petfriendly-app',
+    nameKey: 'items.petfriendlyApp.title',
+    descriptionKey: 'items.petfriendlyApp.description',
+    featuresKey: 'items.petfriendlyApp.features',
+    techStack: ['React Native', '.NET 8', 'MySQL', 'Redis', 'AWS S3', 'Next.js', 'TypeScript'],
+    link: 'https://ptalk.moushih.com/',
+    icon: faPaw,
+    hasViewDetails: true
   },
   {
-    id: 'product2',
-    nameKey: 'items.pos.name',
-    descriptionKey: 'items.pos.description',
-    featuresKey: 'items.pos.features',
-    techStack: ['React Native', 'Node.js', 'MongoDB', 'AWS'],
-    link: '#',
-    icon: faCashRegister
-  },
-  {
-    id: 'product3',
-    nameKey: 'items.eduhub.name',
-    descriptionKey: 'items.eduhub.description',
-    featuresKey: 'items.eduhub.features',
-    techStack: ['Vue.js', 'Django', 'WebRTC', 'Docker'],
-    link: '#',
-    icon: faGraduationCap
-  },
-  {
-    id: 'product4',
-    nameKey: 'items.aiassistant.name',
-    descriptionKey: 'items.aiassistant.description',
-    featuresKey: 'items.aiassistant.features',
-    techStack: ['Python', 'TensorFlow', 'FastAPI', 'OpenAI'],
-    link: '#',
-    icon: faRobot
+    id: 'petfriendly-admin',
+    nameKey: 'items.petfriendlyAdmin.title',
+    descriptionKey: 'items.petfriendlyAdmin.description',
+    featuresKey: 'items.petfriendlyAdmin.features',
+    techStack: ['.NET 8', 'MySQL', 'Redis', 'AWS S3', 'Next.js', 'TypeScript', 'React'],
+    link: null,
+    icon: faUsersCog,
+    hasViewDetails: false
   }
 ];
 
@@ -103,7 +86,7 @@ export const ProductsSection = () => {
               ...product,
               name: t(product.nameKey),
               description: t(product.descriptionKey),
-              features: t(product.featuresKey)
+              features: t.raw(product.featuresKey) as string[]
             };
             return (
               <ProductCard key={product.id} product={productData} index={index} />

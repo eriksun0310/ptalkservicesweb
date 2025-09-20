@@ -13,7 +13,19 @@
   "hero": {
     "title": "アイデアをデジタルリアリティへ",
     "subtitle": "プロフェッショナルチームが革新的なソリューションを創造",
-    "cta": "今すぐ相談"
+    "cta": "今すぐ相談",
+    "badge": "プロフェッショナルチーム",
+    "browseServices": "サービスを見る",
+    "features": {
+      "tech": "最先端技術",
+      "delivery": "迅速な納品",
+      "design": "美しいデザイン",
+      "security": "安全で信頼性の高い"
+    },
+    "stats": {
+      "projects": "完了プロジェクト",
+      "satisfaction": "顧客満足度"
+    }
   },
   "services": {
     "title": "サービス内容",
@@ -62,25 +74,111 @@
     }
   },
   "about": {
-    "title": "PTalkについて",
-    "mission": {
-      "title": "私たちのミッション",
-      "content": "PTalkは革新的な技術ソリューションの提供に専念し、企業と個人のデジタルトランスフォーメーションを支援します。テクノロジーの力で世界を変えることができると信じ、プロフェッショナルな技術サービスを通じてすべてのアイデアを現実にします。"
+    "badge": "PTalkについて",
+    "mainTitle": "PTalkについて",
+    "subtitle": "デジタルトランスフォーメーションのための専門技術サービス",
+    "intro": {
+      "paragraph1": "PTalkテクニカルサービスは2018年に設立され、企業に包括的な技術ソリューションの提供に専念しています。革新的な技術と業界のベストプラクティスを組み合わせた経験豊富な専門チームが、お客様のデジタルトランスフォーメーションと競争力向上を支援します。",
+      "paragraph2": "ウェブサイト開発からモバイルアプリケーション、システム統合からクラウドサービスまで、あらゆる規模の企業のニーズに応えるワンストップ技術サービスを提供します。プロフェッショナルで信頼できるPTalkをお選びください。"
     },
-    "vision": {
-      "title": "会社ビジョン",
-      "content": "最も信頼できる技術パートナーとなり、革新的な思考と専門技術でお客様に最大の価値を創造します。"
+    "coreValues": {
+      "title": "コアバリュー",
+      "innovation": {
+        "title": "イノベーション",
+        "description": "継続的な革新、技術トレンドをリード"
+      },
+      "quality": {
+        "title": "品質",
+        "description": "高い基準、卓越性の提供"
+      },
+      "service": {
+        "title": "サービス",
+        "description": "顧客第一、期待を超える"
+      },
+      "integrity": {
+        "title": "誠実",
+        "description": "正直で信頼でき、長期的なパートナーシップを構築"
+      }
+    },
+    "timeline": {
+      "title": "私たちの歩み",
+      "2018": {
+        "title": "会社設立",
+        "description": "PTalkテクニカルサービスが正式に設立、デジタルトランスフォーメーションサービスの提供開始"
+      },
+      "2020": {
+        "title": "事業拡大",
+        "description": "サービス範囲が全国に拡大、顧客数が100社を超える"
+      },
+      "2022": {
+        "title": "技術的ブレークスルー",
+        "description": "革新的なAIソリューションを発表、業界の認知を獲得"
+      },
+      "2024": {
+        "title": "継続的な成長",
+        "description": "チーム規模50人に達し、500社以上の企業顧客にサービス提供"
+      }
     },
     "team": {
-      "title": "専門チーム",
-      "content": "私たちのチームは経験豊富なエンジニア、デザイナー、プロジェクトマネージャーで構成され、それぞれの分野で深い専門知識を持っています。"
+      "title": "私たちのチーム",
+      "tech": {
+        "title": "技術チーム",
+        "description": "シニアフルスタックエンジニア",
+        "details": "様々なプログラミング言語とフレームワークに精通、豊富な開発経験"
+      },
+      "design": {
+        "title": "デザインチーム",
+        "description": "創造的なUI/UXデザイナー",
+        "details": "美しく機能的なユーザーインターフェースを作成、優れたユーザー体験を提供"
+      },
+      "pm": {
+        "title": "プロジェクト管理",
+        "description": "プロフェッショナルなPMチーム",
+        "details": "プロジェクトが期限内に品質基準を満たして納品されることを保証"
+      },
+      "consultant": {
+        "title": "コンサルタントチーム",
+        "description": "ビジネス戦略コンサルタント",
+        "details": "デジタルトランスフォーメーションを支援する専門的なコンサルティングを提供"
+      }
+    },
+    "achievements": {
+      "title": "私たちの実績",
+      "experience": "年の経験",
+      "clients": "顧客数",
+      "projects": "完了プロジェクト",
+      "members": "チームメンバー"
     }
   },
   "products": {
     "title": "私たちの製品",
+    "subtitle": "最新で最も誇れる作品を展示",
+    "badge": "製品ショーケース",
     "viewDetails": "詳細を見る",
     "features": "主要機能",
-    "techStack": "技術スタック"
+    "techStack": "技術スタック",
+    "learnMore": "詳細を見る",
+    "contactUs": "お問い合わせ",
+    "demo": "デモを見る",
+    "items": {
+      "petfriendlyApp": {
+        "title": "PTalk ペットフレンドリーマップアプリ",
+        "description": "台湾最大のペットフレンドリー施設情報プラットフォーム",
+        "features": ["地図探索", "誠実な評価", "飼い主シェア", "お気に入りコレクション", "レビュー追加", "会場追加"],
+        "techStack": ["React Native", ".NET 8", "MySQL", "Redis", "AWS S3", "Next.js", "TypeScript"]
+      },
+      "petfriendlyAdmin": {
+        "title": "PTalk バックエンド管理システム",
+        "description": "ペットフレンドリーマップ運営ダッシュボード",
+        "features": ["メンバー&ユーザー管理", "レビュー&レポート審査", "会場データメンテナンス", "プッシュ通知管理", "データ統計&分析"],
+        "techStack": [".NET 8", "MySQL", "Redis", "AWS S3", "Next.js", "TypeScript", "React"]
+      }
+    },
+    "cta": {
+      "title": "適切な製品が見つかりませんか？",
+      "description": "カスタム開発サービスを提供し、お客様専用のソリューションを作成します",
+      "button": "お問い合わせ"
+    }
   },
   "process": {
     "hero": {
@@ -265,7 +363,11 @@
       "service": "サービス相談",
       "message": "メッセージ内容",
       "submit": "送信",
-      "selectService": "サービスを選択してください"
+      "selectService": "サービスを選択してください",
+      "submitting": "送信中...",
+      "successMessage": "お問い合わせありがとうございます！24時間以内にご連絡いたします。",
+      "errorMessage": "送信に失敗しました。後でもう一度お試しください。",
+      "networkError": "ネットワークエラー。接続を確認してもう一度お試しください。"
     },
     "info": {
       "title": "連絡先情報",
@@ -298,5 +400,16 @@
       "phone": "+886 912 345 678",
       "email": "connect.ptalk@gmail.com"
     }
+  },
+  "common": {
+    "deliverables": "成果物",
+    "executionContent": "実行内容",
+    "email": "メール",
+    "lineOfficialAccount": "Line公式アカウント",
+    "quickContact": "クイックコンタクト",
+    "followUs": "フォローする",
+    "chinese": "中国語",
+    "japanese": "日本語",
+    "english": "英語"
   }
 }

@@ -250,6 +250,7 @@
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+a.ctaButton,
 .ctaButton {
   width: 100%;
   padding: 14px 24px;
@@ -267,8 +268,10 @@
   gap: 10px;
   position: relative;
   overflow: hidden;
+  text-decoration: none;
 }
 
+a.ctaButton::before,
 .ctaButton::before {
   content: '';
   position: absolute;
@@ -280,10 +283,12 @@
   transition: left 0.5s ease;
 }
 
+a.ctaButton:hover::before,
 .ctaButton:hover::before {
   left: 100%;
 }
 
+a.ctaButton:hover,
 .ctaButton:hover {
   transform: translateY(-2px);
   box-shadow:
@@ -296,6 +301,7 @@
   transition: transform 0.3s ease;
 }
 
+a.ctaButton:hover .ctaIcon,
 .ctaButton:hover .ctaIcon {
   transform: translateX(5px);
 }

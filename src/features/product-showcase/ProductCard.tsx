@@ -17,9 +17,10 @@ interface Product {
   description: string;
   features: string[];
   techStack: string[];
-  link: string;
+  link: string | null;
   icon: IconDefinition;
   gradient?: string;
+  hasViewDetails?: boolean;
 }
 
 interface ProductCardProps {
@@ -76,12 +77,19 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
           </div>
         </div>
 
-        <div className={styles.cardFooter}>
-          <button className={styles.ctaButton}>
-            <span>{t('viewDetails')}</span>
-            <FontAwesomeIcon icon={faArrowRight} className={styles.ctaIcon} />
-          </button>
-        </div>
+        {product.hasViewDetails && product.link && (
+          <div className={styles.cardFooter}>
+            <a
+              href={product.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.ctaButton}
+            >
+              <span>{t('viewDetails')}</span>
+              <FontAwesomeIcon icon={faArrowRight} className={styles.ctaIcon} />
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );

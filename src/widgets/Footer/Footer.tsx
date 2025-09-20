@@ -4,8 +4,7 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { Button } from '@/shared/ui/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { faInstagram, faThreads, faLine } from '@fortawesome/free-brands-svg-icons';
+import { SOCIAL_LINKS } from '@/shared/config';
 import styles from './Footer.module.css';
 
 export const Footer = () => {
@@ -47,43 +46,18 @@ export const Footer = () => {
 
             <div className={styles.bottomRight}>
               <div className={styles.contactSection}>
-                <a
-                  href="mailto:connect.ptalk@gmail.com"
-                  className={styles.contactIcon}
-                  title="connect.ptalk@gmail.com"
-                >
-                  <FontAwesomeIcon icon={faEnvelope} />
-                </a>
-
-                <a
-                  href="https://line.me/R/ti/p/@015ziycs"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.contactIcon}
-                  title={t('common.lineOfficialAccount')}
-                >
-                  <FontAwesomeIcon icon={faLine} />
-                </a>
-
-                <a
-                  href="https://instagram.com/ptalk.tw"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.contactIcon}
-                  title="@ptalk.tw"
-                >
-                  <FontAwesomeIcon icon={faInstagram} />
-                </a>
-
-                <a
-                  href="https://threads.net/ptalk"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.contactIcon}
-                  title="@ptalk.tw"
-                >
-                  <FontAwesomeIcon icon={faThreads} />
-                </a>
+                {SOCIAL_LINKS.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.url}
+                    target={link.name === 'Email' ? '_self' : '_blank'}
+                    rel={link.name === 'Email' ? '' : 'noopener noreferrer'}
+                    className={styles.contactIcon}
+                    title={link.name === 'Line' ? t('common.lineOfficialAccount') : link.username || link.label}
+                  >
+                    <FontAwesomeIcon icon={link.icon} />
+                  </a>
+                ))}
               </div>
             </div>
           </div>

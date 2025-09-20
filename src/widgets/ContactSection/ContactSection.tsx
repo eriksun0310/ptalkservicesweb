@@ -3,8 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { ContactForm } from '@/features/contact-form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { faInstagram, faThreads, faLine } from '@fortawesome/free-brands-svg-icons';
+import { LINKS, getSocialLinks } from '@/shared/config';
 import styles from './ContactSection.module.css';
 
 export const ContactSection = () => {
@@ -30,8 +29,8 @@ export const ContactSection = () => {
                 <h3>{t('info.quickContact')}</h3>
 
                 <div className={styles.contactEmail}>
-                  <FontAwesomeIcon icon={faEnvelope} className={styles.emailIcon} />
-                  <a href="mailto:connect.ptalk@gmail.com">connect.ptalk@gmail.com</a>
+                  <FontAwesomeIcon icon={LINKS.email.icon} className={styles.emailIcon} />
+                  <a href={LINKS.email.url}>{LINKS.email.label}</a>
                 </div>
 
                 <div className={styles.divider}></div>
@@ -40,34 +39,26 @@ export const ContactSection = () => {
                   <p className={styles.socialTitle}>{t('social.follow')}</p>
                   <div className={styles.socialIcons}>
                     <a
-                      href="https://line.me/R/ti/p/@015ziycs"
+                      href={LINKS.line.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className={styles.socialIcon}
                       title={tCommon('lineOfficialAccount')}
                     >
-                      <FontAwesomeIcon icon={faLine} />
+                      <FontAwesomeIcon icon={LINKS.line.icon} />
                     </a>
-
-                    <a
-                      href="https://instagram.com/ptalk.tw"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={styles.socialIcon}
-                      title="@ptalk.tw"
-                    >
-                      <FontAwesomeIcon icon={faInstagram} />
-                    </a>
-
-                    <a
-                      href="https://www.threads.com/@ptalk.tw"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={styles.socialIcon}
-                      title="@ptalk.tw"
-                    >
-                      <FontAwesomeIcon icon={faThreads} />
-                    </a>
+                    {getSocialLinks().map((social) => (
+                      <a
+                        key={social.name}
+                        href={social.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.socialIcon}
+                        title={social.username}
+                      >
+                        <FontAwesomeIcon icon={social.icon} />
+                      </a>
+                    ))}
                   </div>
                 </div>
               </div>
