@@ -60,7 +60,7 @@ export const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.contactIcon}
-                  title="Line 官方帳號"
+                  title={t('common.lineOfficialAccount')}
                 >
                   <FontAwesomeIcon icon={faLine} />
                 </a>

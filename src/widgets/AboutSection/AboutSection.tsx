@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faLightbulb,
@@ -17,6 +18,7 @@ import {
 import styles from './AboutSection.module.css';
 
 export const AboutSection = () => {
+  const t = useTranslations('about');
   const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set());
 
   const handleCardClick = (index: number) => {
@@ -34,81 +36,81 @@ export const AboutSection = () => {
   const coreValues = [
     {
       icon: faLightbulb,
-      title: '創新',
-      description: '持續創新，引領技術潮流'
+      title: t('coreValues.innovation.title'),
+      description: t('coreValues.innovation.description')
     },
     {
       icon: faMedal,
-      title: '品質',
-      description: '堅持高標準，交付卓越成果'
+      title: t('coreValues.quality.title'),
+      description: t('coreValues.quality.description')
     },
     {
       icon: faHandshake,
-      title: '服務',
-      description: '客戶至上，超越期待'
+      title: t('coreValues.service.title'),
+      description: t('coreValues.service.description')
     },
     {
       icon: faShieldAlt,
-      title: '誠信',
-      description: '誠實守信，建立長期夥伴關係'
+      title: t('coreValues.integrity.title'),
+      description: t('coreValues.integrity.description')
     }
   ];
 
   const milestones = [
     {
       year: '2018',
-      title: '公司成立',
-      description: 'PTalk 技術服務公司正式成立，開始為企業提供數位轉型服務'
+      title: t('timeline.2018.title'),
+      description: t('timeline.2018.description')
     },
     {
       year: '2020',
-      title: '業務擴展',
-      description: '服務範圍擴展至全台，客戶數量突破 100 家'
+      title: t('timeline.2020.title'),
+      description: t('timeline.2020.description')
     },
     {
       year: '2022',
-      title: '技術突破',
-      description: '推出創新 AI 解決方案，獲得業界認可'
+      title: t('timeline.2022.title'),
+      description: t('timeline.2022.description')
     },
     {
       year: '2024',
-      title: '持續成長',
-      description: '團隊規模達到 50 人，服務超過 500 家企業客戶'
+      title: t('timeline.2024.title'),
+      description: t('timeline.2024.description')
     }
   ];
 
   const teamMembers = [
     {
       icon: faCode,
-      title: '技術團隊',
-      description: '資深全端工程師團隊',
-      details: '精通各種程式語言與框架，具備豐富的開發經驗'
+      title: t('team.tech.title'),
+      description: t('team.tech.description'),
+      details: t('team.tech.details')
     },
     {
       icon: faPalette,
-      title: '設計團隊',
-      description: '創意 UI/UX 設計師',
-      details: '打造美觀實用的使用者介面，提供卓越的用戶體驗'
+      title: t('team.design.title'),
+      description: t('team.design.description'),
+      details: t('team.design.details')
     },
     {
       icon: faTasks,
-      title: '專案管理',
-      description: '專業 PM 團隊',
-      details: '確保專案準時交付，品質符合客戶期待'
+      title: t('team.pm.title'),
+      description: t('team.pm.description'),
+      details: t('team.pm.details')
     },
     {
       icon: faUserTie,
-      title: '顧問團隊',
-      description: '業務策略顧問',
-      details: '提供專業諮詢，協助企業數位轉型'
+      title: t('team.consultant.title'),
+      description: t('team.consultant.description'),
+      details: t('team.consultant.details')
     }
   ];
 
   const achievements = [
-    { number: '6+', label: '年經驗' },
-    { number: '500+', label: '服務客戶' },
-    { number: '1000+', label: '完成專案' },
-    { number: '50+', label: '團隊成員' }
+    { number: '6+', label: t('achievements.experience') },
+    { number: '500+', label: t('achievements.clients') },
+    { number: '1000+', label: t('achievements.projects') },
+    { number: '50+', label: t('achievements.members') }
   ];
 
   return (
@@ -139,28 +141,24 @@ export const AboutSection = () => {
       <div className="container">
         {/* 頂部介紹區 */}
         <div className={styles.introSection}>
-          <div className={styles.badge}>About PTalk</div>
-          <h1 className={styles.mainTitle}>關於 PTalk</h1>
+          <div className={styles.badge}>{t('badge')}</div>
+          <h1 className={styles.mainTitle}>{t('mainTitle')}</h1>
           <p className={styles.subtitle}>
-            專業技術服務，助力企業數位轉型
+            {t('subtitle')}
           </p>
           <div className={styles.introContent}>
             <p>
-              PTalk 技術服務公司成立於 2018 年，致力於為企業提供全方位的技術解決方案。
-              我們擁有經驗豐富的專業團隊，結合創新技術與業界最佳實踐，
-              協助客戶實現數位轉型，提升競爭力。
+              {t('intro.paragraph1')}
             </p>
             <p>
-              從網站開發到行動應用，從系統整合到雲端服務，
-              我們提供一站式的技術服務，滿足不同規模企業的需求。
-              選擇 PTalk，選擇專業與信賴。
+              {t('intro.paragraph2')}
             </p>
           </div>
         </div>
 
         {/* 核心價值 */}
         <div className={styles.coreValues}>
-          <h2 className={styles.sectionTitle}>核心價值</h2>
+          <h2 className={styles.sectionTitle}>{t('coreValues.title')}</h2>
           <div className={styles.valuesGrid}>
             {coreValues.map((value, index) => (
               <div key={index} className={styles.valueCard}>
@@ -177,7 +175,7 @@ export const AboutSection = () => {
 
         {/* 公司歷程時間軸 */}
         <div className={styles.timeline}>
-          <h2 className={styles.sectionTitle}>發展歷程</h2>
+          <h2 className={styles.sectionTitle}>{t('timeline.title')}</h2>
           <div className={styles.timelineWrapper}>
             <div className={styles.timelineLine} />
             {milestones.map((milestone, index) => (
@@ -198,7 +196,7 @@ export const AboutSection = () => {
 
         {/* 團隊展示 */}
         <div className={styles.teamSection}>
-          <h2 className={styles.sectionTitle}>專業團隊</h2>
+          <h2 className={styles.sectionTitle}>{t('team.title')}</h2>
           <div className={styles.teamGrid}>
             {teamMembers.map((member, index) => (
               <div
@@ -225,7 +223,7 @@ export const AboutSection = () => {
 
         {/* 成就數據 */}
         <div className={styles.achievements}>
-          <h2 className={styles.sectionTitle}>我們的成就</h2>
+          <h2 className={styles.sectionTitle}>{t('achievements.title')}</h2>
           <div className={styles.achievementsGrid}>
             {achievements.map((achievement, index) => (
               <div key={index} className={styles.achievementCard}>

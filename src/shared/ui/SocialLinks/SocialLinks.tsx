@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faThreads, faLine } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
@@ -21,9 +22,10 @@ const socials = [
 ];
 
 export const SocialLinks = () => {
+  const t = useTranslations('common');
   return (
     <div className={styles.container}>
-      <h3 className={styles.title}>追蹤我們</h3>
+      <h3 className={styles.title}>{t('followUs')}</h3>
       <div className={styles.socialLinks}>
         {socials.map((social) => (
           <a

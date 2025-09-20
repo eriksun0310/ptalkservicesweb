@@ -18,36 +18,36 @@ import styles from './ProductsSection.module.css';
 const products = [
   {
     id: 'product1',
-    name: 'PTalk CRM',
-    description: '客戶關係管理系統',
-    features: ['客戶資料管理', '銷售追蹤', '自動化報表', '團隊協作'],
+    nameKey: 'items.crm.name',
+    descriptionKey: 'items.crm.description',
+    featuresKey: 'items.crm.features',
     techStack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Redis'],
     link: '#',
     icon: faChartLine
   },
   {
     id: 'product2',
-    name: 'SmartPOS',
-    description: '智慧零售管理系統',
-    features: ['庫存管理', '銷售分析', '會員系統', '多店管理'],
+    nameKey: 'items.pos.name',
+    descriptionKey: 'items.pos.description',
+    featuresKey: 'items.pos.features',
     techStack: ['React Native', 'Node.js', 'MongoDB', 'AWS'],
     link: '#',
     icon: faCashRegister
   },
   {
     id: 'product3',
-    name: 'EduHub',
-    description: '線上教育平台',
-    features: ['課程管理', '直播教學', '作業系統', '學習分析'],
+    nameKey: 'items.eduhub.name',
+    descriptionKey: 'items.eduhub.description',
+    featuresKey: 'items.eduhub.features',
     techStack: ['Vue.js', 'Django', 'WebRTC', 'Docker'],
     link: '#',
     icon: faGraduationCap
   },
   {
     id: 'product4',
-    name: 'AI Assistant',
-    description: '智能客服助手',
-    features: ['自然語言處理', '多語言支援', '24/7服務', '智能路由'],
+    nameKey: 'items.aiassistant.name',
+    descriptionKey: 'items.aiassistant.description',
+    featuresKey: 'items.aiassistant.features',
     techStack: ['Python', 'TensorFlow', 'FastAPI', 'OpenAI'],
     link: '#',
     icon: faRobot
@@ -92,25 +92,33 @@ export const ProductsSection = () => {
           <div className={styles.badge}>Our Products</div>
           <h1 className={styles.title}>{t('title')}</h1>
           <p className={styles.subtitle}>
-            創新科技解決方案，助力企業數位轉型
+            {t('subtitle')}
           </p>
         </div>
 
         {/* 產品網格 */}
         <div className={styles.grid}>
-          {products.map((product, index) => (
-            <ProductCard key={product.id} product={product} index={index} />
-          ))}
+          {products.map((product, index) => {
+            const productData = {
+              ...product,
+              name: t(product.nameKey),
+              description: t(product.descriptionKey),
+              features: t(product.featuresKey)
+            };
+            return (
+              <ProductCard key={product.id} product={productData} index={index} />
+            );
+          })}
         </div>
 
         {/* CTA 區域 */}
         <div className={styles.ctaSection}>
-          <h2 className={styles.ctaTitle}>找不到適合的產品？</h2>
+          <h2 className={styles.ctaTitle}>{t('cta.title')}</h2>
           <p className={styles.ctaText}>
-            我們提供客製化開發服務，為您打造專屬解決方案
+            {t('cta.description')}
           </p>
           <button className={styles.ctaButton} onClick={handleContactClick}>
-            <span>聯絡我們</span>
+            <span>{t('cta.button')}</span>
             <FontAwesomeIcon icon={faRocket} />
           </button>
         </div>

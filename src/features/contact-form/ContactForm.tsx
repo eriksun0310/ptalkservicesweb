@@ -64,7 +64,7 @@ export const ContactForm = () => {
 
       if (response.ok) {
         setSubmitStatus('success');
-        setStatusMessage('感謝您的諮詢！我們會在24小時內與您聯繫。');
+        setStatusMessage(t('successMessage'));
         setFormData({
           name: '',
           email: '',
@@ -74,11 +74,11 @@ export const ContactForm = () => {
         });
       } else {
         setSubmitStatus('error');
-        setStatusMessage(data.error || '發送失敗，請稍後再試。');
+        setStatusMessage(data.error || t('errorMessage'));
       }
     } catch (error) {
       setSubmitStatus('error');
-      setStatusMessage('網絡錯誤，請檢查您的連線後再試。');
+      setStatusMessage(t('networkError'));
       console.error('Form submission error:', error);
     } finally {
       setIsSubmitting(false);
@@ -176,7 +176,7 @@ export const ContactForm = () => {
         fullWidth
         disabled={isSubmitting}
       >
-        {isSubmitting ? '發送中...' : t('submit')}
+        {isSubmitting ? t('submitting') : t('submit')}
       </Button>
     </form>
   );

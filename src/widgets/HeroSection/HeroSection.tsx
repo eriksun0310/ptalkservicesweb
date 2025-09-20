@@ -26,10 +26,10 @@ export const HeroSection = () => {
   };
 
   const features = [
-    { icon: faCode, label: '前沿技術' },
-    { icon: faRocket, label: '快速交付' },
-    { icon: faPalette, label: '精美設計' },
-    { icon: faShieldAlt, label: '安全可靠' },
+    { icon: faCode, label: t('features.tech') },
+    { icon: faRocket, label: t('features.delivery') },
+    { icon: faPalette, label: t('features.design') },
+    { icon: faShieldAlt, label: t('features.security') },
   ];
 
   return (
@@ -59,7 +59,7 @@ export const HeroSection = () => {
         <div className={styles.contentWrapper}>
           {/* 主內容玻璃容器 */}
           <div className={styles.mainContent}>
-            <div className={styles.badge}>專業技術團隊</div>
+            <div className={styles.badge}>{t('badge')}</div>
             <h1 className={styles.title}>{t('title')}</h1>
             <p className={styles.subtitle}>{t('subtitle')}</p>
 
@@ -89,7 +89,7 @@ export const HeroSection = () => {
                 onClick={scrollToServices}
                 className={styles.secondaryCta}
               >
-                瀏覽服務
+                {t('browseServices')}
               </Button>
             </div>
           </div>
@@ -98,11 +98,11 @@ export const HeroSection = () => {
           <div className={styles.sideCards}>
             <div className={styles.statsCard}>
               <div className={styles.statsNumber}>500+</div>
-              <div className={styles.statsLabel}>完成專案</div>
+              <div className={styles.statsLabel}>{t('stats.projects')}</div>
             </div>
             <div className={styles.statsCard}>
               <div className={styles.statsNumber}>98%</div>
-              <div className={styles.statsLabel}>客戶滿意</div>
+              <div className={styles.statsLabel}>{t('stats.satisfaction')}</div>
             </div>
           </div>
         </div>

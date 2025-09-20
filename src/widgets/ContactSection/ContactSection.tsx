@@ -9,6 +9,7 @@ import styles from './ContactSection.module.css';
 
 export const ContactSection = () => {
   const t = useTranslations('contact');
+  const tCommon = useTranslations('common');
 
   return (
     <section className={styles.contact}>
@@ -43,7 +44,7 @@ export const ContactSection = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className={styles.socialIcon}
-                      title="Line 官方帳號"
+                      title={tCommon('lineOfficialAccount')}
                     >
                       <FontAwesomeIcon icon={faLine} />
                     </a>

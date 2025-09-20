@@ -13,7 +13,19 @@
   "hero": {
     "title": "將您的想法轉化為數位現實",
     "subtitle": "專業技術團隊，打造創新解決方案",
-    "cta": "立即諮詢"
+    "cta": "立即諮詢",
+    "badge": "專業技術團隊",
+    "browseServices": "瀏覽服務",
+    "features": {
+      "tech": "前沿技術",
+      "delivery": "快速交付",
+      "design": "精美設計",
+      "security": "安全可靠"
+    },
+    "stats": {
+      "projects": "完成專案",
+      "satisfaction": "客戶滿意"
+    }
   },
   "services": {
     "title": "我們的服務",
@@ -62,25 +74,115 @@
     }
   },
   "about": {
-    "title": "關於PTalk",
-    "mission": {
-      "title": "我們的使命",
-      "content": "PTalk致力於提供創新的技術解決方案，協助企業與個人實現數位轉型。我們相信科技的力量能夠改變世界，透過專業的技術服務，讓每個想法都能成為現實。"
+    "badge": "About PTalk",
+    "mainTitle": "關於 PTalk",
+    "subtitle": "專業技術服務，助力企業數位轉型",
+    "intro": {
+      "paragraph1": "PTalk 技術服務公司成立於 2018 年，致力於為企業提供全方位的技術解決方案。我們擁有經驗豐富的專業團隊，結合創新技術與業界最佳實踐，協助客戶實現數位轉型，提升競爭力。",
+      "paragraph2": "從網站開發到行動應用，從系統整合到雲端服務，我們提供一站式的技術服務，滿足不同規模企業的需求。選擇 PTalk，選擇專業與信賴。"
     },
-    "vision": {
-      "title": "公司願景",
-      "content": "成為最值得信賴的技術合作夥伴，以創新思維和專業技術，為客戶創造最大價值。"
+    "coreValues": {
+      "title": "核心價值",
+      "innovation": {
+        "title": "創新",
+        "description": "持續創新，引領技術潮流"
+      },
+      "quality": {
+        "title": "品質",
+        "description": "堅持高標準，交付卓越成果"
+      },
+      "service": {
+        "title": "服務",
+        "description": "客戶至上，超越期待"
+      },
+      "integrity": {
+        "title": "誠信",
+        "description": "誠實守信，建立長期夥伴關係"
+      }
+    },
+    "timeline": {
+      "title": "發展歷程",
+      "2018": {
+        "title": "公司成立",
+        "description": "PTalk 技術服務公司正式成立，開始為企業提供數位轉型服務"
+      },
+      "2020": {
+        "title": "業務擴展",
+        "description": "服務範圍擴展至全台，客戶數量突破 100 家"
+      },
+      "2022": {
+        "title": "技術突破",
+        "description": "推出創新 AI 解決方案，獲得業界認可"
+      },
+      "2024": {
+        "title": "持續成長",
+        "description": "團隊規模達到 50 人，服務超過 500 家企業客戶"
+      }
     },
     "team": {
       "title": "專業團隊",
-      "content": "我們的團隊由經驗豐富的工程師、設計師和專案經理組成，每個成員都在各自領域擁有深厚的專業知識。"
+      "tech": {
+        "title": "技術團隊",
+        "description": "資深全端工程師團隊",
+        "details": "精通各種程式語言與框架，具備豐富的開發經驗"
+      },
+      "design": {
+        "title": "設計團隊",
+        "description": "創意 UI/UX 設計師",
+        "details": "打造美觀實用的使用者介面，提供卓越的用戶體驗"
+      },
+      "pm": {
+        "title": "專案管理",
+        "description": "專業 PM 團隊",
+        "details": "確保專案準時交付，品質符合客戶期待"
+      },
+      "consultant": {
+        "title": "顧問團隊",
+        "description": "業務策略顧問",
+        "details": "提供專業諮詢，協助企業數位轉型"
+      }
+    },
+    "achievements": {
+      "title": "我們的成就",
+      "experience": "年經驗",
+      "clients": "服務客戶",
+      "projects": "完成專案",
+      "members": "團隊成員"
     }
   },
   "products": {
     "title": "我們的產品",
+    "subtitle": "創新科技解決方案，助力企業數位轉型",
     "viewDetails": "查看詳情",
     "features": "核心功能",
-    "techStack": "技術架構"
+    "techStack": "技術架構",
+    "cta": {
+      "title": "找不到適合的產品？",
+      "description": "我們提供客製化開發服務，為您打造專屬解決方案",
+      "button": "聯絡我們"
+    },
+    "items": {
+      "crm": {
+        "name": "PTalk CRM",
+        "description": "客戶關係管理系統",
+        "features": ["客戶資料管理", "銷售追蹤", "自動化報表", "團隊協作"]
+      },
+      "pos": {
+        "name": "SmartPOS",
+        "description": "智慧零售管理系統",
+        "features": ["庫存管理", "銷售分析", "會員系統", "多店管理"]
+      },
+      "eduhub": {
+        "name": "EduHub",
+        "description": "線上教育平台",
+        "features": ["課程管理", "直播教學", "作業系統", "學習分析"]
+      },
+      "aiassistant": {
+        "name": "AI Assistant",
+        "description": "智能客服助手",
+        "features": ["自然語言處理", "多語言支援", "24/7服務", "智能路由"]
+      }
+    }
   },
   "process": {
     "hero": {
@@ -265,7 +367,11 @@
       "service": "諮詢服務",
       "message": "訊息內容",
       "submit": "送出諮詢",
-      "selectService": "請選擇服務項目"
+      "selectService": "請選擇服務項目",
+      "submitting": "發送中...",
+      "successMessage": "感謝您的諮詢！我們會在24小時內與您聯繫。",
+      "errorMessage": "發送失敗，請稍後再試。",
+      "networkError": "網絡錯誤，請檢查您的連線後再試。"
     },
     "info": {
       "title": "聯絡資訊",
@@ -298,5 +404,16 @@
       "phone": "+886 912 345 678",
       "email": "connect.ptalk@gmail.com"
     }
+  },
+  "common": {
+    "deliverables": "交付成果",
+    "executionContent": "執行內容",
+    "email": "電子郵件",
+    "lineOfficialAccount": "Line 官方帳號",
+    "quickContact": "快速聯絡",
+    "followUs": "追蹤我們",
+    "chinese": "中文",
+    "japanese": "日本語",
+    "english": "English"
   }
 }

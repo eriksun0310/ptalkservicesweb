@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe, faChevronDown } from '@fortawesome/free-solid-svg-icons';
@@ -11,12 +11,13 @@ import styles from './LanguageSwitcher.module.css';
 export const LanguageSwitcher = () => {
   const locale = useLocale();
   const router = useRouter();
+  const t = useTranslations('common');
   const [isOpen, setIsOpen] = useState(false);
 
   const languages = [
-    { code: 'zh-TW', label: '中文', shortLabel: 'ZH' },
-    { code: 'en', label: 'English', shortLabel: 'EN' },
-    { code: 'ja', label: '日本語', shortLabel: 'JP' }
+    { code: 'zh-TW', label: t('chinese'), shortLabel: 'ZH' },
+    { code: 'en', label: t('english'), shortLabel: 'EN' },
+    { code: 'ja', label: t('japanese'), shortLabel: 'JP' }
   ];
 
   const currentLanguage = languages.find(lang => lang.code === locale) || languages[0];

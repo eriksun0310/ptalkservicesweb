@@ -13,7 +13,19 @@
   "hero": {
     "title": "Transform Your Ideas Into Digital Reality",
     "subtitle": "Professional team creating innovative solutions",
-    "cta": "Get Started"
+    "cta": "Get Started",
+    "badge": "Professional Team",
+    "browseServices": "Browse Services",
+    "features": {
+      "tech": "Cutting-edge Tech",
+      "delivery": "Fast Delivery",
+      "design": "Beautiful Design",
+      "security": "Secure & Reliable"
+    },
+    "stats": {
+      "projects": "Projects Completed",
+      "satisfaction": "Client Satisfaction"
+    }
   },
   "services": {
     "title": "Our Services",
@@ -62,25 +74,118 @@
     }
   },
   "about": {
-    "title": "About PTalk",
-    "mission": {
-      "title": "Our Mission",
-      "content": "PTalk is dedicated to providing innovative technical solutions, helping businesses and individuals achieve digital transformation. We believe in the power of technology to change the world, turning every idea into reality through professional technical services."
+    "badge": "About PTalk",
+    "mainTitle": "About PTalk",
+    "subtitle": "Professional technical services for digital transformation",
+    "intro": {
+      "paragraph1": "PTalk Technical Services was founded in 2018, dedicated to providing comprehensive technical solutions for businesses. We have an experienced professional team that combines innovative technology with industry best practices to help clients achieve digital transformation and enhance competitiveness.",
+      "paragraph2": "From website development to mobile applications, from system integration to cloud services, we provide one-stop technical services to meet the needs of businesses of all sizes. Choose PTalk for professionalism and trust."
     },
-    "vision": {
-      "title": "Our Vision",
-      "content": "To become the most trusted technology partner, creating maximum value for clients through innovative thinking and professional expertise."
+    "coreValues": {
+      "title": "Core Values",
+      "innovation": {
+        "title": "Innovation",
+        "description": "Continuous innovation, leading technology trends"
+      },
+      "quality": {
+        "title": "Quality",
+        "description": "High standards, delivering excellence"
+      },
+      "service": {
+        "title": "Service",
+        "description": "Customer first, exceeding expectations"
+      },
+      "integrity": {
+        "title": "Integrity",
+        "description": "Honest and trustworthy, building long-term partnerships"
+      }
+    },
+    "timeline": {
+      "title": "Our Journey",
+      "2018": {
+        "title": "Company Founded",
+        "description": "PTalk Technical Services officially established, began providing digital transformation services"
+      },
+      "2020": {
+        "title": "Business Expansion",
+        "description": "Service coverage expanded nationwide, client base exceeded 100 companies"
+      },
+      "2022": {
+        "title": "Technical Breakthrough",
+        "description": "Launched innovative AI solutions, gained industry recognition"
+      },
+      "2024": {
+        "title": "Continuous Growth",
+        "description": "Team size reached 50 people, serving over 500 enterprise clients"
+      }
     },
     "team": {
       "title": "Our Team",
-      "content": "Our team consists of experienced engineers, designers, and project managers, each with deep expertise in their respective fields."
+      "tech": {
+        "title": "Tech Team",
+        "description": "Senior full-stack engineers",
+        "details": "Proficient in various programming languages and frameworks with rich development experience"
+      },
+      "design": {
+        "title": "Design Team",
+        "description": "Creative UI/UX designers",
+        "details": "Creating beautiful and functional user interfaces, providing excellent user experience"
+      },
+      "pm": {
+        "title": "Project Management",
+        "description": "Professional PM team",
+        "details": "Ensuring projects are delivered on time with quality meeting client expectations"
+      },
+      "consultant": {
+        "title": "Consultant Team",
+        "description": "Business strategy consultants",
+        "details": "Providing professional consultation to help businesses with digital transformation"
+      }
+    },
+    "achievements": {
+      "title": "Our Achievements",
+      "experience": "Years Experience",
+      "clients": "Clients Served",
+      "projects": "Projects Completed",
+      "members": "Team Members"
     }
   },
   "products": {
     "title": "Our Products",
+    "subtitle": "Showcasing our latest and proudest works",
+    "badge": "Product Showcase",
     "viewDetails": "View Details",
     "features": "Core Features",
-    "techStack": "Tech Stack"
+    "techStack": "Tech Stack",
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "demo": "View Demo",
+    "projects": {
+      "ptalk": {
+        "title": "PTalk Official Website",
+        "description": "Modern corporate website with complete content management",
+        "features": ["Responsive Design", "SEO Optimization", "Content Management", "Multi-language Support"],
+        "techStack": ["Next.js", "React", "TypeScript", "TailwindCSS"]
+      },
+      "ecommerce": {
+        "title": "E-commerce Platform",
+        "description": "Full-featured online shopping platform",
+        "features": ["Product Management", "Shopping Cart", "Payment Integration", "Order Tracking"],
+        "techStack": ["Vue.js", "Node.js", "MongoDB", "Stripe API"]
+      },
+      "app": {
+        "title": "Mobile App Development",
+        "description": "Cross-platform mobile application solutions",
+        "features": ["Cross-platform", "Push Notifications", "Offline Support", "Native Performance"],
+        "techStack": ["React Native", "Flutter", "Firebase", "GraphQL"]
+      },
+      "ai": {
+        "title": "AI Intelligence Platform",
+        "description": "AI-powered business intelligence solutions",
+        "features": ["Natural Language Processing", "Data Analytics", "Predictive Models", "Automated Reports"],
+        "techStack": ["Python", "TensorFlow", "FastAPI", "Docker"]
+      }
+    }
   },
   "process": {
     "hero": {
@@ -265,7 +370,11 @@
       "service": "Service Inquiry",
       "message": "Message",
       "submit": "Send Inquiry",
-      "selectService": "Select a service"
+      "selectService": "Select a service",
+      "submitting": "Sending...",
+      "successMessage": "Thank you for your inquiry! We will contact you within 24 hours.",
+      "errorMessage": "Failed to send. Please try again later.",
+      "networkError": "Network error. Please check your connection and try again."
     },
     "info": {
       "title": "Contact Information",
@@ -298,5 +407,16 @@
       "phone": "+886 912 345 678",
       "email": "connect.ptalk@gmail.com"
     }
+  },
+  "common": {
+    "deliverables": "Deliverables",
+    "executionContent": "Execution Content",
+    "email": "Email",
+    "lineOfficialAccount": "Line Official Account",
+    "quickContact": "Quick Contact",
+    "followUs": "Follow Us",
+    "chinese": "Chinese",
+    "japanese": "Japanese",
+    "english": "English"
   }
 }
