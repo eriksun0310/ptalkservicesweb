@@ -16,7 +16,7 @@ const contacts = [
   {
     name: 'Line',
     icon: faLine,
-    url: 'https://line.me/ti/p/ptalk.tw',
+    url: 'https://line.me/R/ti/p/@015ziycs',
     label: 'Line 官方帳號',
     type: 'line'
   }

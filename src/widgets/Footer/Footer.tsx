@@ -56,7 +56,7 @@ export const Footer = () => {
                 </a>
 
                 <a
-                  href="https://line.me/ti/p/ptalk.tw"
+                  href="https://line.me/R/ti/p/@015ziycs"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.contactIcon}

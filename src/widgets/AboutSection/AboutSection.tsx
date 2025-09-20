@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faLightbulb,
@@ -16,6 +17,19 @@ import {
 import styles from './AboutSection.module.css';
 
 export const AboutSection = () => {
+  const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set());
+
+  const handleCardClick = (index: number) => {
+    setFlippedCards(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(index)) {
+        newSet.delete(index);
+      } else {
+        newSet.add(index);
+      }
+      return newSet;
+    });
+  };
 
   const coreValues = [
     {
@@ -187,7 +201,11 @@ export const AboutSection = () => {
           <h2 className={styles.sectionTitle}>專業團隊</h2>
           <div className={styles.teamGrid}>
             {teamMembers.map((member, index) => (
-              <div key={index} className={styles.teamCard}>
+              <div
+                key={index}
+                className={`${styles.teamCard} ${flippedCards.has(index) ? styles.flipped : ''}`}
+                onClick={() => handleCardClick(index)}
+              >
                 <div className={styles.teamCardInner}>
                   <div className={styles.teamCardFront}>
                     <div className={styles.teamIcon}>

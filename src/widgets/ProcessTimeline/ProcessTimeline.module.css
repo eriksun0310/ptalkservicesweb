@@ -498,7 +498,8 @@
 
   .timelineContent {
     height: auto;
-    min-height: 380px;
+    min-height: auto;
+    perspective: none;
   }
 
   .note {
@@ -514,6 +515,37 @@
 @media (max-width: 480px) {
   .timeline {
     padding: 60px 0;
+  }
+
+  .timelineWrapper {
+    padding: 0 10px;
+  }
+
+  .timelineContent {
+    margin-left: 50px !important;
+    margin-right: 10px !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  .timelineItem {
+    margin-bottom: 30px;
+  }
+
+  .timelineLine {
+    left: 20px;
+  }
+
+  .timelineNode {
+    left: 20px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .timelineItem.left::after,
+  .timelineItem.right::after {
+    left: 20px;
+    width: 30px;
   }
 
   .title {

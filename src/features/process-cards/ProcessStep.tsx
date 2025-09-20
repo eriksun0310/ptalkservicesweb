@@ -2,7 +2,7 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { faCheck, faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FlipCard } from '@/shared/ui/FlipCard';
 import styles from './ProcessStep.module.css';
 
@@ -37,10 +37,9 @@ export const ProcessStep: React.FC<ProcessStepProps> = ({ step, index }) => {
       </div>
       <h3 className={styles.title}>{step.title}</h3>
       <p className={styles.duration}>{step.duration}</p>
-      <p className={styles.description}>{step.description}</p>
-      <div className={styles.flipHint}>
-        <span>滑鼠移入查看詳情</span>
-        <FontAwesomeIcon icon={faArrowRight} />
+      <div className={styles.frontDeliverable}>
+        <h4>交付成果</h4>
+        <p>{step.deliverables}</p>
       </div>
     </div>
   );
@@ -54,7 +53,7 @@ export const ProcessStep: React.FC<ProcessStepProps> = ({ step, index }) => {
       </div>
 
       <div className={styles.details}>
-        <h4>執行內容：</h4>
+        <h4>執行內容</h4>
         <ul>
           {step.details.map((detail, idx) => (
             <li key={idx}>
@@ -65,15 +64,6 @@ export const ProcessStep: React.FC<ProcessStepProps> = ({ step, index }) => {
         </ul>
       </div>
 
-      <div className={styles.deliverable}>
-        <h4>交付成果：</h4>
-        <p>{step.deliverables}</p>
-      </div>
-
-      <div className={styles.flipBack}>
-        <FontAwesomeIcon icon={faArrowLeft} />
-        <span>返回</span>
-      </div>
     </div>
   );
 

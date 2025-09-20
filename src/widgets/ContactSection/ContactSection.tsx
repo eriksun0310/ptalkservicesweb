@@ -39,7 +39,7 @@ export const ContactSection = () => {
                   <p className={styles.socialTitle}>{t('social.follow')}</p>
                   <div className={styles.socialIcons}>
                     <a
-                      href="https://line.me/ti/p/ptalk.tw"
+                      href="https://line.me/R/ti/p/@015ziycs"
                       target="_blank"
                       rel="noopener noreferrer"
                       className={styles.socialIcon}
@@ -59,7 +59,7 @@ export const ContactSection = () => {
                     </a>
 
                     <a
-                      href="https://threads.net/ptalk"
+                      href="https://www.threads.com/@ptalk.tw"
                       target="_blank"
                       rel="noopener noreferrer"
                       className={styles.socialIcon}

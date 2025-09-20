@@ -15,7 +15,7 @@ const socials = [
   {
     name: 'Threads',
     icon: faThreads,
-    url: 'https://threads.net/ptalk',
+    url: 'https://www.threads.com/@ptalk.tw',
     label: '@ptalk.tw'
   }
 ];

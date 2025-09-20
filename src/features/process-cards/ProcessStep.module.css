@@ -3,6 +3,7 @@
   height: 100%;
 }
 
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -151,7 +152,7 @@
   font-size: 0.9rem;
   color: var(--accent);
   font-weight: 600;
-  margin-bottom: 18px;
+  margin-bottom: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 5px 14px;
@@ -159,13 +160,71 @@
   border-radius: 15px;
 }
 
-.description {
+.frontDeliverable {
   flex: 1;
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.8);
+  width: calc(100% + 60px);
+  margin: 20px -30px -35px -30px;
+  padding: 25px 30px;
+  background: linear-gradient(135deg, rgba(139, 111, 71, 0.2) 0%, rgba(139, 111, 71, 0.1) 100%);
+  border-radius: 0 0 20px 20px;
+  border-top: 2px solid rgba(139, 111, 71, 0.4);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.frontDeliverable::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.frontDeliverable h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 15px;
   text-align: center;
-  line-height: 1.65;
-  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.frontDeliverable h4::before,
+.frontDeliverable h4::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(139, 111, 71, 0.3));
+  max-width: 50px;
+}
+
+.frontDeliverable h4::after {
+  background: linear-gradient(90deg, rgba(139, 111, 71, 0.3), transparent);
+}
+
+.frontDeliverable p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.7;
+  text-align: center;
+  margin: 0;
+  font-weight: 500;
+  padding: 0 10px;
 }
 
 .flipHint {
@@ -205,6 +264,7 @@
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 0 1px rgba(255, 255, 255, 0.15);
 }
+
 
 .backGlow {
   position: absolute;
@@ -250,17 +310,18 @@
 .details {
   flex: 1;
   margin-bottom: 20px;
-  overflow-y: auto;
-  max-height: 200px;
 }
 
 .details h4 {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--accent);
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(139, 111, 71, 0.3);
+  text-align: center;
 }
 
 .details ul {
@@ -301,34 +362,11 @@
 
 .details li span {
   flex: 1;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.5;
-}
-
-.deliverable {
-  padding: 15px;
-  background: rgba(139, 111, 71, 0.1);
-  border-radius: 12px;
-  border: 1px solid rgba(139, 111, 71, 0.2);
-  margin-bottom: 20px;
-}
-
-.deliverable h4 {
   font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--accent);
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
 }
 
-.deliverable p {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.5;
-  margin: 0;
-}
 
 .flipBack {
   display: flex;
@@ -355,10 +393,24 @@
   box-shadow: 0 8px 20px rgba(139, 111, 71, 0.4);
 }
 
+
 /* 響應式設計 */
 @media (max-width: 768px) {
-  .front, .back {
+  .card {
+    min-height: 420px;
+  }
+
+  .front {
+    padding: 30px 24px 0;
+  }
+
+  .back {
     padding: 30px 24px;
+  }
+
+  .frontDeliverable {
+    margin: 20px -24px -30px -24px;
+    padding: 20px 24px;
   }
 
   .icon {
@@ -385,8 +437,27 @@
 }
 
 @media (max-width: 480px) {
-  .front, .back {
+  .card {
+    min-height: auto;
+  }
+
+  .front {
+    padding: 24px 20px 0;
+  }
+
+  .back {
     padding: 24px 20px;
+  }
+
+  .frontDeliverable {
+    margin: 15px -20px 0 -20px;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .frontDeliverable h4::before,
+  .frontDeliverable h4::after {
+    display: none;
   }
 
   .icon {

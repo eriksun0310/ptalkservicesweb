@@ -3,7 +3,8 @@
     "allow": [
       "Read(//c/Users/USER/Downloads/**)",
       "Read(//Users/jiayu/Downloads/**)",
-      "Bash(pnpm add:*)"
+      "Bash(pnpm add:*)",
+      "Bash(git add:*)"
     ],
     "deny": [],
     "ask": []

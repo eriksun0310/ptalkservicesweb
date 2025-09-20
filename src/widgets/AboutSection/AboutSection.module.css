@@ -514,6 +514,10 @@
   transform: rotateY(180deg);
 }
 
+.teamCard.flipped .teamCardInner {
+  transform: rotateY(180deg);
+}
+
 .teamCardFront, .teamCardBack {
   position: absolute;
   width: 100%;
@@ -699,6 +703,18 @@
 }
 
 @media (max-width: 768px) {
+  .teamCard {
+    cursor: pointer;
+  }
+
+  .teamCard:hover .teamCardInner {
+    transform: none;
+  }
+
+  .teamCard.flipped .teamCardInner {
+    transform: rotateY(180deg);
+  }
+
   .about {
     padding-top: 100px;
     padding-bottom: 60px;
