@@ -271,11 +271,10 @@
   margin-left: calc(50% + 50px);
 }
 
-/* 時間軸內容 - 翻轉卡片容器 */
+/* 時間軸內容 */
 .timelineContent {
   position: relative;
-  perspective: 1000px;
-  height: 380px;
+  height: auto;
 }
 
 /* 時間軸節點 */
@@ -498,8 +497,6 @@
 
   .timelineContent {
     height: auto;
-    min-height: auto;
-    perspective: none;
   }
 
   .note {
@@ -525,7 +522,6 @@
     margin-left: 50px !important;
     margin-right: 10px !important;
     height: auto !important;
-    min-height: auto !important;
   }
 
   .timelineItem {

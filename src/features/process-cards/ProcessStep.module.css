@@ -1,6 +1,8 @@
 .stepContainer {
   width: 100%;
   height: 100%;
+  perspective: 1000px;
+  cursor: pointer;
 }
 
 
@@ -15,11 +17,35 @@
   }
 }
 
-.card {
+.cardInner {
+  width: 100%;
   height: 100%;
   min-height: 380px;
-  cursor: pointer;
   position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stepContainer.flipped .cardInner {
+  transform: rotateY(180deg);
+}
+
+.cardFront,
+.cardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.cardFront {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.cardBack {
+  transform: rotateY(180deg);
 }
 
 /* 正面卡片樣式 */
@@ -227,24 +253,7 @@
   padding: 0 10px;
 }
 
-.flipHint {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.5);
-  transition: all 0.3s ease;
-  padding: 6px 12px;
-  background: rgba(139, 111, 71, 0.08);
-  border-radius: 15px;
-  font-weight: 500;
-}
-
-.flipHint:hover {
-  color: var(--accent);
-  background: rgba(139, 111, 71, 0.2);
-  transform: translateX(5px);
-}
+/* 移除不需要的 flipHint 相關樣式 */
 
 /* 背面卡片樣式 */
 .back {
@@ -368,40 +377,25 @@
 }
 
 
-.flipBack {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 8px 16px;
-  background: rgba(139, 111, 71, 0.2);
-  border: 1px solid var(--accent);
-  border-radius: 20px;
-  color: white;
-  font-size: 0.85rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin: 0 auto;
-}
-
-.flipBack:hover {
-  background: var(--accent);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(139, 111, 71, 0.4);
-}
+/* 移除不需要的 flipBack 相關樣式 */
 
 
 /* 響應式設計 */
 @media (max-width: 768px) {
-  .card {
+  .stepContainer:hover .cardInner {
+    transform: none;
+  }
+
+  .stepContainer.flipped .cardInner {
+    transform: rotateY(180deg);
+  }
+
+  .cardInner {
     min-height: 420px;
   }
 
   .front {
-    padding: 30px 24px 0;
+    padding: 30px 24px;
   }
 
   .back {
@@ -437,12 +431,12 @@
 }
 
 @media (max-width: 480px) {
-  .card {
-    min-height: auto;
+  .cardInner {
+    min-height: 400px;
   }
 
   .front {
-    padding: 24px 20px 0;
+    padding: 24px 20px;
   }
 
   .back {
@@ -453,6 +447,10 @@
     margin: 15px -20px 0 -20px;
     padding: 20px;
     border-radius: 0 0 20px 20px;
+  }
+
+  .frontDeliverable {
+    margin: 15px -20px -20px -20px;
   }
 
   .frontDeliverable h4::before,
