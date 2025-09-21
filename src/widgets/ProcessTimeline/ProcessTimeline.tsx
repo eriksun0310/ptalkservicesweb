@@ -17,98 +17,98 @@ import { ProcessStep, ProcessStepData } from '@/features/process-cards';
 import styles from './ProcessTimeline.module.css';
 
 export const ProcessTimeline = () => {
-  const t = useTranslations('process.timeline');
+  const t = useTranslations('流程頁面.流程時間線');
 
   const processSteps: ProcessStepData[] = [
     {
       id: 'consultation',
       number: '01',
-      title: t('steps.consultation.title'),
-      duration: t('steps.consultation.duration'),
+      title: t('流程步驟.需求諮詢.需求諮詢標題'),
+      duration: t('流程步驟.需求諮詢.諮詢時長'),
       icon: faComments,
-      description: t('steps.consultation.description'),
+      description: t('流程步驟.需求諮詢.諮詢描述'),
       details: [
-        t('steps.consultation.details.0'),
-        t('steps.consultation.details.1'),
-        t('steps.consultation.details.2'),
-        t('steps.consultation.details.3')
+        t('流程步驟.需求諮詢.諮詢細節.0'),
+        t('流程步驟.需求諮詢.諮詢細節.1'),
+        t('流程步驟.需求諮詢.諮詢細節.2'),
+        t('流程步驟.需求諮詢.諮詢細節.3')
       ],
-      deliverables: t('steps.consultation.deliverables')
+      deliverables: t('流程步驟.需求諮詢.諮詢交付物')
     },
     {
       id: 'proposal',
       number: '02',
-      title: t('steps.proposal.title'),
-      duration: t('steps.proposal.duration'),
+      title: t('流程步驟.提案報價.提案報價標題'),
+      duration: t('流程步驟.提案報價.提案時長'),
       icon: faClipboardList,
-      description: t('steps.proposal.description'),
+      description: t('流程步驟.提案報價.提案描述'),
       details: [
-        t('steps.proposal.details.0'),
-        t('steps.proposal.details.1'),
-        t('steps.proposal.details.2'),
-        t('steps.proposal.details.3')
+        t('流程步驟.提案報價.提案細節.0'),
+        t('流程步驟.提案報價.提案細節.1'),
+        t('流程步驟.提案報價.提案細節.2'),
+        t('流程步驟.提案報價.提案細節.3')
       ],
-      deliverables: t('steps.proposal.deliverables')
+      deliverables: t('流程步驟.提案報價.提案交付物')
     },
     {
       id: 'contract',
       number: '03',
-      title: t('steps.contract.title'),
-      duration: t('steps.contract.duration'),
+      title: t('流程步驟.合約簽訂.合約簽訂標題'),
+      duration: t('流程步驟.合約簽訂.簽約時長'),
       icon: faFileSignature,
-      description: t('steps.contract.description'),
+      description: t('流程步驟.合約簽訂.簽約描述'),
       details: [
-        t('steps.contract.details.0'),
-        t('steps.contract.details.1'),
-        t('steps.contract.details.2'),
-        t('steps.contract.details.3')
+        t('流程步驟.合約簽訂.簽約細節.0'),
+        t('流程步驟.合約簽訂.簽約細節.1'),
+        t('流程步驟.合約簽訂.簽約細節.2'),
+        t('流程步驟.合約簽訂.簽約細節.3')
       ],
-      deliverables: t('steps.contract.deliverables')
+      deliverables: t('流程步驟.合約簽訂.簽約交付物')
     },
     {
       id: 'development',
       number: '04',
-      title: t('steps.development.title'),
-      duration: t('steps.development.duration'),
+      title: t('流程步驟.開發實作.開發實作標題'),
+      duration: t('流程步驟.開發實作.開發時長'),
       icon: faCode,
-      description: t('steps.development.description'),
+      description: t('流程步驟.開發實作.開發描述'),
       details: [
-        t('steps.development.details.0'),
-        t('steps.development.details.1'),
-        t('steps.development.details.2'),
-        t('steps.development.details.3')
+        t('流程步驟.開發實作.開發細節.0'),
+        t('流程步驟.開發實作.開發細節.1'),
+        t('流程步驟.開發實作.開發細節.2'),
+        t('流程步驟.開發實作.開發細節.3')
       ],
-      deliverables: t('steps.development.deliverables')
+      deliverables: t('流程步驟.開發實作.開發交付物')
     },
     {
       id: 'testing',
       number: '05',
-      title: t('steps.testing.title'),
-      duration: t('steps.testing.duration'),
+      title: t('流程步驟.測試驗收.測試驗收標題'),
+      duration: t('流程步驟.測試驗收.測試時長'),
       icon: faVial,
-      description: t('steps.testing.description'),
+      description: t('流程步驟.測試驗收.測試描述'),
       details: [
-        t('steps.testing.details.0'),
-        t('steps.testing.details.1'),
-        t('steps.testing.details.2'),
-        t('steps.testing.details.3')
+        t('流程步驟.測試驗收.測試細節.0'),
+        t('流程步驟.測試驗收.測試細節.1'),
+        t('流程步驟.測試驗收.測試細節.2'),
+        t('流程步驟.測試驗收.測試細節.3')
       ],
-      deliverables: t('steps.testing.deliverables')
+      deliverables: t('流程步驟.測試驗收.測試交付物')
     },
     {
       id: 'launch',
       number: '06',
-      title: t('steps.launch.title'),
-      duration: t('steps.launch.duration'),
+      title: t('流程步驟.上線維護.上線維護標題'),
+      duration: t('流程步驟.上線維護.維護時長'),
       icon: faRocket,
-      description: t('steps.launch.description'),
+      description: t('流程步驟.上線維護.上線描述'),
       details: [
-        t('steps.launch.details.0'),
-        t('steps.launch.details.1'),
-        t('steps.launch.details.2'),
-        t('steps.launch.details.3')
+        t('流程步驟.上線維護.上線細節.0'),
+        t('流程步驟.上線維護.上線細節.1'),
+        t('流程步驟.上線維護.上線細節.2'),
+        t('流程步驟.上線維護.上線細節.3')
       ],
-      deliverables: t('steps.launch.deliverables')
+      deliverables: t('流程步驟.上線維護.上線交付物')
     }
   ];
 
@@ -135,8 +135,8 @@ export const ProcessTimeline = () => {
       <div className="container">
         <div className={styles.header}>
           <div className={styles.badge}>Process Timeline</div>
-          <h2 className={styles.title}>{t('title')}</h2>
-          <p className={styles.subtitle}>{t('subtitle')}</p>
+          <h2 className={styles.title}>{t('六步驟完成專案')}</h2>
+          <p className={styles.subtitle}>{t('敏捷開發方法')}</p>
         </div>
 
         <div className={styles.timelineWrapper}>
@@ -155,7 +155,7 @@ export const ProcessTimeline = () => {
         </div>
 
         <div className={styles.note}>
-          <p>{t('note')}</p>
+          <p>{t('流程備註')}</p>
         </div>
       </div>
     </section>

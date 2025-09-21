@@ -46,12 +46,12 @@ const services = [
 ];
 
 export const ServicesSection = () => {
-  const t = useTranslations('services');
+  const t = useTranslations('服務項目');
 
   return (
     <section id="services" className="section">
       <div className="container">
-        <h2 className={styles.title}>{t('title')}</h2>
+        <h2 className={styles.title}>{t('服務標題')}</h2>
         <div className={styles.carouselWrapper}>
           <Carousel
             itemsPerView={3}

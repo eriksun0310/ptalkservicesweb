@@ -15,11 +15,11 @@ const geistMono = Geist_Mono({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('metadata');
+  const t = await getTranslations('網站資訊');
 
   return {
-    title: t('title'),
-    description: t('description'),
+    title: t('網站標題'),
+    description: t('網站描述'),
   };
 }
 

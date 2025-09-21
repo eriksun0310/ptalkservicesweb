@@ -25,7 +25,7 @@ interface ProcessStepProps {
 
 export const ProcessStep: React.FC<ProcessStepProps> = ({ step, index }) => {
   const [isFlipped, setIsFlipped] = useState(false);
-  const t = useTranslations('common');
+  const t = useTranslations('共用');
 
   const handleClick = () => {
     setIsFlipped(!isFlipped);
@@ -68,7 +68,7 @@ export const ProcessStep: React.FC<ProcessStepProps> = ({ step, index }) => {
             <h3 className={styles.title}>{step.title}</h3>
             <p className={styles.duration}>{step.duration}</p>
             <div className={styles.frontDeliverable}>
-              <h4>{t('deliverables')}</h4>
+              <h4>{t('交付成果')}</h4>
               <p>{step.deliverables}</p>
             </div>
           </div>
@@ -84,7 +84,7 @@ export const ProcessStep: React.FC<ProcessStepProps> = ({ step, index }) => {
             </div>
 
             <div className={styles.details}>
-              <h4>{t('executionContent')}</h4>
+              <h4>{t('執行內容')}</h4>
               <ul>
                 {step.details.map((detail, idx) => (
                   <li key={idx}>

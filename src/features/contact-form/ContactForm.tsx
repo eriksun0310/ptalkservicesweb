@@ -5,6 +5,20 @@ import { useTranslations } from 'next-intl';
 import { Button } from '@/shared/ui/Button';
 import styles from './ContactForm.module.css';
 
+// 輔助函數用於映射服務 ID 到中文翻譯 key
+const getServiceTitle = (serviceId: string, t: any) => {
+  const titleMap: Record<string, string> = {
+    'app': 'APP服務.APP規劃設計',
+    'web': '網頁設計服務.網頁設計',
+    'website': '網站架設服務.網站架設',
+    'hosting': '主機租賃服務.網站主機租賃',
+    'ai': 'AI串接服務.AI串接',
+    'seo': 'SEO優化服務.SEO優化',
+    'teaching': '教學服務.AI科技演講教學'
+  };
+  return t(titleMap[serviceId] || serviceId);
+};
+
 interface FormData {
   name: string;
   email: string;
@@ -14,8 +28,8 @@ interface FormData {
 }
 
 export const ContactForm = () => {
-  const t = useTranslations('contact.form');
-  const tServices = useTranslations('services');
+  const t = useTranslations('聯絡頁面.聯絡表單');
+  const tServices = useTranslations('服務項目');
 
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -64,7 +78,7 @@ export const ContactForm = () => {
 
       if (response.ok) {
         setSubmitStatus('success');
-        setStatusMessage(t('successMessage'));
+        setStatusMessage(t('發送成功訊息'));
         setFormData({
           name: '',
           email: '',
@@ -74,11 +88,11 @@ export const ContactForm = () => {
         });
       } else {
         setSubmitStatus('error');
-        setStatusMessage(data.error || t('errorMessage'));
+        setStatusMessage(data.error || t('發送失敗訊息'));
       }
     } catch (error) {
       setSubmitStatus('error');
-      setStatusMessage(t('networkError'));
+      setStatusMessage(t('網路錯誤訊息'));
       console.error('Form submission error:', error);
     } finally {
       setIsSubmitting(false);
@@ -99,7 +113,7 @@ export const ContactForm = () => {
 
       <div className={styles.row}>
         <div className={styles.field}>
-          <label htmlFor="name">{t('name')}</label>
+          <label htmlFor="name">{t('姓名')}</label>
           <input
             type="text"
             id="name"
@@ -111,7 +125,7 @@ export const ContactForm = () => {
           />
         </div>
         <div className={styles.field}>
-          <label htmlFor="email">{t('email')}</label>
+          <label htmlFor="email">{t('電子郵件')}</label>
           <input
             type="email"
             id="email"
@@ -126,7 +140,7 @@ export const ContactForm = () => {
 
       <div className={styles.row}>
         <div className={styles.field}>
-          <label htmlFor="phone">{t('phone')}</label>
+          <label htmlFor="phone">{t('電話')}</label>
           <input
             type="tel"
             id="phone"
@@ -137,7 +151,7 @@ export const ContactForm = () => {
           />
         </div>
         <div className={styles.field}>
-          <label htmlFor="service">{t('service')}</label>
+          <label htmlFor="service">{t('諮詢服務')}</label>
           <select
             id="service"
             name="service"
@@ -146,10 +160,10 @@ export const ContactForm = () => {
             required
             disabled={isSubmitting}
           >
-            <option value="">{t('selectService')}</option>
+            <option value="">{t('請選擇服務')}</option>
             {services.map(service => (
               <option key={service} value={service}>
-                {tServices(`${service}.title`)}
+                {getServiceTitle(service, tServices)}
               </option>
             ))}
           </select>
@@ -157,7 +171,7 @@ export const ContactForm = () => {
       </div>
 
       <div className={styles.field}>
-        <label htmlFor="message">{t('message')}</label>
+        <label htmlFor="message">{t('訊息內容')}</label>
         <textarea
           id="message"
           name="message"
@@ -176,7 +190,7 @@ export const ContactForm = () => {
         fullWidth
         disabled={isSubmitting}
       >
-        {isSubmitting ? t('submitting') : t('submit')}
+        {isSubmitting ? t('發送中') : t('送出諮詢')}
       </Button>
     </form>
   );

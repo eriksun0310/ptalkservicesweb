@@ -1,0 +1,415 @@
+{
+  "metadata": {
+    "title": "PTalk - 專業技術服務團隊",
+    "description": "提供APP規劃設計、網頁設計、網站架設、AI串接、SEO優化等專業服務"
+  },
+  "navigation": {
+    "home": "首頁",
+    "about": "關於我們",
+    "products": "產品展示",
+    "process": "合作流程",
+    "contact": "聯絡我們"
+  },
+  "hero": {
+    "title": "將您的想法轉化為數位現實",
+    "subtitle": "專業技術團隊，打造創新解決方案",
+    "cta": "立即諮詢",
+    "badge": "專業技術團隊",
+    "browseServices": "瀏覽服務",
+    "features": {
+      "tech": "前沿技術",
+      "delivery": "快速交付",
+      "design": "精美設計",
+      "security": "安全可靠"
+    },
+    "stats": {
+      "projects": "完成專案",
+      "satisfaction": "客戶滿意"
+    }
+  },
+  "services": {
+    "title": "我們的服務",
+    "app": {
+      "title": "APP規劃設計",
+      "description": "從概念到上架，完整APP開發服務"
+    },
+    "web": {
+      "title": "網頁設計",
+      "description": "響應式網頁設計，提供最佳使用體驗"
+    },
+    "website": {
+      "title": "網站架設",
+      "description": "客製化網站開發，滿足您的商業需求"
+    },
+    "hosting": {
+      "title": "網站主機租賃",
+      "description": "穩定可靠的主機服務，確保網站正常運作"
+    },
+    "ai": {
+      "title": "AI串接",
+      "description": "整合AI技術，提升產品智能化程度"
+    },
+    "seo": {
+      "title": "SEO優化",
+      "description": "提升搜尋排名，增加網站能見度"
+    },
+    "teaching": {
+      "title": "AI科技演講教學",
+      "description": "分享最新AI技術與程式開發經驗"
+    }
+  },
+  "whyUs": {
+    "title": "為什麼選擇PTalk",
+    "reason1": {
+      "title": "專業技術團隊",
+      "description": "擁有豐富開發經驗的專業工程師"
+    },
+    "reason2": {
+      "title": "客製化解決方案",
+      "description": "根據您的需求量身打造最適合的方案"
+    },
+    "reason3": {
+      "title": "完整售後服務",
+      "description": "提供持續的技術支援與維護服務"
+    }
+  },
+  "about": {
+    "badge": "About PTalk",
+    "mainTitle": "關於 PTalk",
+    "subtitle": "專業技術服務，助力企業數位轉型",
+    "intro": {
+      "paragraph1": "PTalk 技術服務公司成立於 2018 年，致力於為企業提供全方位的技術解決方案。我們擁有經驗豐富的專業團隊，結合創新技術與業界最佳實踐，協助客戶實現數位轉型，提升競爭力。",
+      "paragraph2": "從網站開發到行動應用，從系統整合到雲端服務，我們提供一站式的技術服務，滿足不同規模企業的需求。選擇 PTalk，選擇專業與信賴。"
+    },
+    "coreValues": {
+      "title": "核心價值",
+      "innovation": {
+        "title": "創新",
+        "description": "持續創新，引領技術潮流"
+      },
+      "quality": {
+        "title": "品質",
+        "description": "堅持高標準，交付卓越成果"
+      },
+      "service": {
+        "title": "服務",
+        "description": "客戶至上，超越期待"
+      },
+      "integrity": {
+        "title": "誠信",
+        "description": "誠實守信，建立長期夥伴關係"
+      }
+    },
+    "timeline": {
+      "title": "發展歷程",
+      "2018": {
+        "title": "公司成立",
+        "description": "PTalk 技術服務公司正式成立，開始為企業提供數位轉型服務"
+      },
+      "2020": {
+        "title": "業務擴展",
+        "description": "服務範圍擴展至全台，客戶數量突破 100 家"
+      },
+      "2022": {
+        "title": "技術突破",
+        "description": "推出創新 AI 解決方案，獲得業界認可"
+      },
+      "2024": {
+        "title": "持續成長",
+        "description": "團隊規模達到 50 人，服務超過 500 家企業客戶"
+      }
+    },
+    "team": {
+      "title": "專業團隊",
+      "tech": {
+        "title": "技術團隊",
+        "description": "資深全端工程師團隊",
+        "details": "精通各種程式語言與框架，具備豐富的開發經驗"
+      },
+      "design": {
+        "title": "設計團隊",
+        "description": "創意 UI/UX 設計師",
+        "details": "打造美觀實用的使用者介面，提供卓越的用戶體驗"
+      },
+      "pm": {
+        "title": "專案管理",
+        "description": "專業 PM 團隊",
+        "details": "確保專案準時交付，品質符合客戶期待"
+      },
+      "consultant": {
+        "title": "顧問團隊",
+        "description": "業務策略顧問",
+        "details": "提供專業諮詢，協助企業數位轉型"
+      }
+    },
+    "achievements": {
+      "title": "我們的成就",
+      "experience": "年經驗",
+      "clients": "服務客戶",
+      "projects": "完成專案",
+      "members": "團隊成員"
+    }
+  },
+  "products": {
+    "title": "我們的產品",
+    "subtitle": "展示我們最新和最引以為傲的作品",
+    "badge": "產品展示",
+    "viewDetails": "查看詳情",
+    "features": "核心功能",
+    "techStack": "技術架構",
+    "learnMore": "了解更多",
+    "contactUs": "聯絡我們",
+    "demo": "查看演示",
+    "items": {
+      "petfriendlyApp": {
+        "title": "PTalk 寵物友善地圖 App",
+        "description": "全台最大寵物友善地點資訊平台",
+        "features": ["地圖探索", "老實評分", "飼主分享", "收藏口袋名單", "新增評論", "新增店家"],
+        "techStack": ["React Native", ".NET 8", "MySQL", "Redis", "AWS S3", "Next.js", "TypeScript"]
+      },
+      "petfriendlyAdmin": {
+        "title": "PTalk 後台管理系統",
+        "description": "寵物友善地圖運營後台",
+        "features": ["會員與用戶管理", "評論與檢舉審核", "店家與場館資料維護", "推播通知管理", "數據統計與分析"],
+        "techStack": [".NET 8", "MySQL", "Redis", "AWS S3", "Next.js", "TypeScript", "React"]
+      }
+    },
+    "cta": {
+      "title": "找不到適合的產品？",
+      "description": "我們提供客製化開發服務，為您打造專屬解決方案",
+      "button": "聯絡我們"
+    }
+  },
+  "process": {
+    "hero": {
+      "title": "透明化的合作流程",
+      "subtitle": "從想法到上線，每一步都清楚掌握",
+      "stats": {
+        "projects": "專案完成",
+        "satisfaction": "客戶滿意度",
+        "clients": "合作夥伴",
+        "support": "技術支援"
+      },
+      "startConsultation": "立即開始諮詢",
+      "viewProcess": "查看流程"
+    },
+    "timeline": {
+      "title": "六步驟完成您的專案",
+      "subtitle": "我們採用敏捷開發方法，確保專案順利進行並及時交付",
+      "note": "每個專案都是獨特的，我們會根據您的具體需求調整流程，確保最佳結果",
+      "steps": {
+        "consultation": {
+          "title": "需求諮詢",
+          "duration": "1-2 天",
+          "description": "深入了解您的需求與目標",
+          "details": [
+            "線上會議討論專案範圍",
+            "需求文件撰寫與確認",
+            "技術可行性評估",
+            "初步時程規劃"
+          ],
+          "deliverables": "需求規格書"
+        },
+        "proposal": {
+          "title": "提案報價",
+          "duration": "2-3 天",
+          "description": "提供客製化解決方案",
+          "details": [
+            "技術架構規劃",
+            "詳細報價單製作",
+            "時程表與里程碑設定",
+            "合約條款討論"
+          ],
+          "deliverables": "專案提案書"
+        },
+        "contract": {
+          "title": "合約簽訂",
+          "duration": "1-2 天",
+          "description": "確認合作細節與保障",
+          "details": [
+            "合約內容最終確認",
+            "付款方式與時程安排",
+            "智慧財產權歸屬確認",
+            "專案啟動會議"
+          ],
+          "deliverables": "正式合約"
+        },
+        "development": {
+          "title": "開發實作",
+          "duration": "依專案規模",
+          "description": "敏捷開發，持續交付",
+          "details": [
+            "Sprint 規劃與執行",
+            "每週進度報告",
+            "版本控制與代碼審查",
+            "階段性成果展示"
+          ],
+          "deliverables": "開發版本"
+        },
+        "testing": {
+          "title": "測試驗收",
+          "duration": "3-5 天",
+          "description": "確保品質與穩定性",
+          "details": [
+            "功能測試與修正",
+            "效能優化調整",
+            "使用者驗收測試",
+            "問題追蹤與解決"
+          ],
+          "deliverables": "測試報告"
+        },
+        "launch": {
+          "title": "上線維護",
+          "duration": "持續服務",
+          "description": "順利上線與後續支援",
+          "details": [
+            "正式環境部署",
+            "系統監控設置",
+            "使用者教育訓練",
+            "保固期技術支援"
+          ],
+          "deliverables": "上線系統"
+        }
+      }
+    },
+    "features": {
+      "title": "我們的合作特色",
+      "subtitle": "透明、高效、專業的服務流程",
+      "items": {
+        "tracking": {
+          "title": "即時專案追蹤",
+          "description": "隨時掌握專案進度與狀態",
+          "highlights": [
+            "線上專案看板",
+            "即時進度更新",
+            "里程碑追蹤"
+          ]
+        },
+        "communication": {
+          "title": "透明溝通機制",
+          "description": "保持密切聯繫，確保需求準確",
+          "highlights": [
+            "專屬 Slack/Teams 頻道",
+            "每週進度會議",
+            "24小時內回覆"
+          ]
+        },
+        "security": {
+          "title": "安全保障",
+          "description": "完整的合約與智財保護",
+          "highlights": [
+            "保密協議簽署",
+            "代碼版權歸屬",
+            "資料安全保護"
+          ]
+        },
+        "agile": {
+          "title": "敏捷開發",
+          "description": "靈活調整，快速響應變化",
+          "highlights": [
+            "Sprint 迭代開發",
+            "持續整合交付",
+            "快速回饋循環"
+          ]
+        }
+      }
+    },
+    "faq": {
+      "title": "常見問題",
+      "subtitle": "關於合作流程的疑問解答",
+      "items": [
+        {
+          "question": "如何開始合作？",
+          "answer": "您可以透過網站表單或直接聯繫我們，我們會在24小時內回覆並安排初步諮詢會議，了解您的需求後提供專業建議。"
+        },
+        {
+          "question": "付款方式與時程？",
+          "answer": "我們提供多種付款方式，一般採用階段性付款：簽約30%、開發中期30%、驗收完成40%。實際付款安排可依專案需求調整。"
+        },
+        {
+          "question": "開發過程中可以修改需求嗎？",
+          "answer": "採用敏捷開發方法，在每個Sprint週期都可以調整需求優先順序。重大變更會評估對時程和成本的影響並與您討論。"
+        },
+        {
+          "question": "提供多久的保固期？",
+          "answer": "標準保固期為3-6個月，期間內提供免費bug修復。保固期後可選擇簽訂維護合約，確保系統長期穩定運行。"
+        },
+        {
+          "question": "智慧財產權如何歸屬？",
+          "answer": "專案完成並結清款項後，客製化開發的程式碼智慧財產權歸客戶所有。我們保留將技術經驗用於其他專案的權利，但不會洩露商業機密。"
+        },
+        {
+          "question": "如何確保專案品質？",
+          "answer": "我們採用代碼審查、自動化測試、持續整合等最佳實踐。每個階段都有明確的驗收標準，確保交付成果符合預期品質。"
+        }
+      ]
+    },
+    "cta": {
+      "title": "準備好開始了嗎？",
+      "subtitle": "讓我們一起將您的想法變成現實",
+      "primaryAction": "立即預約諮詢",
+      "secondaryAction": "下載服務手冊",
+      "phone": "+886 912 345 678",
+      "email": "contact@ptalk.com.tw"
+    }
+  },
+  "contact": {
+    "title": "聯絡我們",
+    "subtitle": "我們很樂意為您提供協助。填寫表單或直接聯繫我們。",
+    "form": {
+      "name": "姓名",
+      "email": "電子郵件",
+      "phone": "電話",
+      "service": "諮詢服務",
+      "message": "訊息內容",
+      "submit": "送出諮詢",
+      "selectService": "請選擇服務項目",
+      "submitting": "發送中...",
+      "successMessage": "感謝您的諮詢！我們會在24小時內與您聯繫。",
+      "errorMessage": "發送失敗，請稍後再試。",
+      "networkError": "網絡錯誤，請檢查您的連線後再試。"
+    },
+    "info": {
+      "title": "聯絡資訊",
+      "quickContact": "快速聯絡",
+      "email": "電子郵件",
+      "phone": "聯絡電話",
+      "address": "公司地址",
+      "addressText": "台北市信義區",
+      "hours": "營業時間",
+      "hoursText": "週一至週五 9:00 - 18:00"
+    },
+    "social": {
+      "title": "社群媒體",
+      "follow": "追蹤我們",
+      "instagram": "Instagram",
+      "line": "Line",
+      "threads": "Threads",
+      "gmail": "Gmail"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 PTalk. 保留所有權利。",
+    "quickLinks": "快速連結",
+    "contact": "聯絡資訊",
+    "cta": {
+      "title": "準備好開始了嗎？",
+      "subtitle": "讓我們一起將您的想法變成現實",
+      "primaryAction": "立即預約諮詢",
+      "secondaryAction": "下載服務手冊",
+      "phone": "+886 912 345 678",
+      "email": "connect.ptalk@gmail.com"
+    }
+  },
+  "common": {
+    "deliverables": "交付成果",
+    "executionContent": "執行內容",
+    "email": "電子郵件",
+    "lineOfficialAccount": "Line 官方帳號",
+    "quickContact": "快速聯絡",
+    "followUs": "追蹤我們",
+    "chinese": "中文",
+    "japanese": "日本語",
+    "english": "English"
+  }
+}

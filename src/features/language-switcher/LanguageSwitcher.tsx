@@ -11,13 +11,13 @@ import styles from './LanguageSwitcher.module.css';
 export const LanguageSwitcher = () => {
   const locale = useLocale();
   const router = useRouter();
-  const t = useTranslations('common');
+  const t = useTranslations('共用');
   const [isOpen, setIsOpen] = useState(false);
 
   const languages = [
-    { code: 'zh-TW', label: t('chinese'), shortLabel: 'ZH' },
-    { code: 'en', label: t('english'), shortLabel: 'EN' },
-    { code: 'ja', label: t('japanese'), shortLabel: 'JP' }
+    { code: 'zh-TW', label: t('中文'), shortLabel: 'ZH' },
+    { code: 'en', label: t('English'), shortLabel: 'EN' },
+    { code: 'ja', label: t('日本語'), shortLabel: 'JP' }
   ];
 
   const currentLanguage = languages.find(lang => lang.code === locale) || languages[0];

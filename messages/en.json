@@ -1,312 +1,312 @@
 {
-  "metadata": {
-    "title": "PTalk - Professional Technical Services",
-    "description": "Providing APP design, web design, website development, AI integration, SEO optimization and more professional services"
+  "網站資訊": {
+    "網站標題": "PTalk - Professional Technical Services",
+    "網站描述": "Providing APP design, web design, website development, AI integration, SEO optimization and more professional services"
   },
-  "navigation": {
-    "home": "Home",
-    "about": "About",
-    "products": "Products",
-    "process": "Process",
-    "contact": "Contact"
+  "導航列": {
+    "首頁": "Home",
+    "關於我們": "About",
+    "產品展示": "Products",
+    "合作流程": "Process",
+    "聯絡我們": "Contact"
   },
-  "hero": {
-    "title": "Transform Your Ideas Into Digital Reality",
-    "subtitle": "Professional team creating innovative solutions",
-    "cta": "Get Started",
-    "badge": "Professional Team",
-    "browseServices": "Browse Services",
-    "features": {
-      "tech": "Cutting-edge Tech",
-      "delivery": "Fast Delivery",
-      "design": "Beautiful Design",
-      "security": "Secure & Reliable"
+  "首頁主視覺": {
+    "主標題": "Transform Your Ideas Into Digital Reality",
+    "副標題": "Professional team creating innovative solutions",
+    "立即諮詢": "Get Started",
+    "專業團隊徽章": "Professional Team",
+    "瀏覽服務": "Browse Services",
+    "特色功能": {
+      "前沿技術": "Cutting-edge Tech",
+      "快速交付": "Fast Delivery",
+      "精美設計": "Beautiful Design",
+      "安全可靠": "Secure & Reliable"
     },
-    "stats": {
-      "projects": "Projects Completed",
-      "satisfaction": "Client Satisfaction"
+    "統計數據": {
+      "完成專案": "Projects Completed",
+      "客戶滿意度": "Client Satisfaction"
     }
   },
-  "services": {
-    "title": "Our Services",
-    "app": {
-      "title": "APP Design & Development",
-      "description": "Complete APP development from concept to launch"
+  "服務項目": {
+    "服務標題": "Our Services",
+    "APP服務": {
+      "APP規劃設計": "APP Design & Development",
+      "APP服務描述": "Complete APP development from concept to launch"
     },
-    "web": {
-      "title": "Web Design",
-      "description": "Responsive web design for optimal user experience"
+    "網頁設計服務": {
+      "網頁設計": "Web Design",
+      "網頁設計描述": "Responsive web design for optimal user experience"
     },
-    "website": {
-      "title": "Website Development",
-      "description": "Custom website development for your business needs"
+    "網站架設服務": {
+      "網站架設": "Website Development",
+      "網站架設描述": "Custom website development for your business needs"
     },
-    "hosting": {
-      "title": "Web Hosting",
-      "description": "Reliable hosting services ensuring website stability"
+    "主機租賃服務": {
+      "網站主機租賃": "Web Hosting",
+      "主機租賃描述": "Reliable hosting services ensuring website stability"
     },
-    "ai": {
-      "title": "AI Integration",
-      "description": "Integrate AI technology to enhance product intelligence"
+    "AI串接服務": {
+      "AI串接": "AI Integration",
+      "AI串接描述": "Integrate AI technology to enhance product intelligence"
     },
-    "seo": {
-      "title": "SEO Optimization",
-      "description": "Improve search rankings and increase visibility"
+    "SEO優化服務": {
+      "SEO優化": "SEO Optimization",
+      "SEO優化描述": "Improve search rankings and increase visibility"
     },
-    "teaching": {
-      "title": "AI Tech Speaking & Training",
-      "description": "Sharing latest AI technology and programming experience"
+    "教學服務": {
+      "AI科技演講教學": "AI Tech Speaking & Training",
+      "教學服務描述": "Sharing latest AI technology and programming experience"
     }
   },
-  "whyUs": {
-    "title": "Why Choose PTalk",
-    "reason1": {
-      "title": "Professional Team",
-      "description": "Experienced engineers with deep expertise"
+  "為什麼選擇我們": {
+    "選擇我們的理由": "Why Choose PTalk",
+    "理由一": {
+      "專業技術團隊": "Professional Team",
+      "專業團隊描述": "Experienced engineers with deep expertise"
     },
-    "reason2": {
-      "title": "Custom Solutions",
-      "description": "Tailored solutions to meet your specific needs"
+    "理由二": {
+      "客製化解決方案": "Custom Solutions",
+      "客製化方案描述": "Tailored solutions to meet your specific needs"
     },
-    "reason3": {
-      "title": "Complete Support",
-      "description": "Ongoing technical support and maintenance"
+    "理由三": {
+      "完整售後服務": "Complete Support",
+      "售後服務描述": "Ongoing technical support and maintenance"
     }
   },
-  "about": {
-    "badge": "About PTalk",
-    "mainTitle": "About PTalk",
-    "subtitle": "Professional technical services for digital transformation",
-    "intro": {
-      "paragraph1": "PTalk Technical Services was founded in 2018, dedicated to providing comprehensive technical solutions for businesses. We have an experienced professional team that combines innovative technology with industry best practices to help clients achieve digital transformation and enhance competitiveness.",
-      "paragraph2": "From website development to mobile applications, from system integration to cloud services, we provide one-stop technical services to meet the needs of businesses of all sizes. Choose PTalk for professionalism and trust."
+  "關於頁面": {
+    "關於徽章": "About PTalk",
+    "關於主標題": "About PTalk",
+    "關於副標題": "Professional technical services for digital transformation",
+    "公司介紹": {
+      "介紹段落一": "PTalk Technical Services was founded in 2018, dedicated to providing comprehensive technical solutions for businesses. We have an experienced professional team that combines innovative technology with industry best practices to help clients achieve digital transformation and enhance competitiveness.",
+      "介紹段落二": "From website development to mobile applications, from system integration to cloud services, we provide one-stop technical services to meet the needs of businesses of all sizes. Choose PTalk for professionalism and trust."
     },
-    "coreValues": {
-      "title": "Core Values",
-      "innovation": {
-        "title": "Innovation",
-        "description": "Continuous innovation, leading technology trends"
+    "核心價值": {
+      "核心價值標題": "Core Values",
+      "創新": {
+        "創新標題": "Innovation",
+        "創新描述": "Continuous innovation, leading technology trends"
       },
-      "quality": {
-        "title": "Quality",
-        "description": "High standards, delivering excellence"
+      "品質": {
+        "品質標題": "Quality",
+        "品質描述": "High standards, delivering excellence"
       },
-      "service": {
-        "title": "Service",
-        "description": "Customer first, exceeding expectations"
+      "服務": {
+        "服務標題": "Service",
+        "服務描述": "Customer first, exceeding expectations"
       },
-      "integrity": {
-        "title": "Integrity",
-        "description": "Honest and trustworthy, building long-term partnerships"
+      "誠信": {
+        "誠信標題": "Integrity",
+        "誠信描述": "Honest and trustworthy, building long-term partnerships"
       }
     },
-    "timeline": {
-      "title": "Our Journey",
-      "2018": {
-        "title": "Company Founded",
-        "description": "PTalk Technical Services officially established, began providing digital transformation services"
+    "發展歷程": {
+      "發展歷程標題": "Our Journey",
+      "2018年": {
+        "公司成立": "Company Founded",
+        "2018年描述": "PTalk Technical Services officially established, began providing digital transformation services"
       },
-      "2020": {
-        "title": "Business Expansion",
-        "description": "Service coverage expanded nationwide, client base exceeded 100 companies"
+      "2020年": {
+        "業務擴展": "Business Expansion",
+        "2020年描述": "Service coverage expanded nationwide, client base exceeded 100 companies"
       },
-      "2022": {
-        "title": "Technical Breakthrough",
-        "description": "Launched innovative AI solutions, gained industry recognition"
+      "2022年": {
+        "技術突破": "Technical Breakthrough",
+        "2022年描述": "Launched innovative AI solutions, gained industry recognition"
       },
-      "2024": {
-        "title": "Continuous Growth",
-        "description": "Team size reached 50 people, serving over 500 enterprise clients"
+      "2024年": {
+        "持續成長": "Continuous Growth",
+        "2024年描述": "Team size reached 50 people, serving over 500 enterprise clients"
       }
     },
-    "team": {
-      "title": "Our Team",
-      "tech": {
-        "title": "Tech Team",
-        "description": "Senior full-stack engineers",
-        "details": "Proficient in various programming languages and frameworks with rich development experience"
+    "團隊": {
+      "專業團隊": "Our Team",
+      "技術團隊": {
+        "技術團隊標題": "Tech Team",
+        "技術團隊描述": "Senior full-stack engineers",
+        "技術團隊詳情": "Proficient in various programming languages and frameworks with rich development experience"
       },
-      "design": {
-        "title": "Design Team",
-        "description": "Creative UI/UX designers",
-        "details": "Creating beautiful and functional user interfaces, providing excellent user experience"
+      "設計團隊": {
+        "設計團隊標題": "Design Team",
+        "設計團隊描述": "Creative UI/UX designers",
+        "設計團隊詳情": "Creating beautiful and functional user interfaces, providing excellent user experience"
       },
-      "pm": {
-        "title": "Project Management",
-        "description": "Professional PM team",
-        "details": "Ensuring projects are delivered on time with quality meeting client expectations"
+      "專案管理": {
+        "專案管理標題": "Project Management",
+        "專案管理描述": "Professional PM team",
+        "專案管理詳情": "Ensuring projects are delivered on time with quality meeting client expectations"
       },
-      "consultant": {
-        "title": "Consultant Team",
-        "description": "Business strategy consultants",
-        "details": "Providing professional consultation to help businesses with digital transformation"
+      "顧問團隊": {
+        "顧問團隊標題": "Consultant Team",
+        "顧問團隊描述": "Business strategy consultants",
+        "顧問團隊詳情": "Providing professional consultation to help businesses with digital transformation"
       }
     },
-    "achievements": {
-      "title": "Our Achievements",
-      "experience": "Years Experience",
-      "clients": "Clients Served",
-      "projects": "Projects Completed",
-      "members": "Team Members"
+    "成就": {
+      "我們的成就": "Our Achievements",
+      "年經驗": "Years Experience",
+      "服務客戶": "Clients Served",
+      "完成專案": "Projects Completed",
+      "團隊成員": "Team Members"
     }
   },
-  "products": {
-    "title": "Our Products",
-    "subtitle": "Showcasing our latest and proudest works",
-    "badge": "Product Showcase",
-    "viewDetails": "View Details",
-    "features": "Core Features",
-    "techStack": "Tech Stack",
-    "learnMore": "Learn More",
-    "contactUs": "Contact Us",
-    "demo": "View Demo",
-    "items": {
-      "petfriendlyApp": {
-        "title": "PTalk Pet-Friendly Map App",
-        "description": "Taiwan's largest pet-friendly location information platform",
-        "features": ["Map Exploration", "Honest Ratings", "Owner Sharing", "Favorites Collection", "Add Reviews", "Add Venues"],
-        "techStack": ["React Native", ".NET 8", "MySQL", "Redis", "AWS S3", "Next.js", "TypeScript"]
+  "產品頁面": {
+    "產品標題": "Our Products",
+    "產品副標題": "Showcasing our latest and proudest works",
+    "產品徽章": "Product Showcase",
+    "查看詳情": "View Details",
+    "核心功能": "Core Features",
+    "技術架構": "Tech Stack",
+    "了解更多": "Learn More",
+    "聯絡我們": "Contact Us",
+    "查看演示": "View Demo",
+    "產品項目": {
+      "寵物友善App": {
+        "寵物友善地圖標題": "PTalk Pet-Friendly Map App",
+        "寵物友善地圖描述": "Taiwan's largest pet-friendly location information platform",
+        "寵物友善功能": ["Map Exploration", "Honest Ratings", "Owner Sharing", "Favorites Collection", "Add Reviews", "Add Venues"],
+        "寵物友善技術": ["React Native", ".NET 8", "MySQL", "Redis", "AWS S3", "Next.js", "TypeScript"]
       },
-      "petfriendlyAdmin": {
-        "title": "PTalk Backend Management System",
-        "description": "Pet-Friendly Map Operations Dashboard",
-        "features": ["Member & User Management", "Review & Report Moderation", "Venue Data Maintenance", "Push Notification Management", "Data Statistics & Analytics"],
-        "techStack": [".NET 8", "MySQL", "Redis", "AWS S3", "Next.js", "TypeScript", "React"]
+      "後台管理系統": {
+        "後台系統標題": "PTalk Backend Management System",
+        "後台系統描述": "Pet-Friendly Map Operations Dashboard",
+        "後台系統功能": ["Member & User Management", "Review & Report Moderation", "Venue Data Maintenance", "Push Notification Management", "Data Statistics & Analytics"],
+        "後台系統技術": [".NET 8", "MySQL", "Redis", "AWS S3", "Next.js", "TypeScript", "React"]
       }
     },
-    "cta": {
-      "title": "Can't find the right product?",
-      "description": "We provide custom development services to create tailored solutions for you",
-      "button": "Contact Us"
+    "產品行動呼籲": {
+      "找不到適合的產品": "Can't find the right product?",
+      "客製化開發服務": "We provide custom development services to create tailored solutions for you",
+      "聯絡按鈕": "Contact Us"
     }
   },
-  "process": {
-    "hero": {
-      "title": "Transparent Collaboration Process",
-      "subtitle": "From idea to launch, every step clearly tracked",
-      "stats": {
-        "projects": "Projects Completed",
-        "satisfaction": "Client Satisfaction",
-        "clients": "Partners",
-        "support": "Tech Support"
+  "流程頁面": {
+    "流程主視覺": {
+      "透明化合作流程": "Transparent Collaboration Process",
+      "流程副標題": "From idea to launch, every step clearly tracked",
+      "流程統計": {
+        "專案完成": "Projects Completed",
+        "客戶滿意度": "Client Satisfaction",
+        "合作夥伴": "Partners",
+        "技術支援": "Tech Support"
       },
-      "startConsultation": "Start Consultation",
-      "viewProcess": "View Process"
+      "開始諮詢": "Start Consultation",
+      "查看流程": "View Process"
     },
-    "timeline": {
-      "title": "Six Steps to Complete Your Project",
-      "subtitle": "We use agile development to ensure smooth progress and timely delivery",
-      "note": "Every project is unique. We adjust our process to your specific needs to ensure the best results",
-      "steps": {
-        "consultation": {
-          "title": "Requirements Consultation",
-          "duration": "1-2 Days",
-          "description": "Deep understanding of your needs and goals",
-          "details": [
+    "流程時間線": {
+      "六步驟完成專案": "Six Steps to Complete Your Project",
+      "敏捷開發方法": "We use agile development to ensure smooth progress and timely delivery",
+      "流程備註": "Every project is unique. We adjust our process to your specific needs to ensure the best results",
+      "流程步驟": {
+        "需求諮詢": {
+          "需求諮詢標題": "Requirements Consultation",
+          "諮詢時長": "1-2 Days",
+          "諮詢描述": "Deep understanding of your needs and goals",
+          "諮詢細節": [
             "Online meeting to discuss project scope",
             "Requirements documentation and confirmation",
             "Technical feasibility assessment",
             "Initial timeline planning"
           ],
-          "deliverables": "Requirements Specification"
+          "諮詢交付物": "Requirements Specification"
         },
-        "proposal": {
-          "title": "Proposal & Quote",
-          "duration": "2-3 Days",
-          "description": "Customized solution proposal",
-          "details": [
+        "提案報價": {
+          "提案報價標題": "Proposal & Quote",
+          "提案時長": "2-3 Days",
+          "提案描述": "Customized solution proposal",
+          "提案細節": [
             "Technical architecture planning",
             "Detailed quotation preparation",
             "Timeline and milestones setting",
             "Contract terms discussion"
           ],
-          "deliverables": "Project Proposal"
+          "提案交付物": "Project Proposal"
         },
-        "contract": {
-          "title": "Contract Signing",
-          "duration": "1-2 Days",
-          "description": "Confirm cooperation details and guarantees",
-          "details": [
+        "合約簽訂": {
+          "合約簽訂標題": "Contract Signing",
+          "簽約時長": "1-2 Days",
+          "簽約描述": "Confirm cooperation details and guarantees",
+          "簽約細節": [
             "Final contract confirmation",
             "Payment terms and schedule",
             "IP rights confirmation",
             "Project kickoff meeting"
           ],
-          "deliverables": "Formal Contract"
+          "簽約交付物": "Formal Contract"
         },
-        "development": {
-          "title": "Development",
-          "duration": "Varies by project",
-          "description": "Agile development, continuous delivery",
-          "details": [
+        "開發實作": {
+          "開發實作標題": "Development",
+          "開發時長": "Varies by project",
+          "開發描述": "Agile development, continuous delivery",
+          "開發細節": [
             "Sprint planning and execution",
             "Weekly progress reports",
             "Version control and code review",
             "Staged deliverables demo"
           ],
-          "deliverables": "Development Builds"
+          "開發交付物": "Development Builds"
         },
-        "testing": {
-          "title": "Testing & QA",
-          "duration": "3-5 Days",
-          "description": "Ensure quality and stability",
-          "details": [
+        "測試驗收": {
+          "測試驗收標題": "Testing & QA",
+          "測試時長": "3-5 Days",
+          "測試描述": "Ensure quality and stability",
+          "測試細節": [
             "Functional testing and fixes",
             "Performance optimization",
             "User acceptance testing",
             "Issue tracking and resolution"
           ],
-          "deliverables": "Test Reports"
+          "測試交付物": "Test Reports"
         },
-        "launch": {
-          "title": "Launch & Support",
-          "duration": "Ongoing",
-          "description": "Smooth launch and continuous support",
-          "details": [
+        "上線維護": {
+          "上線維護標題": "Launch & Support",
+          "維護時長": "Ongoing",
+          "上線描述": "Smooth launch and continuous support",
+          "上線細節": [
             "Production deployment",
             "System monitoring setup",
             "User training",
             "Warranty support"
           ],
-          "deliverables": "Live System"
+          "上線交付物": "Live System"
         }
       }
     },
-    "features": {
-      "title": "Our Collaboration Features",
-      "subtitle": "Transparent, efficient, professional service process",
-      "items": {
-        "tracking": {
-          "title": "Real-time Project Tracking",
-          "description": "Track project progress and status anytime",
-          "highlights": [
+    "流程特色": {
+      "合作特色標題": "Our Collaboration Features",
+      "合作特色副標題": "Transparent, efficient, professional service process",
+      "特色項目": {
+        "專案追蹤": {
+          "即時專案追蹤": "Real-time Project Tracking",
+          "追蹤描述": "Track project progress and status anytime",
+          "追蹤亮點": [
             "Online project dashboard",
             "Real-time progress updates",
             "Milestone tracking"
           ]
         },
-        "communication": {
-          "title": "Transparent Communication",
-          "description": "Stay closely connected to ensure accurate requirements",
-          "highlights": [
+        "溝通機制": {
+          "透明溝通機制": "Transparent Communication",
+          "溝通描述": "Stay closely connected to ensure accurate requirements",
+          "溝通亮點": [
             "Dedicated Slack/Teams channel",
             "Weekly progress meetings",
             "24-hour response time"
           ]
         },
-        "security": {
-          "title": "Security Guarantee",
-          "description": "Complete contract and IP protection",
-          "highlights": [
+        "安全保障": {
+          "安全保障標題": "Security Guarantee",
+          "安全描述": "Complete contract and IP protection",
+          "安全亮點": [
             "NDA signing",
             "Code ownership transfer",
             "Data security protection"
           ]
         },
-        "agile": {
-          "title": "Agile Development",
-          "description": "Flexible adjustments, rapid response to changes",
-          "highlights": [
+        "敏捷開發": {
+          "敏捷開發標題": "Agile Development",
+          "敏捷描述": "Flexible adjustments, rapid response to changes",
+          "敏捷亮點": [
             "Sprint iterations",
             "Continuous integration",
             "Fast feedback loops"
@@ -314,10 +314,10 @@
         }
       }
     },
-    "faq": {
-      "title": "Frequently Asked Questions",
-      "subtitle": "Answers about our collaboration process",
-      "items": [
+    "常見問題": {
+      "常見問題標題": "Frequently Asked Questions",
+      "常見問題副標題": "Answers about our collaboration process",
+      "問題項目": [
         {
           "question": "How do we start working together?",
           "answer": "You can contact us through our website form or directly. We'll respond within 24 hours and schedule an initial consultation to understand your needs and provide professional recommendations."
@@ -344,72 +344,72 @@
         }
       ]
     },
-    "cta": {
-      "title": "Ready to Get Started?",
-      "subtitle": "Let's turn your ideas into reality together",
-      "primaryAction": "Schedule Consultation",
-      "secondaryAction": "Download Service Guide",
-      "phone": "+886 912 345 678",
-      "email": "contact@ptalk.com.tw"
+    "流程行動呼籲": {
+      "準備好開始了嗎": "Ready to Get Started?",
+      "流程CTA副標題": "Let's turn your ideas into reality together",
+      "立即預約諮詢": "Schedule Consultation",
+      "下載服務手冊": "Download Service Guide",
+      "聯絡電話": "+886 912 345 678",
+      "聯絡郵件": "contact@ptalk.com.tw"
     }
   },
-  "contact": {
-    "title": "Contact Us",
-    "subtitle": "We'd love to help. Fill out the form or contact us directly.",
-    "form": {
-      "name": "Name",
-      "email": "Email",
-      "phone": "Phone",
-      "service": "Service Inquiry",
-      "message": "Message",
-      "submit": "Send Inquiry",
-      "selectService": "Select a service",
-      "submitting": "Sending...",
-      "successMessage": "Thank you for your inquiry! We will contact you within 24 hours.",
-      "errorMessage": "Failed to send. Please try again later.",
-      "networkError": "Network error. Please check your connection and try again."
+  "聯絡頁面": {
+    "聯絡我們": "Contact Us",
+    "聯絡副標題": "We'd love to help. Fill out the form or contact us directly.",
+    "聯絡表單": {
+      "姓名": "Name",
+      "電子郵件": "Email",
+      "電話": "Phone",
+      "諮詢服務": "Service Inquiry",
+      "訊息內容": "Message",
+      "送出諮詢": "Send Inquiry",
+      "請選擇服務": "Select a service",
+      "發送中": "Sending...",
+      "發送成功訊息": "Thank you for your inquiry! We will contact you within 24 hours.",
+      "發送失敗訊息": "Failed to send. Please try again later.",
+      "網路錯誤訊息": "Network error. Please check your connection and try again."
     },
-    "info": {
-      "title": "Contact Information",
-      "quickContact": "Quick Contact",
-      "email": "Email",
-      "phone": "Phone",
-      "address": "Address",
-      "addressText": "Xinyi District, Taipei",
-      "hours": "Business Hours",
-      "hoursText": "Monday - Friday 9:00 - 18:00"
+    "聯絡資訊": {
+      "聯絡資訊標題": "Contact Information",
+      "快速聯絡": "Quick Contact",
+      "電子郵件": "Email",
+      "聯絡電話": "Phone",
+      "公司地址": "Address",
+      "地址內容": "Xinyi District, Taipei",
+      "營業時間": "Business Hours",
+      "營業時間內容": "Monday - Friday 9:00 - 18:00"
     },
-    "social": {
-      "title": "Social Media",
-      "follow": "Follow Us",
-      "instagram": "Instagram",
-      "line": "Line",
-      "threads": "Threads",
-      "gmail": "Gmail"
+    "社群媒體": {
+      "社群媒體標題": "Social Media",
+      "追蹤我們": "Follow Us",
+      "Instagram": "Instagram",
+      "Line": "Line",
+      "Threads": "Threads",
+      "Gmail": "Gmail"
     }
   },
-  "footer": {
-    "copyright": "© 2025 PTalk. All rights reserved.",
-    "quickLinks": "Quick Links",
-    "contact": "Contact Info",
-    "cta": {
-      "title": "Ready to Get Started?",
-      "subtitle": "Let's turn your ideas into reality together",
-      "primaryAction": "Schedule Consultation",
-      "secondaryAction": "Download Service Guide",
-      "phone": "+886 912 345 678",
-      "email": "connect.ptalk@gmail.com"
+  "頁尾": {
+    "版權聲明": "© 2025 PTalk. All rights reserved.",
+    "快速連結": "Quick Links",
+    "聯絡資訊": "Contact Info",
+    "頁尾CTA": {
+      "準備好開始了嗎": "Ready to Get Started?",
+      "頁尾CTA副標題": "Let's turn your ideas into reality together",
+      "立即預約諮詢": "Schedule Consultation",
+      "下載服務手冊": "Download Service Guide",
+      "聯絡電話": "+886 912 345 678",
+      "聯絡郵件": "connect.ptalk@gmail.com"
     }
   },
-  "common": {
-    "deliverables": "Deliverables",
-    "executionContent": "Execution Content",
-    "email": "Email",
-    "lineOfficialAccount": "Line Official Account",
-    "quickContact": "Quick Contact",
-    "followUs": "Follow Us",
-    "chinese": "Chinese",
-    "japanese": "Japanese",
-    "english": "English"
+  "共用": {
+    "交付成果": "Deliverables",
+    "執行內容": "Execution Content",
+    "電子郵件": "Email",
+    "Line官方帳號": "Line Official Account",
+    "快速聯絡": "Quick Contact",
+    "追蹤我們": "Follow Us",
+    "中文": "Chinese",
+    "日本語": "Japanese",
+    "English": "English"
   }
 }

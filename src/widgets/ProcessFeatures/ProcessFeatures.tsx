@@ -15,47 +15,47 @@ import { Carousel } from '@/shared/ui/Carousel';
 import styles from './ProcessFeatures.module.css';
 
 export const ProcessFeatures = () => {
-  const t = useTranslations('process.features');
+  const t = useTranslations('流程頁面.流程特色');
 
   const features = [
     {
       icon: faChartBar,
-      title: t('items.tracking.title'),
-      description: t('items.tracking.description'),
+      title: t('特色項目.專案追蹤.即時專案追蹤'),
+      description: t('特色項目.專案追蹤.追蹤描述'),
       highlights: [
-        t('items.tracking.highlights.0'),
-        t('items.tracking.highlights.1'),
-        t('items.tracking.highlights.2')
+        t('特色項目.專案追蹤.追蹤亮點.0'),
+        t('特色項目.專案追蹤.追蹤亮點.1'),
+        t('特色項目.專案追蹤.追蹤亮點.2')
       ]
     },
     {
       icon: faComments,
-      title: t('items.communication.title'),
-      description: t('items.communication.description'),
+      title: t('特色項目.溝通機制.透明溝通機制'),
+      description: t('特色項目.溝通機制.溝通描述'),
       highlights: [
-        t('items.communication.highlights.0'),
-        t('items.communication.highlights.1'),
-        t('items.communication.highlights.2')
+        t('特色項目.溝通機制.溝通亮點.0'),
+        t('特色項目.溝通機制.溝通亮點.1'),
+        t('特色項目.溝通機制.溝通亮點.2')
       ]
     },
     {
       icon: faLock,
-      title: t('items.security.title'),
-      description: t('items.security.description'),
+      title: t('特色項目.安全保障.安全保障標題'),
+      description: t('特色項目.安全保障.安全描述'),
       highlights: [
-        t('items.security.highlights.0'),
-        t('items.security.highlights.1'),
-        t('items.security.highlights.2')
+        t('特色項目.安全保障.安全亮點.0'),
+        t('特色項目.安全保障.安全亮點.1'),
+        t('特色項目.安全保障.安全亮點.2')
       ]
     },
     {
       icon: faBolt,
-      title: t('items.agile.title'),
-      description: t('items.agile.description'),
+      title: t('特色項目.敏捷開發.敏捷開發標題'),
+      description: t('特色項目.敏捷開發.敏捷描述'),
       highlights: [
-        t('items.agile.highlights.0'),
-        t('items.agile.highlights.1'),
-        t('items.agile.highlights.2')
+        t('特色項目.敏捷開發.敏捷亮點.0'),
+        t('特色項目.敏捷開發.敏捷亮點.1'),
+        t('特色項目.敏捷開發.敏捷亮點.2')
       ]
     }
   ];
@@ -84,8 +84,8 @@ export const ProcessFeatures = () => {
       <div className="container">
         <div className={styles.header}>
           <div className={styles.badge}>Our Features</div>
-          <h2 className={styles.title}>{t('title')}</h2>
-          <p className={styles.subtitle}>{t('subtitle')}</p>
+          <h2 className={styles.title}>{t('合作特色標題')}</h2>
+          <p className={styles.subtitle}>{t('合作特色副標題')}</p>
         </div>
 
         <div className={styles.carouselWrapper}>

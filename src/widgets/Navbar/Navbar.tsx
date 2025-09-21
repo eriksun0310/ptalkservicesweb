@@ -7,15 +7,15 @@ import { LanguageSwitcher } from '@/features/language-switcher';
 import styles from './Navbar.module.css';
 
 export const Navbar = () => {
-  const t = useTranslations('navigation');
+  const t = useTranslations('導航列');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { id: 'home', href: '/' },
-    { id: 'about', href: '/about' },
-    { id: 'products', href: '/products' },
-    { id: 'process', href: '/process' },
-    { id: 'contact', href: '/contact' },
+    { id: '首頁', href: '/' },
+    { id: '關於我們', href: '/about' },
+    { id: '產品展示', href: '/products' },
+    { id: '合作流程', href: '/process' },
+    { id: '聯絡我們', href: '/contact' },
   ];
 
   return (

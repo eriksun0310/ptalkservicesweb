@@ -15,7 +15,7 @@ import {
 import styles from './ProcessHero.module.css';
 
 export const ProcessHero = () => {
-  const t = useTranslations('process.hero');
+  const t = useTranslations('流程頁面.流程主視覺');
   const router = useRouter();
 
   const handleConsultationClick = () => {
@@ -32,22 +32,22 @@ export const ProcessHero = () => {
   const stats = [
     {
       number: '100+',
-      label: t('stats.projects'),
+      label: t('流程統計.專案完成'),
       icon: faProjectDiagram
     },
     {
       number: '98%',
-      label: t('stats.satisfaction'),
+      label: t('流程統計.客戶滿意度'),
       icon: faChartLine
     },
     {
       number: '30+',
-      label: t('stats.clients'),
+      label: t('流程統計.合作夥伴'),
       icon: faUsers
     },
     {
       number: '24/7',
-      label: t('stats.support'),
+      label: t('流程統計.技術支援'),
       icon: faHeadset
     },
   ];
@@ -77,10 +77,10 @@ export const ProcessHero = () => {
         <div className={styles.content}>
           <div className={styles.badge}>Our Process</div>
           <h1 className={styles.title}>
-            {t('title')}
+            {t('透明化合作流程')}
           </h1>
           <p className={styles.subtitle}>
-            {t('subtitle')}
+            {t('流程副標題')}
           </p>
 
           <div className={styles.stats}>
@@ -98,11 +98,11 @@ export const ProcessHero = () => {
 
           <div className={styles.cta}>
             <button className={styles.primaryBtn} onClick={handleConsultationClick}>
-              <span>{t('startConsultation')}</span>
+              <span>{t('開始諮詢')}</span>
               <FontAwesomeIcon icon={faArrowRight} />
             </button>
             <button className={styles.secondaryBtn} onClick={handleViewProcessClick}>
-              <span>{t('viewProcess')}</span>
+              <span>{t('查看流程')}</span>
               <FontAwesomeIcon icon={faArrowRight} />
             </button>
           </div>

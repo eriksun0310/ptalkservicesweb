@@ -29,7 +29,7 @@ interface ProductCardProps {
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
-  const t = useTranslations('products');
+  const t = useTranslations('產品頁面');
 
   return (
     <div className={styles.card} style={{ animationDelay: `${index * 0.1}s` }}>
@@ -51,7 +51,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
         <div className={styles.section}>
           <div className={styles.sectionHeader}>
             <FontAwesomeIcon icon={faCode} className={styles.sectionIcon} />
-            <h4 className={styles.sectionTitle}>{t('features')}</h4>
+            <h4 className={styles.sectionTitle}>{t('核心功能')}</h4>
           </div>
           <ul className={styles.features}>
             {product.features.map((feature, index) => (
@@ -66,7 +66,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
         <div className={styles.section}>
           <div className={styles.sectionHeader}>
             <FontAwesomeIcon icon={faMicrochip} className={styles.sectionIcon} />
-            <h4 className={styles.sectionTitle}>{t('techStack')}</h4>
+            <h4 className={styles.sectionTitle}>{t('技術架構')}</h4>
           </div>
           <div className={styles.techStack}>
             {product.techStack.map((tech, index) => (
@@ -85,7 +85,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
               rel="noopener noreferrer"
               className={styles.ctaButton}
             >
-              <span>{t('viewDetails')}</span>
+              <span>{t('查看詳情')}</span>
               <FontAwesomeIcon icon={faArrowRight} className={styles.ctaIcon} />
             </a>
           </div>

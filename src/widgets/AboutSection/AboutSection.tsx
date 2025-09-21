@@ -18,7 +18,7 @@ import {
 import styles from './AboutSection.module.css';
 
 export const AboutSection = () => {
-  const t = useTranslations('about');
+  const t = useTranslations('關於頁面');
   const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set());
 
   const handleCardClick = (index: number) => {
@@ -36,81 +36,81 @@ export const AboutSection = () => {
   const coreValues = [
     {
       icon: faLightbulb,
-      title: t('coreValues.innovation.title'),
-      description: t('coreValues.innovation.description')
+      title: t('核心價值.創新.創新標題'),
+      description: t('核心價值.創新.創新描述')
     },
     {
       icon: faMedal,
-      title: t('coreValues.quality.title'),
-      description: t('coreValues.quality.description')
+      title: t('核心價值.品質.品質標題'),
+      description: t('核心價值.品質.品質描述')
     },
     {
       icon: faHandshake,
-      title: t('coreValues.service.title'),
-      description: t('coreValues.service.description')
+      title: t('核心價值.服務.服務標題'),
+      description: t('核心價值.服務.服務描述')
     },
     {
       icon: faShieldAlt,
-      title: t('coreValues.integrity.title'),
-      description: t('coreValues.integrity.description')
+      title: t('核心價值.誠信.誠信標題'),
+      description: t('核心價值.誠信.誠信描述')
     }
   ];
 
   const milestones = [
     {
       year: '2018',
-      title: t('timeline.2018.title'),
-      description: t('timeline.2018.description')
+      title: t('發展歷程.2018年.公司成立'),
+      description: t('發展歷程.2018年.2018年描述')
     },
     {
       year: '2020',
-      title: t('timeline.2020.title'),
-      description: t('timeline.2020.description')
+      title: t('發展歷程.2020年.業務擴展'),
+      description: t('發展歷程.2020年.2020年描述')
     },
     {
       year: '2022',
-      title: t('timeline.2022.title'),
-      description: t('timeline.2022.description')
+      title: t('發展歷程.2022年.技術突破'),
+      description: t('發展歷程.2022年.2022年描述')
     },
     {
       year: '2024',
-      title: t('timeline.2024.title'),
-      description: t('timeline.2024.description')
+      title: t('發展歷程.2024年.持續成長'),
+      description: t('發展歷程.2024年.2024年描述')
     }
   ];
 
   const teamMembers = [
     {
       icon: faCode,
-      title: t('team.tech.title'),
-      description: t('team.tech.description'),
-      details: t('team.tech.details')
+      title: t('團隊.技術團隊.技術團隊標題'),
+      description: t('團隊.技術團隊.技術團隊描述'),
+      details: t('團隊.技術團隊.技術團隊詳情')
     },
     {
       icon: faPalette,
-      title: t('team.design.title'),
-      description: t('team.design.description'),
-      details: t('team.design.details')
+      title: t('團隊.設計團隊.設計團隊標題'),
+      description: t('團隊.設計團隊.設計團隊描述'),
+      details: t('團隊.設計團隊.設計團隊詳情')
     },
     {
       icon: faTasks,
-      title: t('team.pm.title'),
-      description: t('team.pm.description'),
-      details: t('team.pm.details')
+      title: t('團隊.專案管理.專案管理標題'),
+      description: t('團隊.專案管理.專案管理描述'),
+      details: t('團隊.專案管理.專案管理詳情')
     },
     {
       icon: faUserTie,
-      title: t('team.consultant.title'),
-      description: t('team.consultant.description'),
-      details: t('team.consultant.details')
+      title: t('團隊.顧問團隊.顧問團隊標題'),
+      description: t('團隊.顧問團隊.顧問團隊描述'),
+      details: t('團隊.顧問團隊.顧問團隊詳情')
     }
   ];
 
   const achievements = [
-    { number: '6+', label: t('achievements.experience') },
-    { number: '500+', label: t('achievements.clients') },
-    { number: '1000+', label: t('achievements.projects') },
-    { number: '50+', label: t('achievements.members') }
+    { number: '6+', label: t('成就.年經驗') },
+    { number: '500+', label: t('成就.服務客戶') },
+    { number: '1000+', label: t('成就.完成專案') },
+    { number: '50+', label: t('成就.團隊成員') }
   ];
 
   return (
@@ -141,24 +141,24 @@ export const AboutSection = () => {
       <div className="container">
         {/* 頂部介紹區 */}
         <div className={styles.introSection}>
-          <div className={styles.badge}>{t('badge')}</div>
-          <h1 className={styles.mainTitle}>{t('mainTitle')}</h1>
+          <div className={styles.badge}>{t('關於徽章')}</div>
+          <h1 className={styles.mainTitle}>{t('關於主標題')}</h1>
           <p className={styles.subtitle}>
-            {t('subtitle')}
+            {t('關於副標題')}
           </p>
           <div className={styles.introContent}>
             <p>
-              {t('intro.paragraph1')}
+              {t('公司介紹.介紹段落一')}
             </p>
             <p>
-              {t('intro.paragraph2')}
+              {t('公司介紹.介紹段落二')}
             </p>
           </div>
         </div>
 
         {/* 核心價值 */}
         <div className={styles.coreValues}>
-          <h2 className={styles.sectionTitle}>{t('coreValues.title')}</h2>
+          <h2 className={styles.sectionTitle}>{t('核心價值.核心價值標題')}</h2>
           <div className={styles.valuesGrid}>
             {coreValues.map((value, index) => (
               <div key={index} className={styles.valueCard}>
@@ -175,7 +175,7 @@ export const AboutSection = () => {
 
         {/* 公司歷程時間軸 */}
         <div className={styles.timeline}>
-          <h2 className={styles.sectionTitle}>{t('timeline.title')}</h2>
+          <h2 className={styles.sectionTitle}>{t('發展歷程.發展歷程標題')}</h2>
           <div className={styles.timelineWrapper}>
             <div className={styles.timelineLine} />
             {milestones.map((milestone, index) => (
@@ -196,7 +196,7 @@ export const AboutSection = () => {
 
         {/* 團隊展示 */}
         <div className={styles.teamSection}>
-          <h2 className={styles.sectionTitle}>{t('team.title')}</h2>
+          <h2 className={styles.sectionTitle}>{t('團隊.專業團隊')}</h2>
           <div className={styles.teamGrid}>
             {teamMembers.map((member, index) => (
               <div
@@ -223,7 +223,7 @@ export const AboutSection = () => {
 
         {/* 成就數據 */}
         <div className={styles.achievements}>
-          <h2 className={styles.sectionTitle}>{t('achievements.title')}</h2>
+          <h2 className={styles.sectionTitle}>{t('成就.我們的成就')}</h2>
           <div className={styles.achievementsGrid}>
             {achievements.map((achievement, index) => (
               <div key={index} className={styles.achievementCard}>

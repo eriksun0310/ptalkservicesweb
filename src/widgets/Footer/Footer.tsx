@@ -14,12 +14,12 @@ export const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.ctaSection}>
         {/* <div className="container"> */}
-          <h2 className={styles.ctaTitle}>{t('footer.cta.title')}</h2>
-          <p className={styles.ctaSubtitle}>{t('footer.cta.subtitle')}</p>
+          <h2 className={styles.ctaTitle}>{t('頁尾.頁尾CTA.準備好開始了嗎')}</h2>
+          <p className={styles.ctaSubtitle}>{t('頁尾.頁尾CTA.頁尾CTA副標題')}</p>
           <div className={styles.ctaActions}>
             <Link href="/contact">
               <Button variant="primary" size="large">
-                {t('footer.cta.primaryAction')}
+                {t('頁尾.頁尾CTA.立即預約諮詢')}
               </Button>
             </Link>
           </div>
@@ -31,16 +31,16 @@ export const Footer = () => {
           <div className={styles.bottomContent}>
             <div className={styles.bottomLeft}>
               <p className={styles.brand}>PTalk</p>
-              <p className={styles.copyright}>{t('footer.copyright')}</p>
+              <p className={styles.copyright}>{t('頁尾.版權聲明')}</p>
             </div>
 
             <div className={styles.bottomCenter}>
               <div className={styles.quickLinks}>
-                <Link href="/">{t('navigation.home')}</Link>
-                <Link href="/about">{t('navigation.about')}</Link>
-                <Link href="/products">{t('navigation.products')}</Link>
-                <Link href="/process">{t('navigation.process')}</Link>
-                <Link href="/contact">{t('navigation.contact')}</Link>
+                <Link href="/">{t('導航列.首頁')}</Link>
+                <Link href="/about">{t('導航列.關於我們')}</Link>
+                <Link href="/products">{t('導航列.產品展示')}</Link>
+                <Link href="/process">{t('導航列.合作流程')}</Link>
+                <Link href="/contact">{t('導航列.聯絡我們')}</Link>
               </div>
             </div>
 
@@ -53,7 +53,7 @@ export const Footer = () => {
                     target={link.name === 'Email' ? '_self' : '_blank'}
                     rel={link.name === 'Email' ? '' : 'noopener noreferrer'}
                     className={styles.contactIcon}
-                    title={link.name === 'Line' ? t('common.lineOfficialAccount') : link.username || link.label}
+                    title={link.name === 'Line' ? t('共用.Line官方帳號') : link.username || link.label}
                   >
                     <FontAwesomeIcon icon={link.icon} />
                   </a>

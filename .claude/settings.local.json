@@ -6,7 +6,10 @@
       "Bash(pnpm add:*)",
       "Bash(git add:*)",
       "Bash(pkill:*)",
-      "Bash(npm run dev:*)"
+      "Bash(npm run dev:*)",
+      "Bash(jq:*)",
+      "Bash(cp:*)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []

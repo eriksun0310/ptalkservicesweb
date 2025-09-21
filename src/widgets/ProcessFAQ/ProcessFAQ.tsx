@@ -7,32 +7,32 @@ import { Accordion } from '@/shared/ui/Accordion';
 import styles from './ProcessFAQ.module.css';
 
 export const ProcessFAQ = () => {
-  const t = useTranslations('process.faq');
+  const t = useTranslations('流程頁面.常見問題');
 
   const faqItems = [
     {
-      question: t('items.0.question'),
-      answer: t('items.0.answer')
+      question: t('問題項目.0.question'),
+      answer: t('問題項目.0.answer')
     },
     {
-      question: t('items.1.question'),
-      answer: t('items.1.answer')
+      question: t('問題項目.1.question'),
+      answer: t('問題項目.1.answer')
     },
     {
-      question: t('items.2.question'),
-      answer: t('items.2.answer')
+      question: t('問題項目.2.question'),
+      answer: t('問題項目.2.answer')
     },
     {
-      question: t('items.3.question'),
-      answer: t('items.3.answer')
+      question: t('問題項目.3.question'),
+      answer: t('問題項目.3.answer')
     },
     {
-      question: t('items.4.question'),
-      answer: t('items.4.answer')
+      question: t('問題項目.4.question'),
+      answer: t('問題項目.4.answer')
     },
     {
-      question: t('items.5.question'),
-      answer: t('items.5.answer')
+      question: t('問題項目.5.question'),
+      answer: t('問題項目.5.answer')
     }
   ];
 
@@ -64,8 +64,8 @@ export const ProcessFAQ = () => {
               <FontAwesomeIcon icon={faQuestionCircle} />
               <span>FAQ</span>
             </div>
-            <h2 className={styles.title}>{t('title')}</h2>
-            <p className={styles.subtitle}>{t('subtitle')}</p>
+            <h2 className={styles.title}>{t('常見問題標題')}</h2>
+            <p className={styles.subtitle}>{t('常見問題副標題')}</p>
           </div>
 
           <div className={styles.accordionWrapper}>

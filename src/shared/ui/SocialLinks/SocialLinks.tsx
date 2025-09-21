@@ -6,11 +6,11 @@ import { getSocialLinks } from '@/shared/config';
 import styles from './SocialLinks.module.css';
 
 export const SocialLinks = () => {
-  const t = useTranslations('common');
+  const t = useTranslations('共用');
   const socials = getSocialLinks();
   return (
     <div className={styles.container}>
-      <h3 className={styles.title}>{t('followUs')}</h3>
+      <h3 className={styles.title}>{t('追蹤我們')}</h3>
       <div className={styles.socialLinks}>
         {socials.map((social) => (
           <a

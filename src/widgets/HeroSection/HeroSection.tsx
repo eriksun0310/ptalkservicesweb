@@ -13,7 +13,7 @@ import {
 import styles from './HeroSection.module.css';
 
 export const HeroSection = () => {
-  const t = useTranslations('hero');
+  const t = useTranslations('首頁主視覺');
   const router = useRouter();
 
   const scrollToContact = () => {
@@ -26,10 +26,10 @@ export const HeroSection = () => {
   };
 
   const features = [
-    { icon: faCode, label: t('features.tech') },
-    { icon: faRocket, label: t('features.delivery') },
-    { icon: faPalette, label: t('features.design') },
-    { icon: faShieldAlt, label: t('features.security') },
+    { icon: faCode, label: t('特色功能.前沿技術') },
+    { icon: faRocket, label: t('特色功能.快速交付') },
+    { icon: faPalette, label: t('特色功能.精美設計') },
+    { icon: faShieldAlt, label: t('特色功能.安全可靠') },
   ];
 
   return (
@@ -59,9 +59,9 @@ export const HeroSection = () => {
         <div className={styles.contentWrapper}>
           {/* 主內容玻璃容器 */}
           <div className={styles.mainContent}>
-            <div className={styles.badge}>{t('badge')}</div>
-            <h1 className={styles.title}>{t('title')}</h1>
-            <p className={styles.subtitle}>{t('subtitle')}</p>
+            <div className={styles.badge}>{t('專業團隊徽章')}</div>
+            <h1 className={styles.title}>{t('主標題')}</h1>
+            <p className={styles.subtitle}>{t('副標題')}</p>
 
             {/* 特色指標 */}
             <div className={styles.features}>
@@ -81,7 +81,7 @@ export const HeroSection = () => {
                 onClick={scrollToContact}
                 className={styles.primaryCta}
               >
-                {t('cta')}
+                {t('立即諮詢')}
               </Button>
               <Button
                 size="large"
@@ -89,7 +89,7 @@ export const HeroSection = () => {
                 onClick={scrollToServices}
                 className={styles.secondaryCta}
               >
-                {t('browseServices')}
+                {t('瀏覽服務')}
               </Button>
             </div>
           </div>
@@ -98,11 +98,11 @@ export const HeroSection = () => {
           <div className={styles.sideCards}>
             <div className={styles.statsCard}>
               <div className={styles.statsNumber}>500+</div>
-              <div className={styles.statsLabel}>{t('stats.projects')}</div>
+              <div className={styles.statsLabel}>{t('統計數據.完成專案')}</div>
             </div>
             <div className={styles.statsCard}>
               <div className={styles.statsNumber}>98%</div>
-              <div className={styles.statsLabel}>{t('stats.satisfaction')}</div>
+              <div className={styles.statsLabel}>{t('統計數據.客戶滿意度')}</div>
             </div>
           </div>
         </div>
