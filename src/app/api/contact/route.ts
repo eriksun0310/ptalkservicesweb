@@ -77,7 +77,7 @@ export async function POST(request: NextRequest) {
       to: process.env.RESEND_TO_EMAIL || 'connect.ptalk@gmail.com',
       subject: `新的諮詢來自 ${name} - ${service || '一般諮詢'}`,
       html: emailHtml,
-      reply_to: email,
+      replyTo: email,
     });
 
     if (error) {
