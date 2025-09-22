@@ -119,7 +119,8 @@ export const Carousel: React.FC<CarouselProps> = ({
           disabled={currentIndex === 0}
           aria-label="上一個"
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+            <title>上一個項目</title>
             <path d="M15 19l-7-7 7-7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </button>
@@ -164,7 +165,8 @@ export const Carousel: React.FC<CarouselProps> = ({
           disabled={currentIndex >= maxIndex}
           aria-label="下一個"
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+            <title>下一個項目</title>
             <path d="M9 5l7 7-7 7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </button>

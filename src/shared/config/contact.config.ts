@@ -33,12 +33,12 @@ export const CONTACT_INFO = {
   // 社群媒體
   social: {
     instagram: {
-      username: '@ptalk.tw',
-      url: 'https://instagram.com/ptalk.tw'
+      username: '@ptalk.design',
+      url: 'https://instagram.com/ptalk.design'
     },
     threads: {
-      username: '@ptalk.tw',
-      url: 'https://www.threads.com/@ptalk.tw'
+      username: '@ptalk.design',
+      url: 'https://www.threads.com/@ptalk.design'
     }
   }
 } as const;

@@ -36,7 +36,10 @@ export const Accordion: React.FC<AccordionProps> = ({ items }) => {
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
+              aria-label={openIndex === index ? "收合" : "展開"}
+              role="img"
             >
+              <title>{openIndex === index ? "收合內容" : "展開內容"}</title>
               {openIndex === index ? (
                 <path d="M18 15l-6-6-6 6" />
               ) : (

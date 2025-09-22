@@ -19,17 +19,17 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     name: 'Instagram',
     icon: faInstagram,
-    url: 'https://instagram.com/ptalk.tw',
-    label: '@ptalk.tw',
-    username: '@ptalk.tw',
+    url: 'https://instagram.com/ptalk.design',
+    label: '@ptalk.design',
+    username: '@ptalk.design',
     type: 'social'
   },
   {
     name: 'Threads',
     icon: faThreads,
-    url: 'https://www.threads.com/@ptalk.tw',
-    label: '@ptalk.tw',
-    username: '@ptalk.tw',
+    url: 'https://www.threads.com/@ptalk.design',
+    label: '@ptalk.design',
+    username: '@ptalk.design',
     type: 'social'
   },
   {
