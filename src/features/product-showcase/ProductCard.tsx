@@ -9,6 +9,7 @@ import {
   faMicrochip
 } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { OptimizedImage } from '@/shared/ui/OptimizedImage';
 import styles from './ProductCard.module.css';
 
 interface Product {
@@ -21,6 +22,8 @@ interface Product {
   icon: IconDefinition;
   gradient?: string;
   hasViewDetails?: boolean;
+  image?: string;
+  imageAlt?: string;
 }
 
 interface ProductCardProps {
@@ -35,6 +38,19 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
     <div className={styles.card} style={{ animationDelay: `${index * 0.1}s` }}>
       <div className={styles.cardGlow} />
       <div className={styles.cardInner}>
+        {product.image && (
+          <div className={styles.imageSection}>
+            <OptimizedImage
+              src={product.image}
+              alt={product.imageAlt || product.name}
+              width={400}
+              height={250}
+              className={styles.productImage}
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            />
+          </div>
+        )}
+
         <div className={styles.header}>
           <div className={styles.iconWrapper}>
             <div className={styles.iconGlow} />
