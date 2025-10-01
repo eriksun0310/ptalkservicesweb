@@ -29,26 +29,22 @@ export const ProcessHero = () => {
     }
   };
 
-  const stats = [
+  const commitments = [
     {
-      number: '100+',
-      label: t('流程統計.專案完成'),
-      icon: faProjectDiagram
+      icon: faProjectDiagram,
+      label: t('服務承諾.準時交付')
     },
     {
-      number: '98%',
-      label: t('流程統計.客戶滿意度'),
-      icon: faChartLine
+      icon: faChartLine,
+      label: t('服務承諾.品質保證')
     },
     {
-      number: '30+',
-      label: t('流程統計.合作夥伴'),
-      icon: faUsers
+      icon: faUsers,
+      label: t('服務承諾.專業團隊')
     },
     {
-      number: '24/7',
-      label: t('流程統計.技術支援'),
-      icon: faHeadset
+      icon: faHeadset,
+      label: t('服務承諾.全天候支援')
     },
   ];
 
@@ -83,15 +79,14 @@ export const ProcessHero = () => {
             {t('流程副標題')}
           </p>
 
-          <div className={styles.stats}>
-            {stats.map((stat, index) => (
-              <div key={index} className={styles.statItem} style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className={styles.statIcon}>
-                  <FontAwesomeIcon icon={stat.icon} />
+          <div className={styles.commitments}>
+            {commitments.map((commitment, index) => (
+              <div key={index} className={styles.commitmentItem} style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className={styles.commitmentIcon}>
+                  <FontAwesomeIcon icon={commitment.icon} />
                 </div>
-                <div className={styles.statNumber}>{stat.number}</div>
-                <div className={styles.statLabel}>{stat.label}</div>
-                <div className={styles.statGlow} />
+                <div className={styles.commitmentLabel}>{commitment.label}</div>
+                <div className={styles.commitmentGlow} />
               </div>
             ))}
           </div>

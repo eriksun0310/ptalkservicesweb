@@ -19,17 +19,44 @@
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-size: 1.75rem;
   font-weight: 800;
   color: #ffffff;
   letter-spacing: -0.5px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
 }
 
-.logo:hover {
-  color: var(--accent);
-  text-shadow: 0 2px 12px rgba(139, 111, 71, 0.5);
+.logoImage {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+.logoText {
+  background: linear-gradient(135deg, #8B6F47 0%, #A0826D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+  transition: all 0.3s ease;
+}
+
+.logo:hover .logoImage {
+  transform: scale(1.05);
+  filter: drop-shadow(0 4px 12px rgba(139, 111, 71, 0.6));
+}
+
+.logo:hover .logoText {
+  background: linear-gradient(135deg, #A0826D 0%, #C9A880 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 2px 8px rgba(139, 111, 71, 0.4));
 }
 
 .navItems {

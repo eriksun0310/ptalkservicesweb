@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { LanguageSwitcher } from '@/features/language-switcher';
 import styles from './Navbar.module.css';
@@ -23,7 +24,15 @@ export const Navbar = () => {
       <div className="container">
         <div className={styles.content}>
           <Link href="/" className={styles.logo}>
-            PTalk
+            <Image
+              src="/logo.png"
+              alt="PTalk Logo"
+              width={45}
+              height={45}
+              priority
+              className={styles.logoImage}
+            />
+            <span className={styles.logoText}>PTalk</span>
           </Link>
 
           <div className={`${styles.navItems} ${isMenuOpen ? styles.active : ''}`}>

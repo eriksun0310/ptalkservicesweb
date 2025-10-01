@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/shared/ui/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { SOCIAL_LINKS } from '@/shared/config';
@@ -30,7 +31,16 @@ export const Footer = () => {
         <div className="container">
           <div className={styles.bottomContent}>
             <div className={styles.bottomLeft}>
-              <p className={styles.brand}>PTalk</p>
+              <div className={styles.footerBrand}>
+                <Image
+                  src="/logo.png"
+                  alt="PTalk Logo"
+                  width={40}
+                  height={40}
+                  className={styles.footerLogo}
+                />
+                <p className={styles.brand}>PTalk</p>
+              </div>
               <p className={styles.copyright}>{t('頁尾.版權聲明')}</p>
             </div>
 

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faLightbulb,
@@ -56,61 +57,61 @@ export const AboutSection = () => {
     }
   ];
 
-  const milestones = [
+  const visionItems = [
     {
-      year: '2018',
-      title: t('發展歷程.2018年.公司成立'),
-      description: t('發展歷程.2018年.2018年描述')
+      icon: faRocket,
+      title: t('服務願景.願景項目.技術創新.技術創新標題'),
+      description: t('服務願景.願景項目.技術創新.技術創新描述')
     },
     {
-      year: '2020',
-      title: t('發展歷程.2020年.業務擴展'),
-      description: t('發展歷程.2020年.2020年描述')
+      icon: faTrophy,
+      title: t('服務願景.願景項目.客戶成功.客戶成功標題'),
+      description: t('服務願景.願景項目.客戶成功.客戶成功描述')
     },
     {
-      year: '2022',
-      title: t('發展歷程.2022年.技術突破'),
-      description: t('發展歷程.2022年.2022年描述')
+      icon: faMedal,
+      title: t('服務願景.願景項目.品質承諾.品質承諾標題'),
+      description: t('服務願景.願景項目.品質承諾.品質承諾描述')
     },
     {
-      year: '2024',
-      title: t('發展歷程.2024年.持續成長'),
-      description: t('發展歷程.2024年.2024年描述')
+      icon: faHandshake,
+      title: t('服務願景.願景項目.長期夥伴.長期夥伴標題'),
+      description: t('服務願景.願景項目.長期夥伴.長期夥伴描述')
     }
   ];
 
-  const teamMembers = [
+  const capabilities = [
     {
       icon: faCode,
-      title: t('團隊.技術團隊.技術團隊標題'),
-      description: t('團隊.技術團隊.技術團隊描述'),
-      details: t('團隊.技術團隊.技術團隊詳情')
+      title: t('技術能力.全端開發.全端開發標題'),
+      description: t('技術能力.全端開發.全端開發描述'),
+      details: t('技術能力.全端開發.全端開發詳情')
     },
     {
       icon: faPalette,
-      title: t('團隊.設計團隊.設計團隊標題'),
-      description: t('團隊.設計團隊.設計團隊描述'),
-      details: t('團隊.設計團隊.設計團隊詳情')
+      title: t('技術能力.UI/UX設計.設計能力標題'),
+      description: t('技術能力.UI/UX設計.設計能力描述'),
+      details: t('技術能力.UI/UX設計.設計能力詳情')
     },
     {
       icon: faTasks,
-      title: t('團隊.專案管理.專案管理標題'),
-      description: t('團隊.專案管理.專案管理描述'),
-      details: t('團隊.專案管理.專案管理詳情')
+      title: t('技術能力.專案管理.專案管理標題'),
+      description: t('技術能力.專案管理.專案管理描述'),
+      details: t('技術能力.專案管理.專案管理詳情')
     },
     {
       icon: faUserTie,
-      title: t('團隊.顧問團隊.顧問團隊標題'),
-      description: t('團隊.顧問團隊.顧問團隊描述'),
-      details: t('團隊.顧問團隊.顧問團隊詳情')
+      title: t('技術能力.技術諮詢.技術諮詢標題'),
+      description: t('技術能力.技術諮詢.技術諮詢描述'),
+      details: t('技術能力.技術諮詢.技術諮詢詳情')
     }
   ];
 
-  const achievements = [
-    { number: '6+', label: t('成就.年經驗') },
-    { number: '500+', label: t('成就.服務客戶') },
-    { number: '1000+', label: t('成就.完成專案') },
-    { number: '50+', label: t('成就.團隊成員') }
+  const serviceCapabilities = [
+    { icon: faRocket, label: t('服務能力.專案交付') },
+    { icon: faShieldAlt, label: t('服務能力.技術支援') },
+    { icon: faHandshake, label: t('服務能力.客戶服務') },
+    { icon: faMedal, label: t('服務能力.專業團隊') }
   ];
 
   return (
@@ -141,6 +142,15 @@ export const AboutSection = () => {
       <div className="container">
         {/* 頂部介紹區 */}
         <div className={styles.introSection}>
+          <div className={styles.logoContainer}>
+            <Image
+              src="/logo.png"
+              alt="PTalk Logo"
+              width={100}
+              height={100}
+              className={styles.companyLogo}
+            />
+          </div>
           <div className={styles.badge}>{t('關於徽章')}</div>
           <h1 className={styles.mainTitle}>{t('關於主標題')}</h1>
           <p className={styles.subtitle}>
@@ -173,32 +183,28 @@ export const AboutSection = () => {
           </div>
         </div>
 
-        {/* 公司歷程時間軸 */}
-        <div className={styles.timeline}>
-          <h2 className={styles.sectionTitle}>{t('發展歷程.發展歷程標題')}</h2>
-          <div className={styles.timelineWrapper}>
-            <div className={styles.timelineLine} />
-            {milestones.map((milestone, index) => (
-              <div
-                key={index}
-                className={`${styles.timelineItem} ${index % 2 === 0 ? styles.left : styles.right}`}
-              >
-                <div className={styles.timelineContent}>
-                  <div className={styles.timelineYear}>{milestone.year}</div>
-                  <h3>{milestone.title}</h3>
-                  <p>{milestone.description}</p>
+        {/* 服務願景 */}
+        <div className={styles.visionSection}>
+          <h2 className={styles.sectionTitle}>{t('服務願景.服務願景標題')}</h2>
+          <div className={styles.visionFlow}>
+            {visionItems.map((item, index) => (
+              <div key={index} className={styles.visionFlowItem}>
+                <div className={styles.visionNumber}>{index + 1}</div>
+                <div className={styles.visionFlowIcon}>
+                  <FontAwesomeIcon icon={item.icon} />
                 </div>
-                <div className={styles.timelineNode} />
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* 團隊展示 */}
+        {/* 技術能力展示 */}
         <div className={styles.teamSection}>
-          <h2 className={styles.sectionTitle}>{t('團隊.專業團隊')}</h2>
+          <h2 className={styles.sectionTitle}>{t('技術能力.技術能力標題')}</h2>
           <div className={styles.teamGrid}>
-            {teamMembers.map((member, index) => (
+            {capabilities.map((capability, index) => (
               <div
                 key={index}
                 className={`${styles.teamCard} ${flippedCards.has(index) ? styles.flipped : ''}`}
@@ -207,13 +213,13 @@ export const AboutSection = () => {
                 <div className={styles.teamCardInner}>
                   <div className={styles.teamCardFront}>
                     <div className={styles.teamIcon}>
-                      <FontAwesomeIcon icon={member.icon} />
+                      <FontAwesomeIcon icon={capability.icon} />
                     </div>
-                    <h3>{member.title}</h3>
-                    <p>{member.description}</p>
+                    <h3>{capability.title}</h3>
+                    <p>{capability.description}</p>
                   </div>
                   <div className={styles.teamCardBack}>
-                    <p>{member.details}</p>
+                    <p>{capability.details}</p>
                   </div>
                 </div>
               </div>
@@ -221,19 +227,17 @@ export const AboutSection = () => {
           </div>
         </div>
 
-        {/* 成就數據 */}
-        <div className={styles.achievements}>
-          <h2 className={styles.sectionTitle}>{t('成就.我們的成就')}</h2>
-          <div className={styles.achievementsGrid}>
-            {achievements.map((achievement, index) => (
-              <div key={index} className={styles.achievementCard}>
-                <div className={styles.achievementNumber}>
-                  {achievement.number}
+        {/* 服務能力 */}
+        <div className={styles.capabilitiesSection}>
+          <h2 className={styles.sectionTitle}>{t('服務能力.服務能力標題')}</h2>
+          <div className={styles.capabilitiesBadges}>
+            {serviceCapabilities.map((capability, index) => (
+              <div key={index} className={styles.capabilityBadge}>
+                <div className={styles.capabilityIconWrapper}>
+                  <FontAwesomeIcon icon={capability.icon} />
                 </div>
-                <div className={styles.achievementLabel}>
-                  {achievement.label}
-                </div>
-                <div className={styles.achievementGlow} />
+                <h3>{capability.label}</h3>
+                <div className={styles.capabilityGlow} />
               </div>
             ))}
           </div>

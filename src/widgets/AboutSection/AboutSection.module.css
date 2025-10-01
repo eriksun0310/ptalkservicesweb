@@ -207,6 +207,34 @@
   animation: fadeInUp 1s ease-out;
 }
 
+.logoContainer {
+  margin-bottom: 30px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.companyLogo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 20px rgba(139, 111, 71, 0.4));
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: logoFloat 3s ease-in-out infinite;
+}
+
+.companyLogo:hover {
+  filter: drop-shadow(0 8px 30px rgba(139, 111, 71, 0.6));
+  transform: scale(1.1) rotate(5deg);
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 .badge {
   display: inline-block;
   padding: 8px 20px;
@@ -655,6 +683,269 @@
   opacity: 1;
 }
 
+/* 服務願景 - 橫向流程樣式 */
+.visionSection {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 100px;
+}
+
+.visionFlow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.visionFlowItem {
+  position: relative;
+  background: linear-gradient(135deg, var(--glass-bg) 0%, rgba(20, 20, 25, 0.6) 100%);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 2px solid transparent;
+  border-radius: 20px;
+  padding: 35px 25px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fadeInUp 1s ease-out;
+  animation-fill-mode: both;
+  overflow: hidden;
+}
+
+.visionFlowItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(139, 111, 71, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 18px;
+}
+
+.visionFlowItem:hover::before {
+  opacity: 1;
+}
+
+.visionFlowItem:nth-child(1) { animation-delay: 0.1s; }
+.visionFlowItem:nth-child(2) { animation-delay: 0.2s; }
+.visionFlowItem:nth-child(3) { animation-delay: 0.3s; }
+.visionFlowItem:nth-child(4) { animation-delay: 0.4s; }
+
+.visionFlowItem:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.3),
+    0 0 25px rgba(139, 111, 71, 0.3);
+}
+
+.visionNumber {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 32px;
+  height: 32px;
+  background: rgba(139, 111, 71, 0.2);
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+  transition: all 0.3s ease;
+}
+
+.visionFlowItem:hover .visionNumber {
+  background: var(--accent);
+  color: white;
+  transform: rotate(360deg);
+}
+
+.visionFlowIcon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  background: rgba(139, 111, 71, 0.15);
+  border: 2px solid rgba(139, 111, 71, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: var(--accent);
+  transition: all 0.4s ease;
+}
+
+.visionFlowItem:hover .visionFlowIcon {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+  transform: scale(1.15);
+}
+
+.visionFlowItem h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.visionFlowItem:hover h3 {
+  color: var(--accent);
+}
+
+.visionFlowItem p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+/* 服務能力 - 大型徽章樣式 */
+.capabilitiesSection {
+  position: relative;
+  z-index: 2;
+  padding: 60px 0;
+}
+
+.capabilitiesBadges {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.capabilityBadge {
+  position: relative;
+  background: var(--glass-bg-light);
+  backdrop-filter: var(--glass-blur-strong);
+  -webkit-backdrop-filter: var(--glass-blur-strong);
+  border: 2px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 50px 30px;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fadeInUp 1s ease-out;
+  animation-fill-mode: both;
+  cursor: pointer;
+}
+
+.capabilityBadge::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(139, 111, 71, 0.15) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.capabilityBadge:hover::after {
+  opacity: 1;
+}
+
+.capabilityBadge:nth-child(1) { animation-delay: 0.1s; }
+.capabilityBadge:nth-child(2) { animation-delay: 0.2s; }
+.capabilityBadge:nth-child(3) { animation-delay: 0.3s; }
+.capabilityBadge:nth-child(4) { animation-delay: 0.4s; }
+
+.capabilityBadge:hover {
+  transform: translateY(-12px) scale(1.03);
+  border-color: var(--accent);
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.3),
+    0 0 50px rgba(139, 111, 71, 0.4),
+    inset 0 0 30px rgba(139, 111, 71, 0.1);
+}
+
+.capabilityIconWrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 25px;
+  background: linear-gradient(135deg, rgba(139, 111, 71, 0.2), rgba(139, 111, 71, 0.05));
+  border: 3px solid var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(139, 111, 71, 0.2);
+}
+
+.capabilityBadge:hover .capabilityIconWrapper {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: rotate(360deg) scale(1.1);
+  box-shadow: 0 15px 40px rgba(139, 111, 71, 0.5);
+}
+
+.capabilityIconWrapper svg {
+  font-size: 56px;
+  color: var(--accent);
+  transition: all 0.5s ease;
+}
+
+.capabilityBadge:hover .capabilityIconWrapper svg {
+  color: white;
+  transform: scale(1.1);
+}
+
+.capabilityBadge h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 0;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.capabilityBadge:hover h3 {
+  color: var(--accent);
+  transform: scale(1.05);
+}
+
+.capabilityGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(139, 111, 71, 0.3), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.capabilityBadge:hover .capabilityGlow {
+  opacity: 1;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+  }
+}
+
 /* 動畫定義 */
 @keyframes fadeIn {
   from {
@@ -702,7 +993,19 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .capabilitiesBadges {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
 @media (max-width: 768px) {
+  .capabilitiesBadges {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
   .teamCard {
     cursor: pointer;
   }
@@ -804,6 +1107,10 @@
 
 @media (max-width: 480px) {
   .achievementsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .capabilitiesBadges {
     grid-template-columns: 1fr;
   }
 }
