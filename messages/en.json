@@ -78,7 +78,7 @@
     "關於主標題": "About PTalk",
     "關於副標題": "Professional technical services for digital transformation",
     "公司介紹": {
-      "介紹段落一": "PTalk Technical Services was founded in 2018, dedicated to providing comprehensive technical solutions for businesses. We have an experienced professional team that combines innovative technology with industry best practices to help clients achieve digital transformation and enhance competitiveness.",
+      "介紹段落一": "PTalk is dedicated to providing comprehensive technical solutions for businesses. We combine innovative technology with industry best practices to help clients achieve digital transformation and enhance competitiveness.",
       "介紹段落二": "From website development to mobile applications, from system integration to cloud services, we provide one-stop technical services to meet the needs of businesses of all sizes. Choose PTalk for professionalism and trust."
     },
     "核心價值": {
@@ -100,54 +100,56 @@
         "誠信描述": "Honest and trustworthy, building long-term partnerships"
       }
     },
-    "發展歷程": {
-      "發展歷程標題": "Our Journey",
-      "2018年": {
-        "公司成立": "Company Founded",
-        "2018年描述": "PTalk Technical Services officially established, began providing digital transformation services"
-      },
-      "2020年": {
-        "業務擴展": "Business Expansion",
-        "2020年描述": "Service coverage expanded nationwide, client base exceeded 100 companies"
-      },
-      "2022年": {
-        "技術突破": "Technical Breakthrough",
-        "2022年描述": "Launched innovative AI solutions, gained industry recognition"
-      },
-      "2024年": {
-        "持續成長": "Continuous Growth",
-        "2024年描述": "Team size reached 50 people, serving over 500 enterprise clients"
+    "服務願景": {
+      "服務願景標題": "Service Vision",
+      "願景項目": {
+        "技術創新": {
+          "技術創新標題": "Technical Innovation",
+          "技術創新描述": "Continuously researching the latest technology trends to provide innovative digital solutions for clients"
+        },
+        "客戶成功": {
+          "客戶成功標題": "Client Success",
+          "客戶成功描述": "Focusing on client success and providing tailored technical services"
+        },
+        "品質承諾": {
+          "品質承諾標題": "Quality Commitment",
+          "品質承諾描述": "Maintaining high-quality standards to ensure every project achieves optimal results"
+        },
+        "長期夥伴": {
+          "長期夥伴標題": "Long-term Partnership",
+          "長期夥伴描述": "Building lasting relationships to support continuous business growth and transformation"
+        }
       }
     },
-    "團隊": {
-      "專業團隊": "Our Team",
-      "技術團隊": {
-        "技術團隊標題": "Tech Team",
-        "技術團隊描述": "Senior full-stack engineers",
-        "技術團隊詳情": "Proficient in various programming languages and frameworks with rich development experience"
+    "技術能力": {
+      "技術能力標題": "Technical Capabilities",
+      "全端開發": {
+        "全端開發標題": "Full-Stack Development",
+        "全端開發描述": "Front-end and back-end integration",
+        "全端開發詳情": "Proficient in various programming languages and frameworks, providing comprehensive technical solutions"
       },
-      "設計團隊": {
-        "設計團隊標題": "Design Team",
-        "設計團隊描述": "Creative UI/UX designers",
-        "設計團隊詳情": "Creating beautiful and functional user interfaces, providing excellent user experience"
+      "UI/UX設計": {
+        "設計能力標題": "UI/UX Design",
+        "設計能力描述": "User experience design",
+        "設計能力詳情": "Creating beautiful and functional interfaces, providing excellent user experience"
       },
       "專案管理": {
         "專案管理標題": "Project Management",
-        "專案管理描述": "Professional PM team",
+        "專案管理描述": "Agile development process",
         "專案管理詳情": "Ensuring projects are delivered on time with quality meeting client expectations"
       },
-      "顧問團隊": {
-        "顧問團隊標題": "Consultant Team",
-        "顧問團隊描述": "Business strategy consultants",
-        "顧問團隊詳情": "Providing professional consultation to help businesses with digital transformation"
+      "技術諮詢": {
+        "技術諮詢標題": "Technical Consulting",
+        "技術諮詢描述": "Digital transformation consulting",
+        "技術諮詢詳情": "Providing professional consultation to help businesses with digital transformation"
       }
     },
-    "成就": {
-      "我們的成就": "Our Achievements",
-      "年經驗": "Years Experience",
-      "服務客戶": "Clients Served",
-      "完成專案": "Projects Completed",
-      "團隊成員": "Team Members"
+    "服務能力": {
+      "服務能力標題": "Service Capabilities",
+      "專案交付": "Project Delivery",
+      "技術支援": "Technical Support",
+      "客戶服務": "Client Service",
+      "專業團隊": "Professional Team"
     }
   },
   "產品頁面": {
@@ -184,11 +186,11 @@
     "流程主視覺": {
       "透明化合作流程": "Transparent Collaboration Process",
       "流程副標題": "From idea to launch, every step clearly tracked",
-      "流程統計": {
-        "專案完成": "Projects Completed",
-        "客戶滿意度": "Client Satisfaction",
-        "合作夥伴": "Partners",
-        "技術支援": "Tech Support"
+      "服務承諾": {
+        "準時交付": "On-Time Delivery",
+        "品質保證": "Quality Assurance",
+        "專業團隊": "Professional Team",
+        "全天候支援": "24/7 Support"
       },
       "開始諮詢": "Start Consultation",
       "查看流程": "View Process"
