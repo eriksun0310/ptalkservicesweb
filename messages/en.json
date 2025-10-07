@@ -170,9 +170,9 @@
         "寵物友善技術": ["React Native", ".NET 8", "MySQL", "Redis", "AWS S3", "Next.js", "TypeScript"]
       },
       "後台管理系統": {
-        "後台系統標題": "PTalk Backend Management System",
-        "後台系統描述": "Pet-Friendly Map Operations Dashboard",
-        "後台系統功能": ["Member & User Management", "Review & Report Moderation", "Venue Data Maintenance", "Push Notification Management", "Data Statistics & Analytics"],
+        "後台系統標題": "Go Bus Volunteer Recruitment Platform",
+        "後台系統描述": "Tour bus volunteer service recruitment and management system",
+        "後台系統功能": ["Trip Browsing & Registration", "Real-time Notifications & Reminders", "Registration List Management", "Community Statistics Tracking", "Cross-device Responsive Design"],
         "後台系統技術": [".NET 8", "MySQL", "Redis", "AWS S3", "Next.js", "TypeScript", "React"]
       }
     },

@@ -168,9 +168,15 @@
         "techStack": ["React Native", ".NET 8", "MySQL", "Redis", "AWS S3", "Next.js", "TypeScript"]
       },
       "petfriendlyAdmin": {
-        "title": "PTalk 後台管理系統",
-        "description": "寵物友善地圖運營後台",
-        "features": ["會員與用戶管理", "評論與檢舉審核", "店家與場館資料維護", "推播通知管理", "數據統計與分析"],
+         "title": "Go Bus 遊覽車志工招募平台",
+    "description": "遊覽車志工服務招募與管理系統",
+    "features": [
+      "車次瀏覽與報名",
+      "即時通知與提醒",
+      "報名名單管理",
+      "社群統計追蹤",
+      "跨裝置響應式設計"
+    ],
         "techStack": [".NET 8", "MySQL", "Redis", "AWS S3", "Next.js", "TypeScript", "React"]
       }
     },

@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faPaw,
   faMapMarkedAlt,
-  faUsersCog,
+  faBus,
   faRocket,
   faStar,
   faCube
@@ -31,9 +31,9 @@ const products = [
     descriptionKey: '產品項目.後台管理系統.後台系統描述',
     featuresKey: '產品項目.後台管理系統.後台系統功能',
     techStack: ['.NET 8', 'MySQL', 'Redis', 'AWS S3', 'Next.js', 'TypeScript', 'React'],
-    link: null,
-    icon: faUsersCog,
-    hasViewDetails: false
+    link: 'https://gobus.moushih.com/auth/login',
+    icon: faBus,
+    hasViewDetails: true
   }
 ];
 
